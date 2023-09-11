@@ -41,3 +41,16 @@ footer .upper-footer .media>i {
     flex-direction: row;
     gap: 20px;
 }
+
+.phone p,
+.email p,
+.media i {
+    transition: all 0.1s ease;
+}
+
+.phone p:hover,
+.email p:hover,
+.media i:hover {
+    cursor: pointer;
+    color: #90cde3;
+}

@@ -25,7 +25,7 @@ export const Shop = () => {
                     <button className="purple-btn">Shop for Coral</button>
                 </div>
                 <div className={`${styles["inner-shop-for"]} ${styles.decoration}`}>
-                    <button className={styles["purple-btn"]}>Shop for Decoration</button>
+                    <button className="purple-btn">Shop for Decoration</button>
                 </div>
             </div>
         </section>

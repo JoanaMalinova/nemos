@@ -1,7 +1,7 @@
 footer .middle-footer {
     display: flex;
     gap: 5vw;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     align-items: flex-start;
 }
 
@@ -28,16 +28,12 @@ footer .middle-footer div>h3 {
     margin-bottom: 10px;
 }
 
-.phone p,
-.email p,
-.media i,
+
 footer .middle-footer ul li {
     transition: all 0.1s ease;
 }
 
-.phone p:hover,
-.email p:hover,
-.media i:hover,
+
 footer .middle-footer ul li:hover {
     cursor: pointer;
     color: #90cde3;

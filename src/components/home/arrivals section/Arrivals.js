@@ -2,7 +2,7 @@ import styles from "./Arrivals.module.css"
 
 export const Arrivals = () => {
     return (
-        <section id={styles.arrivals} classNameName={styles["newest-arrivals"]}>
+        <section id={styles.arrivals} className={styles["newest-arrivals"]}>
             <h2>Newest Arrivals</h2>
             <ul className={styles["inner-arrivals"]}>
                 <li>

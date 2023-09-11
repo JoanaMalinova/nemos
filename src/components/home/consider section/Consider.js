@@ -1,6 +1,6 @@
-import styles from "./Consder.module.css"
+import styles from "./Consider.module.css"
 
-export const Consder = () => {
+export const Consider = () => {
 
     return (
         <section className={styles.consider}>

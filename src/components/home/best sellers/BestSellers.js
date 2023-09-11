@@ -4,7 +4,7 @@ export const BestSellers = () => {
 
     return (
         <section id="best-sellers" className={styles["best-sellers"]}>
-            <div className="best-sellers-heading-wrapper">
+            <div className={styles["best-sellers-heading-wrapper"]}>
                 <h2 className={styles["home-header"]}>Best Sellers</h2>
             </div>
             <div className={styles.container}>

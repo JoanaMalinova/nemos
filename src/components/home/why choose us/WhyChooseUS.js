@@ -1,4 +1,4 @@
-import styles from "./WhyChooseUS.module.css";
+import styles from "./WhyChooseUs.module.css";
 
 export const WhyChooseUS = () => {
 
