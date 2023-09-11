@@ -1,0 +1,102 @@
+.shop-for-wrapper {
+    background-color: #100721;
+    width: 100%;
+    border-top: 3px groove #7645d8;
+    padding: 20vh 8vw 5vh 8vw;
+    text-shadow: 8px 1px 32px rgba(0, 0, 0, 0.58);
+}
+
+.shop-for {
+    width: 80vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "shopping-hours shopping-hours shop-for-fish"
+        "shop-for-ivertabrate shop-for-coral shop-for-decoration";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.shopping-hours {
+    padding: 5vh 0;
+    grid-area: shopping-hours;
+    background-color: #90cde3;
+    color: white;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.shopping-hours>* {
+    position: relative;
+    z-index: 2;
+}
+
+.shopping-hours fieldset {
+    border: 3px dashed white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.shopping-hours fieldset legend {
+    text-align: center;
+}
+
+.fish {
+    grid-area: shop-for-fish;
+    background: url("https://images.unsplash.com/photo-1535591273668-578e31182c4f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjM2NTI5fQ") no-repeat center / cover;
+}
+
+.coral {
+    grid-area: shop-for-coral;
+    background: url("https://images.pexels.com/photos/4485811/pexels-photo-4485811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center / cover;
+}
+
+.invertebrate {
+    grid-area: shop-for-ivertabrate;
+    background: url("https://as1.ftcdn.net/v2/jpg/02/14/34/76/1000_F_214347633_RiEwicozrYN5UHZlWvMOX9SRPlTu9hjQ.jpg") no-repeat center / cover;
+}
+
+.decoration {
+    grid-area: shop-for-decoration;
+    background: url("https://www.fishkeepingworld.com/wp-content/uploads/2017/10/10-Things-You-Shouldn%E2%80%99t-Put-In-Your-Fish-Tank-Banner.png") center;
+}
+
+.inner-shop-for {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2
+}
+
+.inner-shop-for>* {
+    position: relative;
+    z-index: 2;
+}
+
+.shopping-hours::before,
+.inner-shop-for::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    bottom: 0px;
+    z-index: 1;
+    opacity: 0.2;
+    background: rgb(2, 23, 30);
+    background: radial-gradient(circle, rgba(2, 23, 30, 1) 54%, rgba(4, 79, 110, 1) 90%, rgba(4, 87, 122, 1) 99%);
+}
+
+.shop-for button {
+    font-size: 1.4rem;
+    word-spacing: -5px;
+}

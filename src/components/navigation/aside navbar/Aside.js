@@ -1,3 +1,5 @@
+import styles from "./Aside.module.css"
+
 export const Aside = () => {
     return (
         <aside>

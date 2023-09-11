@@ -1,0 +1,43 @@
+footer .upper-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vh;
+}
+
+footer .upper-footer ul {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .upper-footer ul li {
+    width: 15vw;
+}
+
+footer .upper-footer ul li div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+}
+
+footer .upper-footer ul li div p {
+    font-size: 1.3rem;
+}
+
+footer .upper-footer ul li div i {
+    display: block;
+    height: 3vh;
+}
+
+footer .upper-footer .media div {
+    flex-direction: row;
+    gap: 20px;
+}
+
+footer .upper-footer .media>i {
+    flex-direction: row;
+    gap: 20px;
+}

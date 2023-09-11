@@ -1,11 +1,13 @@
+import styles from './UpperFooter.module.css';
+
 export const UpperFooter = () => {
 
     return (
-        <section class="upper-footer">
+        <section className={styles["upper-footer"]}>
             <ul>
                 <li>
-                    <div class="address">
-                        <i class="fa-solid fa-location-dot fa-2xl"></i>
+                    <div className={styles.address}>
+                        <i className="fa-solid fa-location-dot fa-2xl"></i>
                         <h3>
                             Address
                         </h3>
@@ -13,27 +15,27 @@ export const UpperFooter = () => {
                     </div>
                 </li>
                 <li>
-                    <div class="email">
-                        <i class="fa-solid fa-envelope fa-2xl"></i>
+                    <div className={styles.email}>
+                        <i className="fa-solid fa-envelope fa-2xl"></i>
                         <h3>Email</h3>
                         <p>nemos@info.com</p>
                     </div>
                 </li>
                 <li>
-                    <div class="phone">
-                        <i class="fa-solid fa-phone fa-2xl"></i>
+                    <div className={styles.phone}>
+                        <i className="fa-solid fa-phone fa-2xl"></i>
                         <h3>Phone</h3>
                         <p>0884558319</p>
                     </div>
                 </li>
                 <li>
-                    <div class="media">
-                        <i class="fa-solid fa-link fa-2xl"></i>
+                    <div className={styles.media}>
+                        <i className="fa-solid fa-link fa-2xl"></i>
                         <h3>Media</h3>
                         <div>
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-twitter"></i>
+                            <i className="fa-brands fa-facebook-f"></i>
+                            <i className="fa-brands fa-instagram"></i>
+                            <i className="fa-brands fa-twitter"></i>
                         </div>
                     </div>
                 </li>

@@ -1,7 +1,9 @@
+import styles from "./LowerNavbar.module.css";
+
 export const LowerNav = () => {
 
     return (
-        <nav class="lower-nav">
+        <nav className={styles["lower-nav"]}>
             <ul>
                 <li>
                     <a href="">

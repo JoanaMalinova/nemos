@@ -1,9 +1,11 @@
+import styles from "./DropdownNav.module.css"
+
 export const DropdownNav = () => {
     return (
 
-        <div class="dropdown">
-            <button class="dropdown-btn"><i class="fa-solid fa-store"></i></button>
-            <div class="dropdown-content">
+        <div className={styles.dropdown}>
+            <button className={styles["dropdown-btn"]}><i className="fa-solid fa-store"></i></button>
+            <div className={styles["dropdown-content"]}>
                 <a href="">All</a>
                 <hr />
                 <a href="">Fish</a>

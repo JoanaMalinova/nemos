@@ -1,0 +1,202 @@
+.discounts {
+    height: 120vh;
+    width: 100%;
+    display: flex;
+    background-color: #100721;
+    justify-content: center;
+    align-items: center;
+}
+
+.discount-wrapper {
+    min-height: 60vh;
+    width: 80%;
+    background-color: #90cde3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4vh 8vh 8vh 8vh;
+    border-radius: 4px;
+    position: relative;
+    z-index: 2;
+}
+
+.discount-wrapper>* {
+    position: relative;
+    z-index: 2;
+}
+
+.discount-wrapper::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    opacity: 0.2;
+    background: rgb(2, 23, 30);
+    background: radial-gradient(circle, rgba(2, 23, 30, 1) 54%, rgba(4, 79, 110, 1) 90%, rgba(4, 87, 122, 1) 99%);
+}
+
+.discount-wrapper hr {
+    width: 40%;
+    height: 2px;
+    background-color: white;
+    border: none;
+    margin-bottom: 5vh;
+}
+
+.discount-header {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 2vh;
+}
+
+.carousel {
+    height: 50vh;
+    width: 60%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel:hover {
+
+    >.flickity-prev-next-button {
+        background-color: white;
+        opacity: 0.6;
+
+        >.flickity-button-icon {
+            fill: #7645d8;
+        }
+    }
+}
+
+.carousel .carousel-cell {
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s ease-out;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card .discount-image {
+    flex: 1 1 60%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-right: 3px solid white;
+}
+
+.card .discount-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card .discount-image .discount-percent {
+    top: 2vh;
+    left: 2vh;
+    position: absolute;
+    height: 14vh;
+    width: 14h;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 2rem;
+    background-color: #7645d8;
+    color: white;
+    z-index: 2;
+    padding: 3vh;
+}
+
+.card .discount-image .discount-percent span {
+    display: inline-block;
+    height: 8vh;
+    width: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .discount-info {
+    flex: 1 1 40%;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 2rem;
+    padding: 2vh;
+    text-align: center;
+}
+
+.card .discount-info button {
+    word-spacing: -5px;
+}
+
+.flickity-prev-next-button {
+    width: 35px;
+    height: 100%;
+    border-radius: 2px;
+    background-color: transparent;
+    transition: all 0.6s ease;
+
+    >.flickity-button-icon {
+        fill: transparent;
+        transition: all 0.5s ease;
+    }
+}
+
+.carousel .flickity-prev-next-button:hover {
+    opacity: 1;
+}
+
+.flickity-prev-next-button.previous {
+    left: 0px;
+}
+
+.flickity-prev-next-button.next {
+    right: 0px;
+}
+
+.flickity-page-dots {
+    bottom: 0px;
+}
+
+.flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid white;
+}
+
+.flickity-page-dots .dot.is-selected {
+    background: white;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.discount-price {
+    color: #7645d8;
+    font-size: 2.1rem;
+    font-weight: 600;
+}

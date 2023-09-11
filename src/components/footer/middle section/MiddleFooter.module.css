@@ -1,0 +1,44 @@
+footer .middle-footer {
+    display: flex;
+    gap: 5vw;
+    font-size: 1.1rem;
+    align-items: flex-start;
+}
+
+footer .middle-footer .about {
+    flex: 1 1 30%
+}
+
+footer .middle-footer .faq {
+    flex: 1 1 12%
+}
+
+footer .middle-footer .links {
+    flex: 1 1 12%
+}
+
+footer .middle-footer .links ul,
+footer .middle-footer .faq ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+footer .middle-footer div>h3 {
+    margin-bottom: 10px;
+}
+
+.phone p,
+.email p,
+.media i,
+footer .middle-footer ul li {
+    transition: all 0.1s ease;
+}
+
+.phone p:hover,
+.email p:hover,
+.media i:hover,
+footer .middle-footer ul li:hover {
+    cursor: pointer;
+    color: #90cde3;
+}

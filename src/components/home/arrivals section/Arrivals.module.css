@@ -1,0 +1,68 @@
+.newest-arrivals {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vh;
+    background-color: #90cde3;
+    padding: 10vh 0 20vh 0;
+}
+
+.newest-arrivals h2 {
+    color: white;
+    font-size: 2.5rem;
+    text-decoration: underline;
+    text-shadow: rgba(0, 0, 0, 0.58) 8px 1px 32px;
+}
+
+.inner-arrivals {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 2vw;
+    row-gap: 3vw;
+}
+
+.newest-arrivals .card {
+    flex-direction: column;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 78px -22px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 78px -22px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 78px -22px rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+}
+
+.newest-arrivals .card:hover {
+    outline: 5px solid #7645d8;
+    box-shadow: rgb(30, 14, 62) 1px 5px 15px
+}
+
+.newest-arrivals .card .discount-image {
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+.newest-arrivals .card .discount-percent {
+    top: 10px;
+    left: 10px;
+    font-size: 1.2rem;
+    padding: 5px;
+    height: unset;
+}
+
+.newest-arrivals .card .discount-info {
+    padding: 20px;
+
+}
+
+.newest-arrivals .card .discount-info p {
+    color: #7645d8;
+    font-size: 1.2rem;
+}
+
+.newest-arrivals .card .discount-info button {
+    font-size: 1.1rem;
+}
