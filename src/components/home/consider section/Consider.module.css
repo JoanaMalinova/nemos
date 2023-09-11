@@ -9,7 +9,7 @@
     font-weight: 800;
     gap: 10vh;
     position: relative;
-    background: url("../../../../public/assets/images/Sunday-Reading-Under-the-Sea.webp")bottom/ cover no-repeat;
+    background: url("../../../../public/images/Sunday-Reading-Under-the-Sea.webp")bottom/ cover no-repeat;
 }
 
 .consider>* {

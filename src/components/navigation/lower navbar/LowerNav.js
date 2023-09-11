@@ -8,30 +8,30 @@ export const LowerNav = () => {
                 <li>
                     <a href="">
                         <span>Store</span>
-                        <img src="./public/assets/images/seashell-26421" alt="open-clam" />
+                        <img src="images/seashell.png" alt="open-clam" />
                     </a>
                 </li>
                 <li>
                     <a href="">
                         <span>Fish</span>
-                        <img src="../../../../public/assets/images/pngegg.png" alt="fish" />
+                        <img src="images/pngegg.png" alt="fish" />
                     </a>
                 </li>
                 <li>
                     <a href="">
                         <span>Invertebrate</span>
-                        <img src="../../../../public/assets/images/starfish.png" alt="starfish" />
+                        <img src="images/starfish.png" alt="starfish" />
                     </a>
                 </li>
                 <li>
                     <a href="">
                         <span>Coral</span>
-                        <img src="../../../../public/assets/images/Coral-Reef-PNG-Transparent-Image.png" alt="coral" />
+                        <img src="images/Coral-Reef-PNG-Transparent-Image.png" alt="coral" />
                     </a>
                 </li>
                 <li><a href="">
                     <span>Decoration</span>
-                    <img src="../../../../public/assets/images/seashell-26412.png" alt="shell" />
+                    <img src="images/seashell-26412.png" alt="shell" />
                 </a>
                 </li>
             </ul>

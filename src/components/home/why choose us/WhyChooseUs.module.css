@@ -6,7 +6,7 @@
     height: 60vh;
     width: 100%;
     position: relative;
-    background: url("../../../../public/assets/images/Sunday-Reading-Under-the-Sea.webp") 0 -18vh / cover no-repeat;
+    background: url("../../../../public/images/Sunday-Reading-Under-the-Sea.webp") 0 -18vh / cover no-repeat;
 }
 
 .why-choose-us>* {
