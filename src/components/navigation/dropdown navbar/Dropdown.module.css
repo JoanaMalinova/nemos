@@ -1,7 +1,7 @@
 .dropdown {
     position: absolute;
-    top: 4vh;
-    left: 36vw;
+    top: 1vh;
+    left: 72vw;
     transition: display 0.8s ease-in;
 }
 

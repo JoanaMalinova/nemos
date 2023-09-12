@@ -6,7 +6,7 @@ export const Header = ({ scrollPosition }) => {
 
     return (
         <header>
-            <UpperNav />
+            <UpperNav scrollPosition={scrollPosition} />
             <DropdownNav scrollPosition={scrollPosition} />
         </header>
     )

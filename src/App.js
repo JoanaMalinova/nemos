@@ -4,6 +4,7 @@ import { Footer } from './components/footer/Footer';
 import { Aside } from './components/navigation/aside navbar/Aside';
 import './App.css';
 import { useState, useEffect } from "react";
+import { HeaderKeeper } from './components/header/header keeper/HeaderKeeper';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <>
+      <HeaderKeeper />
       <Header scrollPosition={scrollPosition} />
       <main>
         <Home />

@@ -46,4 +46,5 @@ main {
     color: white;
     z-index: 7;
     text-shadow: -1px 1px 13px rgba(0, 0, 0, 0.6);
+    transition: all 0.6 ease;
 }
