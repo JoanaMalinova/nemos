@@ -3,7 +3,7 @@ import styles from "./Discount.module.css"
 export const Discount = () => {
 
     return (
-        <section id={styles["dicount"]} className={styles["discounts"]}>
+        <section id="dicount" className={styles["discounts"]}>
             <div className={styles["discount-wrapper"]}>
                 <h2 className={styles["discount-header"]}>Weekly offers</h2>
                 <hr />

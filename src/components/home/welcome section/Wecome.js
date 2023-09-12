@@ -6,7 +6,7 @@ export const Welcome = () => {
     return (
         <section className={styles["welcome-wrapper"]}>
             <div className={styles["video-div"]}>
-                <video autoplay muted loop >
+                <video autoPlay="autoplay" muted="muted" loop="loop" >
                     <source src="images/fish-swimming.mp4" type="video/mp4" />
                 </video>
             </div>
