@@ -1,4 +1,4 @@
-import styles from "./DropdownNav.module.css"
+import styles from "./Dropdown.module.css"
 
 export const DropdownNav = () => {
     return (

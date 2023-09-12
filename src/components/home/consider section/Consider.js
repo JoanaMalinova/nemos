@@ -20,7 +20,7 @@ export const Consider = () => {
                     </div>
                 </li>
                 <li>
-                    <div>
+                    <div className={styles["secure-checkout"]}>
                         <i className="fa-solid fa-shield fa-2xl"></i>
                         <i className="fa-solid fa-cart-shopping"></i>
                         <p>Secure Checkout</p>
