@@ -2,6 +2,7 @@
     position: absolute;
     top: 4vh;
     left: 36vw;
+    transition: display 0.8s ease-in;
 }
 
 .dropdown-btn {

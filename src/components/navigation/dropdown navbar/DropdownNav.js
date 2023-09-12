@@ -1,9 +1,9 @@
 import styles from "./Dropdown.module.css"
 
-export const DropdownNav = () => {
+export const DropdownNav = ({ scrollPosition }) => {
     return (
 
-        <div className={styles.dropdown}>
+        <div style={{ display: scrollPosition >= 265 ? "block" : "none" }} className={styles.dropdown}>
             <button className={styles["dropdown-btn"]}><i className="fa-solid fa-store"></i></button>
             <div className={styles["dropdown-content"]}>
                 <a href="">All</a>

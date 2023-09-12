@@ -8,7 +8,7 @@ export const UpperNav = () => {
                 <p>NEMO's</p>
             </div>
             <form method="POST">
-                <label for="search"><i className="fa-solid fa-magnifying-glass fa-xl"></i></label>
+                <label htmlFor="search"><i className="fa-solid fa-magnifying-glass fa-xl"></i></label>
                 <input type="text" name="search" id="search" />
             </form>
             <div>

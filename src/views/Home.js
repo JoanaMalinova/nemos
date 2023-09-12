@@ -10,6 +10,7 @@ import { Arrivals } from "../components/home/arrivals section/Arrivals";
 
 export const Home = () => {
 
+
     return (
         <>
             <LowerNav />
@@ -20,7 +21,6 @@ export const Home = () => {
             <Discount />
             <Consider />
             <Arrivals />
-
         </>
     )
 }
