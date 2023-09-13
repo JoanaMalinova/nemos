@@ -54,30 +54,6 @@
     margin-bottom: 2vh;
 }
 
-.carousel {
-    height: 50vh;
-    width: 60%;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.carousel:hover {
-
-    >.flickity-prev-next-button {
-        background-color: white;
-        opacity: 0.6;
-
-        >.flickity-button-icon {
-            fill: #7645d8;
-        }
-    }
-}
-
-.carousel .carousel-cell {
-    width: 100%;
-    height: 100%;
-}
-
 .card {
     height: 100%;
     width: 100%;
@@ -150,46 +126,6 @@
     word-spacing: -5px;
 }
 
-.flickity-prev-next-button {
-    width: 35px;
-    height: 100%;
-    border-radius: 2px;
-    background-color: transparent;
-    transition: all 0.6s ease;
-
-    >.flickity-button-icon {
-        fill: transparent;
-        transition: all 0.5s ease;
-    }
-}
-
-.carousel .flickity-prev-next-button:hover {
-    opacity: 1;
-}
-
-.flickity-prev-next-button.previous {
-    left: 0px;
-}
-
-.flickity-prev-next-button.next {
-    right: 0px;
-}
-
-.flickity-page-dots {
-    bottom: 0px;
-}
-
-.flickity-page-dots .dot {
-    width: 12px;
-    height: 12px;
-    opacity: 1;
-    background: transparent;
-    border: 2px solid white;
-}
-
-.flickity-page-dots .dot.is-selected {
-    background: white;
-}
 
 .line-through {
     text-decoration: line-through;

@@ -16,10 +16,12 @@ export const UpperNav = ({ scrollPosition }) => {
             <div>
                 <ul className={styles["user-div"]}>
                     <li>
-                        <a style={{ height: scrolledDown ? "unset" : "10vw" }} href=""><i className="fa-solid fa-user fa-2xl"></i></a>
+                        {scrolledDown ? <a style={{ height: "unset" }} href=""><i className="fa-solid fa-user fa-xl"></i></a> :
+                            <a style={{ height: "10vw" }} href=""><i className="fa-solid fa-user fa-2xl"></i></a>}
                     </li>
                     <li>
-                        <a style={{ height: scrolledDown ? "unset" : "10vw" }} href=""><i className="fa-solid fa-cart-shopping fa-2xl"></i></a>
+                        {scrolledDown ? <a style={{ height: "unset" }} href=""><i className="fa-solid fa-cart-shopping fa-xl"></i></a> :
+                            <a style={{ height: "10vw" }} href=""><i className="fa-solid fa-cart-shopping fa-2xl"></i></a>}
                     </li>
                 </ul>
             </div>

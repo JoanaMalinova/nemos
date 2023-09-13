@@ -10,7 +10,7 @@ export const BestSellers = () => {
             <div className={styles.container}>
                 <div>
                     <div className={styles.content}>
-                        <h2>classNameic Leopard Discus, Blue Base</h2>
+                        <h2>Leopard Discus, Blue Base</h2>
                         <span>240$</span>
                     </div>
                 </div>
