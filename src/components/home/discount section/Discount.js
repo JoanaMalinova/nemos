@@ -1,7 +1,6 @@
 import styles from "./Discount.module.css";
 
-
-export const Discount = () => {
+function Discount() {
 
     const elem = document.getElementsByClassName('carousel')[0];
     console.log(elem);
@@ -78,7 +77,7 @@ export const Discount = () => {
                                 </div>
                             </section>
                             <section className={styles["discount-info"]}>
-                                <p>Pomacanthus-xanthometopon</p>
+                                <p>Centropyge venusta</p>
                                 <p className={styles["discount-price"]}><span className={styles[" line-through"]}>$240</span> $212</p>
                                 <button className="purple-btn">Add to Cart</button>
                             </section>
@@ -121,3 +120,5 @@ export const Discount = () => {
         </section>
     )
 }
+
+export default Discount;

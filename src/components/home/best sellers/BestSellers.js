@@ -1,6 +1,6 @@
 import styles from "./BestSellers.module.css";
 
-export const BestSellers = () => {
+function BestSellers() {
 
     return (
         <section id="best-sellers" className={styles["best-sellers"]}>
@@ -49,3 +49,5 @@ export const BestSellers = () => {
         </section>
     )
 }
+
+export default BestSellers;

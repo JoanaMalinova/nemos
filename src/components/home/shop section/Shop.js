@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./Shop.module.css"
 
-export const Shop = () => {
+function Shop() {
+
+    const navigate = useNavigate();
+
+    // const onInnerShopClick = () => {
+    //     navigate(`/${}`)
+    // }
 
     return (
         <section id="shop" className={styles["shop-for-wrapper"]}>
@@ -31,3 +38,5 @@ export const Shop = () => {
         </section>
     )
 }
+
+export default Shop;

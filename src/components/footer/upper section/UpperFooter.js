@@ -1,6 +1,6 @@
 import styles from './UpperFooter.module.css';
 
-export const UpperFooter = () => {
+function UpperFooter() {
 
     return (
         <section className={styles["upper-footer"]}>
@@ -43,3 +43,5 @@ export const UpperFooter = () => {
         </section>
     )
 }
+
+export default UpperFooter;

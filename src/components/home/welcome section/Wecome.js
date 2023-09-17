@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Welcome.module.css";
 
-export const Welcome = () => {
+function Welcome() {
 
     return (
         <section className={styles["welcome-wrapper"]}>
@@ -15,3 +15,5 @@ export const Welcome = () => {
         </section>
     )
 }
+
+export default Welcome;

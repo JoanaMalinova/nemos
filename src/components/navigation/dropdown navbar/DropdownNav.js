@@ -1,23 +1,26 @@
-import styles from "./Dropdown.module.css"
+import { Link } from "react-router-dom";
+import styles from "./Dropdown.module.css";
 
-export const DropdownNav = ({ scrollPosition }) => {
+function DropdownNav({ scrollPosition }) {
+
     return (
 
         <div style={{ display: scrollPosition >= 265 ? "block" : "none" }} className={styles.dropdown}>
             <button className={styles["dropdown-btn"]}><i className="fa-solid fa-store"></i></button>
             <div className={styles["dropdown-content"]}>
-                <a href="">All</a>
+                <Link to="/store">All</Link>
                 <hr />
-                <a href="">Fish</a>
+                <Link to="/fish">Fish</Link>
                 <hr />
-                <a href="">Invertebrate</a>
+                <Link to="/invertebrate">Invertebrate</Link>
                 <hr />
-                <a href="">Coral</a>
+                <Link to="/coral">Coral</Link>
                 <hr />
-                <a href="">Decoration</a>
+                <Link to="/decoration">Decoration</Link>
             </div>
         </div>
-
     )
 }
+
+export default DropdownNav;
 

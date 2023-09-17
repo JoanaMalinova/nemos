@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import styles from "./Aside.module.css"
 
-export const Aside = ({ scrollPosition }) => {
+function Aside({ scrollPosition }) {
 
     const backgroundStyles = {
         shop: "none",
@@ -32,3 +32,5 @@ export const Aside = ({ scrollPosition }) => {
         </aside>
     )
 }
+
+export default Aside;

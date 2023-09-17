@@ -1,10 +1,9 @@
-import { LowerFooter } from "./lower section/LowerFooter"
-import { MiddleFooter } from "./middle section/MiddleFooter"
-import { UpperFooter } from "./upper section/UpperFooter"
-import styles from "./Footer.module.css"
+import LowerFooter from "./lower section/LowerFooter"
+import MiddleFooter from "./middle section/MiddleFooter"
+import UpperFooter from "./upper section/UpperFooter"
+import styles from "./Footer.module.css";
 
-
-export const Footer = () => {
+function Footer() {
     return (
         <footer>
             < UpperFooter />
@@ -13,3 +12,5 @@ export const Footer = () => {
         </footer>
     )
 }
+
+export default Footer;

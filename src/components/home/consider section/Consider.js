@@ -1,6 +1,6 @@
 import styles from "./Consider.module.css"
 
-export const Consider = () => {
+function Consider() {
 
     return (
         <section className={styles.consider}>
@@ -31,3 +31,5 @@ export const Consider = () => {
         </section>
     )
 }
+
+export default Consider;

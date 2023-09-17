@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import styles from "./MiddleFooter.module.css";
 
-export const MiddleFooter = () => {
+function MiddleFooter() {
 
     return (
         <section className={styles["middle-footer"]}>
@@ -26,13 +27,15 @@ export const MiddleFooter = () => {
             <div className={styles.links}>
                 <h3>Quick links</h3>
                 <ul>
-                    <li>Store</li>
-                    <li>Fish</li>
-                    <li>Invertebrate</li>
-                    <li>Coral</li>
-                    <li>Decoration</li>
+                    <li><Link to="/store">Store</Link></li>
+                    <li><Link to="/fish">Fish</Link></li>
+                    <li><Link to="/invertebrate">Invertebrate</Link></li>
+                    <li><Link to="/coral">Coral</Link></li>
+                    <li><Link to="/decoration">Decoration</Link></li>
                 </ul>
             </div>
         </section>
     )
 }
+
+export default MiddleFooter;

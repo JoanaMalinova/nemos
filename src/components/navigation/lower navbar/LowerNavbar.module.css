@@ -53,3 +53,14 @@
     transform: translate(-50%, -50%);
     z-index: 4;
 }
+
+.active {
+    >img {
+        transform: scale(1.2);
+    }
+
+    >span {
+        font-size: larger;
+        color: #90cde3;
+    }
+}

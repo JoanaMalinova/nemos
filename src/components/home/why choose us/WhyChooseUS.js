@@ -1,6 +1,6 @@
 import styles from "./WhyChooseUs.module.css";
 
-export const WhyChooseUS = () => {
+function WhyChooseUS() {
 
     return (
         <section className={styles["why-choose-us"]}>
@@ -24,3 +24,5 @@ export const WhyChooseUS = () => {
         </section>
     )
 }
+
+export default WhyChooseUS;

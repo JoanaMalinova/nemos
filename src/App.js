@@ -1,38 +1,36 @@
-import { Home } from './views/Home';
-import { Header } from './components/header/Header';
-import { Footer } from './components/footer/Footer';
-import { Aside } from './components/navigation/aside navbar/Aside';
-import './App.css';
-import { useState, useEffect } from "react";
-import { HeaderKeeper } from './components/header/header keeper/HeaderKeeper';
+import HomePage from './pages/Home';
+import ShoppingCartPage from './pages/ShoppingCart';
+import StorePage from './pages/Store';
+import CoralPage from './pages/Coral';
+import FishPage from './pages/Fish';
+import InvertebratePage from './pages/Invertebrate';
+import DetailPage from './pages/Detail';
+import RootLayout from './pages/Root';
+import DecorationPage from './pages/Decoration'
 
+import './App.css';
+
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 function App() {
 
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => {
-    const position = window.scrollY;
-    setScrollPosition(position);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const routes = createBrowserRouter([
+    {
+      path: '/', element: <RootLayout />, children: [
+        { index: true, element: <HomePage /> },
+        { path: 'store', element: <StorePage /> },
+        { path: 'coral', element: <CoralPage /> },
+        { path: 'decoration', element: < DecorationPage /> },
+        { path: 'fish', element: <FishPage /> },
+        { path: 'invertebrate', element: <InvertebratePage /> },
+        { path: ':storeName/:itemId', element: <DetailPage /> },
+        { path: 'cart', element: <ShoppingCartPage /> }
+      ]
+    }
+  ]);
 
   return (
-    <>
-      <HeaderKeeper />
-      <Header scrollPosition={scrollPosition} />
-      <main>
-        <Home />
-      </main>
-      <Aside scrollPosition={scrollPosition} />
-      <Footer />
-    </>
+    <RouterProvider router={routes}></RouterProvider>
   );
 }
 
