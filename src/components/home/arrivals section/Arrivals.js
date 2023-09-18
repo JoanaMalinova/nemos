@@ -3,7 +3,7 @@ import styles from "./Arrivals.module.css"
 function Arrivals() {
     return (
         <section id="arrivals" className={styles["newest-arrivals"]}>
-            <h2>Newest Arrivals</h2>
+            <h2>New Arrivals</h2>
             <ul className={styles["inner-arrivals"]}>
                 <li>
                     <article className={styles.card}>
