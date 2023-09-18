@@ -4,6 +4,7 @@ aside {
     right: 40px;
     transform: translatey(-50%);
     z-index: 7;
+    display: none;
 }
 
 aside li a {

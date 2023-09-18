@@ -5,12 +5,16 @@ function Shop() {
 
     const navigate = useNavigate();
 
-    // const onInnerShopClick = () => {
-    //     navigate(`/${}`)
-    // }
+    const onInnerShopClick = (ev) => {
+
+        if (ev.target.tagName === "BUTTON") {
+            const url = ev.target.innerText.split(" ")[2].toLowerCase();
+            navigate(`/${url}`);
+        }
+    }
 
     return (
-        <section id="shop" className={styles["shop-for-wrapper"]}>
+        <section id="shop" className={styles["shop-for-wrapper"]} onClick={onInnerShopClick}>
             <div className={styles["shop-for"]}>
                 <div className={styles["shopping-hours"]}>
                     <h3>Visit us at</h3>

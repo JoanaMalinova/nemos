@@ -1,7 +1,10 @@
 import { useEffect } from "react"
 import styles from "./Aside.module.css"
+import { useLocation } from "react-router-dom"
 
 function Aside({ scrollPosition }) {
+
+    const location = useLocation();
 
     const backgroundStyles = {
         shop: "none",
@@ -20,9 +23,8 @@ function Aside({ scrollPosition }) {
     // }, [scrollPosition])
 
 
-
     return (
-        <aside>
+        <aside style={{ "display": location.pathname === "/" ? "block" : "none" }}>
             <ul>
                 <li style={{ background: backgroundStyles.shop }}><a href="#shop"></a></li>
                 <li><a href="#best-sellers"></a></li>

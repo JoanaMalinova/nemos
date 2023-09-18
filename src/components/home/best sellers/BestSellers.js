@@ -1,6 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./BestSellers.module.css";
 
 function BestSellers() {
+    const navigate = useNavigate();
+
+    const onBttnClick = () => {
+        navigate("/store");
+    }
+    // const scrollToTop = () => {
+    //     window.scrollTo(0, 0)
+    // }
 
     return (
         <section id="best-sellers" className={styles["best-sellers"]}>
@@ -45,7 +54,7 @@ function BestSellers() {
                     </div>
                 </div>
             </div>
-            <button className="purple-btn">View all</button>
+            <button className="purple-btn" onClick={onBttnClick}>View all</button>
         </section>
     )
 }
