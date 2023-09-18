@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import classes from "./Modal.module.css";
 
 
@@ -6,11 +6,14 @@ function Modal({ imageUrl, species, display, setDisplay, images }) {
 
     const [modalImg, setModalImg] = useState(imageUrl);
 
+    const modalRef = useRef(null);
+
     useEffect(() => {
 
         setModalImg(imageUrl);
+        modalRef.current.focus();
 
-    }, [imageUrl]);
+    }, [imageUrl, display]);
 
     const onModalClick = (ev) => {
         if (ev.target === ev.currentTarget) {
@@ -37,14 +40,26 @@ function Modal({ imageUrl, species, display, setDisplay, images }) {
 
     }
 
+    const onArrowsDown = (ev) => {
+        const key = ev.key;
+        console.log(key);
+        if (ev.key === "ArrowLeft") {
+            onLeftClick();
+        } else if (ev.key === "ArrowRight") {
+            onRightClick()
+        } else if (ev.key === "Escape") {
+            setDisplay('none');
+        }
+    }
+
     return (
-        <div class={classes.modal} onClick={onModalClick} style={{ "display": display }}>
-            <i class="fa-solid fa-chevron-left fa-2xl" onClick={onLeftClick}></i>
-            <div class={classes["modal-content"]}>
+        <div tabIndex={0} className={classes.modal} ref={modalRef} onClick={onModalClick} style={{ "display": display }} onKeyDown={onArrowsDown}>
+            <i className="fa-solid fa-chevron-left fa-2xl" onClick={onLeftClick}></i>
+            <div className={classes["modal-content"]}>
                 <img src={modalImg} alt={species} />
-                <span class={classes.close} onClick={onModalClick}>&times;</span>
+                <span className={classes.close} onClick={onModalClick}>&times;</span>
             </div>
-            <i class="fa-solid fa-chevron-right fa-2xl" onClick={onRightClick}></i>
+            <i className="fa-solid fa-chevron-right fa-2xl" onClick={onRightClick}></i>
         </div >
     )
 }

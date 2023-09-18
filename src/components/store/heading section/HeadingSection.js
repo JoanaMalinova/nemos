@@ -3,10 +3,10 @@ import classes from "./HeadingSection.module.css";
 function HeadingSection({ imageUrl, heading }) {
 
     return (
-        <section class={classes["store-heading"]}>
+        <section className={classes["store-heading"]}>
             <img src={imageUrl}
                 alt="aquarium" />
-            <div class={classes["store-info"]}>
+            <div className={classes["store-info"]}>
                 <h1>{heading}
                     <hr />
                 </h1>
