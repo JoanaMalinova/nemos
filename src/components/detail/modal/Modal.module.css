@@ -1,0 +1,64 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    margin: auto;
+    padding: 20px;
+    height: 100vh;
+    width: 50vw;
+    position: relative;
+}
+
+.modal-content img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.close {
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    top: 2px;
+    right: 30px;
+}
+
+.close:hover,
+.close:focus {
+    color: blueviolet;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal i {
+    display: block;
+    position: absolute;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.modal i:hover {
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.modal i:nth-of-type(1) {
+    left: 10px;
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+.modal i:nth-of-type(2) {
+    right: 10px;
+    top: 50%;
+    transform: translatey(-50%);
+}

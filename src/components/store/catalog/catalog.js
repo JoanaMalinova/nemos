@@ -1,11 +1,18 @@
 import classes from "./Catalog.module.css";
+import { useNavigate } from "react-router-dom"
 
 function Catalog() {
+
+    const navigate = useNavigate();
+
+    const onCardClick = () => {
+        navigate('/fish/someId');
+    }
 
     return (
         <section className={`${classes["newest-arrivals"]} ${classes["store-main"]}`}>
             <ul className={classes["inner-store"]}>
-                <li>
+                <li onClick={onCardClick}>
                     <article className={classes.card}>
                         <section className={classes["image-wrapper"]}>
                             <img src="https://exoticland.bg/wp-content/uploads/2022/11/9dcb6feb95a3233071397c7fa1df1808.jpg"

@@ -15,7 +15,7 @@ function RootLayout() {
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
