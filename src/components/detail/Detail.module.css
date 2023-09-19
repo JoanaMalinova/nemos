@@ -1,15 +1,32 @@
 .detail-wrapper {
+    background-color: #90cde3;
+}
+
+.detail-wrapper button {
+    transition: all 0.7s ease;
+}
+
+.detail-wrapper p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.upper-detail {
     width: 100%;
     display: flex;
     padding: 5vw;
     gap: 5vw;
-    background-color: #90cde3;
+    position: relative;
 }
 
 .gallery-wrapper {
     flex-basis: 60%;
     display: flex;
     gap: 16px;
+    max-height: 80vh;
+    position: sticky;
+    top: 100px;
+    bottom: 0;
+
 }
 
 .gallery-wrapper img:hover {
@@ -51,10 +68,26 @@
 .info-wrapper {
     flex-basis: 40%;
     color: white;
-    font-size: 1.4rem;
     display: flex;
     flex-direction: column;
     gap: 4vh;
+}
+
+.info-wrapper h1 {
+    font-size: 1.9rem;
+}
+
+.info-wrapper h2 {
+    font-size: 1.8rem;
+}
+
+.info-wrapper h3 {
+    font-size: 1.6rem;
+}
+
+.info-wrapper p {
+
+    line-height: 1.6;
 }
 
 .info-wrapper h1,
@@ -63,7 +96,7 @@
     margin-bottom: 10px;
 }
 
-.detail-wrapper button {
+.upper-detail button {
     text-transform: none;
     font-size: 1.5rem;
     border: 2px solid rgba(118, 69, 216, 1);
@@ -73,4 +106,145 @@ hr {
     border: white;
     height: 2px;
     background-color: white;
+}
+
+.middle-hr {
+    width: 90%;
+    margin: 2vh auto;
+}
+
+.additional-info {
+    padding: 5vh 5vw;
+}
+
+.additional-info ul {
+    display: flex;
+    gap: 5px;
+    font-size: 1.1rem;
+}
+
+.additional-info li span {
+    display: block;
+    border: 1px solid white;
+    border-top: 3px solid white;
+    padding: 10px 28px;
+    margin-bottom: -1px;
+    color: blueviolet;
+    text-transform: uppercase;
+    background-color: #90cde3;
+    transition: all 0.3s ease-in;
+}
+
+.additional-info li span:hover {
+    cursor: pointer;
+    color: rgba(137, 43, 226, 0.777);
+}
+
+.additional-info .description,
+.additional-info .add-info {
+    border: 1px solid white;
+    color: white;
+    padding: 20px 40px;
+    font-size: 1.2rem;
+}
+
+.additional-info .active {
+    border-bottom: 1px solid #90cde3;
+    border-top-color: blueviolet;
+}
+
+.additional-info .inactive {
+    border-bottom: 1px solid white;
+    background-color: #9cc9d8;
+}
+
+.additional-info .description ul {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 20px 40px;
+    font-size: 1.2rem;
+    width: 40%;
+}
+
+.additional-info .description ul li {
+    border-bottom: 1px solid white;
+
+}
+
+.additional-info .description ul i {
+    color: blueviolet;
+}
+
+.additional-info .add-info,
+.additional-info .add-info table,
+.additional-info .add-info table tr {
+    width: 100%;
+}
+
+.related-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 5vw;
+    gap: 2vh;
+    color: white;
+}
+
+.related-items h2 {
+    color: blueviolet;
+    text-transform: uppercase;
+}
+
+.related-items .inner-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 8vh;
+}
+
+.related-items .inner-wrapper>* {
+    flex-basis: 24%;
+    height: 25vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.related-items .card-info-wrapper button {
+    font-size: 1.1rem;
+    text-transform: none;
+    padding: 4px 0;
+    border: 1px solid blueviolet;
+}
+
+.card-info-wrapper p:nth-of-type(2) {
+    font-size: 1.1rem;
+}
+
+.card .img-wrapper {
+    width: 100%;
+    height: 80%;
+}
+
+.card {
+    transition: all 0.5s ease;
+}
+
+.card:hover {
+    cursor: pointer;
+    scale: 1.01;
+    transform: translatey(-5px);
+    opacity: 0.9;
+}
+
+.card .img-wrapper img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.card .card-info-wrapper {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
 }
