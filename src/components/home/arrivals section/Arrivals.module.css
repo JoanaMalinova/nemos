@@ -11,7 +11,7 @@
 }
 
 .card .discount-image {
-    flex: 1 1 60%;
+    flex: 1 1 65%;
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -53,21 +53,21 @@
 }
 
 .card .discount-info {
-    flex: 1 1 40%;
+    flex: 1 1 35%;
     color: white;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     font-size: 2rem;
-    padding: 2vh;
     text-align: center;
 }
 
 .card .discount-info button {
     word-spacing: -5px;
+    font-size: 1rem;
 }
 
 .newest-arrivals {

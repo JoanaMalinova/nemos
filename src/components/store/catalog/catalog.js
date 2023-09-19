@@ -10,7 +10,8 @@ function Catalog() {
     }
 
     return (
-        <section className={`${classes["newest-arrivals"]} ${classes["store-main"]}`}>
+        <section className={classes["store-main"]}>
+            <p>Showing 1 - 48 of 74 products</p>
             <ul className={classes["inner-store"]}>
                 <li onClick={onCardClick}>
                     <article className={classes.card}>
@@ -23,7 +24,7 @@ function Catalog() {
                         </section>
                         <section className={classes["info-wrapper"]}>
                             <p>Pterois miles</p>
-                            <p className={classes["discount-price"]}> $450</p>
+                            <p className={classes["info-price"]}> $450</p>
                             <button className="purple-btn">Add to Cart</button>
                         </section>
                     </article>
@@ -39,7 +40,7 @@ function Catalog() {
                         </section>
                         <section className={classes["info-wrapper"]}>
                             <p>Echinaster sp. orange</p>
-                            <p className={classes["discount-price"]}> $430</p>
+                            <p className={classes["info-price"]}> $430</p>
                             <button className="purple-btn">Add to Cart</button>
                         </section>
                     </article>
@@ -55,7 +56,7 @@ function Catalog() {
                         </section>
                         <section className={classes["info-wrapper"]}>
                             <p>Neopetrolisthes ohshimai</p>
-                            <p className={classes["discount-price"]}> $230</p>
+                            <p className={classes["info-price"]}> $230</p>
                             <button className="purple-btn">Add to Cart</button>
                         </section>
                     </article>
@@ -71,7 +72,7 @@ function Catalog() {
                         </section>
                         <section className={classes["info-wrapper"]}>
                             <p>Lima scabra</p>
-                            <p className={classes["discount-price"]}> $100</p>
+                            <p className={classes["info-price"]}> $100</p>
                             <button className="purple-btn">Add to Cart</button>
                         </section>
                     </article>
@@ -87,7 +88,7 @@ function Catalog() {
                         </section>
                         <section className={classes["info-wrapper"]}>
                             <p>Zanclus canescens</p>
-                            <p className={classes["discount-price"]}> $120</p>
+                            <p className={classes["info-price"]}> $120</p>
                             <button className="purple-btn">Add to Cart</button>
                         </section>
                     </article>
@@ -103,7 +104,7 @@ function Catalog() {
                         </section>
                         <section className={classes["info-wrapper"]}>
                             <p>Cirrhilabrus linatus</p>
-                            <p className={classes["discount-price"]}> $130</p>
+                            <p className={classes["info-price"]}> $130</p>
                             <button className="purple-btn">Add to Cart</button>
                         </section>
                     </article>
@@ -119,7 +120,7 @@ function Catalog() {
                         </section>
                         <section className={classes["info-wrapper"]}>
                             <p>Balistoides conspicillum</p>
-                            <p className={classes["discount-price"]}> $130</p>
+                            <p className={classes["info-price"]}> $130</p>
                             <button className="purple-btn">Add to Cart</button>
                         </section>
                     </article>
@@ -135,12 +136,13 @@ function Catalog() {
                         </section>
                         <section className={classes["info-wrapper"]}>
                             <p>Balistapus undulatus</p>
-                            <p className={classes["discount-price"]}> $130</p>
+                            <p className={classes["info-price"]}> $130</p>
                             <button className="purple-btn">Add to Cart</button>
                         </section>
                     </article>
                 </li>
             </ul>
+            <a className={classes.pagination}>1</a>
         </section>)
 }
 

@@ -1,20 +1,29 @@
 /* *************Card******************** */
 
 .store-main {
-    padding: 15vh 0;
+    padding: 5vh 0 5vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
+    gap: 7vh;
     background-color: #90cde3;
+}
+
+.store-main>p {
+    color: blueviolet;
+    font-size: 1.2rem;
+    align-self: flex-start;
+    margin-left: 10vw;
 }
 
 .inner-store {
     width: 80vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 2vw;
-    row-gap: 3vw;
+    grid-template-rows: 50vh 50vh;
+    column-gap: 1vw;
+    row-gap: 4vh;
 }
 
 .card {
@@ -39,7 +48,7 @@
 }
 
 .card .image-wrapper {
-    flex: 1 1 60%;
+    flex: 1 1 65%;
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -94,25 +103,51 @@
 }
 
 .card .info-wrapper {
-    flex: 1 1 40%;
+    flex: 1 1 35%;
     color: white;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    justify-content: flex-start;
+    gap: 10px;
     font-size: 2rem;
     text-align: center;
-    padding: 20px;
+    padding-top: 7px;
 }
 
 .card .info-wrapper button {
     word-spacing: -5px;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .card .info-wrapper p {
     color: #7645d8;
     font-size: 1.2rem;
+}
+
+.card .info-wrapper button:hover {
+    border: #7645d8;
+}
+
+.card .info-wrapper .info-price {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.pagination {
+    color: #7645d8;
+    display: block;
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 1.2rem;
+    border: 3px solid #7645d8;
+    border-radius: 99px;
+    padding: 5px 15px;
+}
+
+.pagination:hover {
+    color: white;
+    background-color: #7645d8;
+    cursor: pointer;
 }
