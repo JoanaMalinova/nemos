@@ -37,13 +37,13 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 80vw;
+    width: 100vw;
     font-weight: 600;
     word-spacing: -5px;
 }
 
 .inner-wrapper h2 {
-    font-size: 4rem;
+    font-size: 3.4rem;
     word-spacing: -10px;
     text-shadow: -1px 1px 13px rgba(0, 0, 0, 0.6);
 }
@@ -53,8 +53,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 13vh;
-    font-size: 2rem;
+    height: 10vh;
+    font-size: 1.8rem;
 }
 
 .icon-holder>* {
