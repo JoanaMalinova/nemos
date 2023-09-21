@@ -4,9 +4,9 @@ import { collection, getDocs, query, where, orderBy } from "firebase/firestore";
 
 const db = getFirestore(firebaseApp);
 
-let result = []
-
 export const getAllItems = async () => {
+
+    let result = []
 
     const allItemsSnapshot = await getDocs(collection(db, "store"), orderBy("createdOn", "desc"));
 
@@ -18,6 +18,8 @@ export const getAllItems = async () => {
 }
 
 export const getAllFromType = async (type) => {
+
+    let result = []
 
     const itemsSnapshot = await getDocs(query(collection(db, "store"), where("type", "==", type), orderBy("createdOn", "desc")));
 
