@@ -1,7 +1,7 @@
 footer .middle-footer {
     display: flex;
     gap: 5vw;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     align-items: flex-start;
 }
 
@@ -13,9 +13,16 @@ footer .middle-footer .faq {
     flex: 1 1 12%
 }
 
+footer .middle-footer .faq li,
+footer .middle-footer .links li,
+footer .middle-footer .about p {
+    font-family: 'Montserrat', sans-serif;
+}
+
 footer .middle-footer .links {
     flex: 1 1 12%
 }
+
 
 footer .middle-footer .links ul,
 footer .middle-footer .faq ul {
@@ -26,6 +33,7 @@ footer .middle-footer .faq ul {
 
 footer .middle-footer div>h3 {
     margin-bottom: 10px;
+    text-decoration: underline;
 }
 
 

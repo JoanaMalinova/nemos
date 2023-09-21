@@ -87,7 +87,7 @@ function Detail() {
                         <hr />
                     </div>
                     <h2>$180</h2>
-                    <button className="purple-btn">Add to cart <i class="fa-solid fa-cart-plus fa-sm"></i></button>
+                    <button className="purple-btn">Add to cart <i className="fa-solid fa-cart-plus fa-sm"></i></button>
                     <div>
                         <h3>How to care for Tridacna squamosa </h3>
                         <hr />
@@ -125,51 +125,53 @@ function Detail() {
                     </p>
                     <ul>
                         <li>
-                            <p><i class="fa-solid fa-fish-fins"></i> Species - Labidochromis Caeruleus</p>
+                            <p><i className="fa-solid fa-fish-fins"></i> Species - Labidochromis Caeruleus</p>
                         </li>
                         <li>
-                            <p><i class="fa-solid fa-fish-fins"></i>   Common Name - Electric Yellow</p>
+                            <p><i className="fa-solid fa-fish-fins"></i>   Common Name - Electric Yellow</p>
                         </li>
                         <li>
-                            <p><i class="fa-solid fa-fish-fins"></i>  Origin - Lake Malawi</p>
+                            <p><i className="fa-solid fa-fish-fins"></i>  Origin - Lake Malawi</p>
                         </li>
                         <li>
-                            <p><i class="fa-solid fa-fish-fins"></i>  Diet - Omnivore</p>
+                            <p><i className="fa-solid fa-fish-fins"></i>  Diet - Omnivore</p>
                         </li>
                         <li>
-                            <p><i class="fa-solid fa-fish-fins"></i> PH Range - Alkaline</p>
+                            <p><i className="fa-solid fa-fish-fins"></i> PH Range - Alkaline</p>
                         </li>
                         <li>
-                            <p><i class="fa-solid fa-fish-fins"></i>  Water Type - Hard</p>
+                            <p><i className="fa-solid fa-fish-fins"></i>  Water Type - Hard</p>
                         </li>
                         <li>
-                            <p><i class="fa-solid fa-fish-fins"></i> Temperature - Tropical 24°c - 26°c</p>
+                            <p><i className="fa-solid fa-fish-fins"></i> Temperature - Tropical 24°c - 26°c</p>
                         </li>
                         <li>
-                            <p><i class="fa-solid fa-fish-fins"></i> Breed Type- Mouth brooder</p>
+                            <p><i className="fa-solid fa-fish-fins"></i> Breed Type- Mouth brooder</p>
                         </li>
                         <li>
-                            <p><i class="fa-solid fa-fish-fins"></i> Current Size - approximately 5cm (Grows to approximately 10cm)</p>
+                            <p><i className="fa-solid fa-fish-fins"></i> Current Size - approximately 5cm (Grows to approximately 10cm)</p>
                         </li>
                         <li>
-                            <p><i class="fa-solid fa-fish-fins"></i>  Sex - Un-sexed</p>
+                            <p><i className="fa-solid fa-fish-fins"></i>  Sex - Un-sexed</p>
                         </li>
                     </ul>
                 </div>
                 <div className={classes["add-info"]} style={{ "display": addInfoDisplay ? "block" : "none" }} >
                     <table>
-                        <tr>
-                            <td className="blueviolet bold">WEIGHT</td>
-                            <td>0.1 kg</td>
-                        </tr>
-                        <tr>
-                            <td className="blueviolet bold">DIMENSIONS</td>
-                            <td>5 x 5 x 5 cm</td>
-                        </tr>
-                        <tr>
-                            <td className="blueviolet bold">CARE LEVEl</td>
-                            <td>Easy</td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td className="blueviolet bold">WEIGHT</td>
+                                <td>0.1 kg</td>
+                            </tr>
+                            <tr>
+                                <td className="blueviolet bold">DIMENSIONS</td>
+                                <td>5 x 5 x 5 cm</td>
+                            </tr>
+                            <tr>
+                                <td className="blueviolet bold">CARE LEVEl</td>
+                                <td>Easy</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </section>

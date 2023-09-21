@@ -1,51 +1,49 @@
 import { firebaseApp } from "../firebase_setup/firebase";
-import { getFirestore } from "firebase/firestore";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import { getFirestore, startAfter } from "firebase/firestore";
+import { collection, getDocs, query, where, orderBy, limit } from "firebase/firestore";
 
 const db = getFirestore(firebaseApp);
 
+let lastVisible;
+let result = []
 
 export const getAllItems = async () => {
 
-    const result = [];
+    const allItemsSnapshot = await getDocs(collection(db, "store"), orderBy("createdOn"), limit(3));
 
-    const querySnapshot = await getDocs(collection(db, "store"));
+    allItemsSnapshot.forEach((doc) => {
+        result.push(doc.data());
+    });
+
+    return result;
+}
+
+export const getAllFromType = async (type) => {
+
+    let query = query(collection(db, "store"), where("type", "==", type), orderBy("createdOn"), limit(3));
+
+    if (lastVisible) {
+
+        query = query(collection(db, "store"), where("type", "==", type), orderBy("createdOn"), startAfter(lastVisible), limit(3));
+    }
+
+    const querySnapshot = await getDocs(query);
+
+    lastVisible = querySnapshot.docs[querySnapshot.docs.length - 1];
 
     querySnapshot.forEach((doc) => {
         result.push(doc.data());
     });
 
-}
-
-export const getAllFish = async () => {
-
-    const q = query(collection(db, "cities"), where("capital", "==", true));
-
-    const querySnapshot = await getDocs(q);
-    querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data());
-    });
+    return result;
 
 }
 
 
-export const getAllInvertebrate = async () => {
 
-    const q = query(collection(db, "cities"), where("capital", "==", true));
 
-    const querySnapshot = await getDocs(q);
-    querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data());
-    });
 
-}
 
-export const getAllCoral = () => {
 
-}
 
-export const getAllDecoration = () => {
 
-}
