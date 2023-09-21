@@ -1,44 +1,24 @@
-import { useLocation } from "react-router-dom";
 import Store from "../components/store/Store";
 import storeInfo from "../utils/storeInfo";
-import { useEffect, useState } from "react";
 import { getAllFromType, getAllItems } from "../services/stroreService";
-
+import { useLocation } from "react-router-dom";
 
 function StorePage() {
 
     const { pathname } = useLocation();
-    const [items, setItems] = useState([]);
-    const [type, setType] = useState("store");
-
-    useEffect(() => {
-
-        setType(pathname.substring(1));
-
-        if (type === "store") {
-            getAllItems()
-                .then((items) => {
-                    setItems(items);
-                })
-                .catch((err) => {
-                    console.log(err)
-                });
-
-        } else {
-            getAllFromType(type)
-                .then((items) => {
-                    setItems(items);
-                })
-                .catch((err) => {
-                    console.log(err)
-                });
-        }
-
-    }, [items, type, pathname])
+    const type = pathname.substring(1);
 
     return (
-        < Store currLink={storeInfo[type].name} imageUrl={storeInfo[type].imageUrl} items={items} />
+        < Store currLink={storeInfo[type].name} imageUrl={storeInfo[type].imageUrl} />
     )
 }
 
 export default StorePage;
+
+export const storeLoader = async () => {
+    return await getAllItems();
+}
+
+export const storeByTypeLoader = async (type) => {
+    return await getAllFromType(type);
+};

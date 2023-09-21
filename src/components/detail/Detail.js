@@ -1,10 +1,14 @@
 import { useState } from "react";
 import classes from "./Detail.module.css";
 import Modal from "./modal/Modal";
+import { useLoaderData } from "react-router-dom";
+import Gallery from "./gallery/Gallery";
+
 
 function Detail() {
 
-    const [activeImage, setActiveImage] = useState("https://coralaxy.de/img/cms/blog%20Bilder/Tridacna%20squamosa%20selten.png");
+    const item = useLoaderData();
+    const [activeImage, setActiveImage] = useState(item.images[0]);
     const [modalDisplay, setModalDisplay] = useState('none');
     const [infoClass, setInfoClass] = useState({
         main: 'active',
@@ -12,15 +16,6 @@ function Detail() {
     });
     const [addInfoDisplay, setAddInfoDisplay] = useState(0);
 
-    const onImageClick = (ev) => {
-        if (ev.target.tagName === "IMG") {
-            setActiveImage(ev.target.src);
-        }
-    }
-
-    const onActiveImgClick = () => {
-        setModalDisplay("block");
-    }
 
     const onAddInfoClick = (ev) => {
 
@@ -35,58 +30,17 @@ function Detail() {
         }
     }
 
-    const imageArray = [
-        "https://coralaxy.de/img/cms/blog%20Bilder/Tridacna%20squamosa%20selten.png",
-        "https://coralaxy.de/img/beesblog/posts/28-post_default.png",
-        "https://coralaxy.de/img/cms/blog%20Bilder/Tridacna%20derasa.png",
-        "https://www.algaebarn.com/wp-content/uploads/2021/07/Biota-Sqamosa.png"
-    ]
-
     return (
 
         <section className={classes["detail-wrapper"]}>
             <section className={classes["upper-detail"]}>
-                <div className={classes["gallery-wrapper"]}>
-                    <ul className={classes["aside-gallery"]} onClick={onImageClick}>
-                        <li>
-                            <img
-                                src="https://coralaxy.de/img/cms/blog%20Bilder/Tridacna%20squamosa%20selten.png"
-                                alt=""
-                                style={activeImage === "https://coralaxy.de/img/cms/blog%20Bilder/Tridacna%20squamosa%20selten.png" ? { "opacity": "0.7", "scale": "1.2" } : {}}
-                            />
-                        </li>
-                        <li>
-                            <img
-                                src="https://coralaxy.de/img/beesblog/posts/28-post_default.png"
-                                alt=""
-                                style={activeImage === "https://coralaxy.de/img/beesblog/posts/28-post_default.png" ? { "opacity": "0.7", "scale": "1.2" } : {}}
-                            />
-                        </li>
-                        <li>
-                            <img
-                                src="https://coralaxy.de/img/cms/blog%20Bilder/Tridacna%20derasa.png"
-                                alt=""
-                                style={activeImage === "https://coralaxy.de/img/cms/blog%20Bilder/Tridacna%20derasa.png" ? { "opacity": "0.7", "scale": "1.2" } : {}}
-                            />
-                        </li>
-                        <li>
-                            <img
-                                src="https://www.algaebarn.com/wp-content/uploads/2021/07/Biota-Sqamosa.png"
-                                alt=""
-                                style={activeImage === "https://www.algaebarn.com/wp-content/uploads/2021/07/Biota-Sqamosa.png" ? { "opacity": "0.7", "scale": "1.2" } : {}}
-                            />
-                        </li>
-                    </ul>
-                    <div className={classes["active-image"]} onClick={onActiveImgClick}>
-                        <img src={activeImage} alt="" />
-                    </div>
-                </div>
+                <Gallery activeImage={activeImage} setActiveImage={setActiveImage} setModalDisplay={setModalDisplay} item={item} />
                 <div className={classes["info-wrapper"]}>
                     <div>
-                        <h1>Tridacna squamosa</h1>
+                        <h1>{item.species}</h1>
                         <hr />
                     </div>
-                    <h2>$180</h2>
+                    <h2>${item.price}</h2>
                     <button className="purple-btn">Add to cart <i className="fa-solid fa-cart-plus fa-sm"></i></button>
                     <div>
                         <h3>How to care for Tridacna squamosa </h3>
@@ -105,7 +59,7 @@ function Detail() {
                     species="Tridacna squamosa"
                     imageUrl={activeImage}
                     setDisplay={setModalDisplay}
-                    images={imageArray}
+                    images={item?.images}
                 />
             </section>
             <hr className={classes["middle-hr"]} />

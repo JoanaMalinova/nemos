@@ -1,7 +1,10 @@
 import classes from "./Catalog.module.css";
 import Card from "../card/Card";
+import { useLoaderData } from "react-router-dom";
 
-function Catalog({ items }) {
+function Catalog() {
+
+    const items = useLoaderData();
 
     return (
         <section className={classes["store-main"]}>

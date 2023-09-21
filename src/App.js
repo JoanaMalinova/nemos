@@ -1,7 +1,7 @@
 import HomePage from './pages/Home';
 import ShoppingCartPage from './pages/ShoppingCart';
-import StorePage from './pages/Store';
-import DetailPage from './pages/Detail';
+import StorePage, { storeByTypeLoader, storeLoader } from './pages/Store';
+import DetailPage, { detailLoader } from './pages/Detail';
 import RootLayout from './pages/Root';
 import DecorationPage from './pages/Decoration'
 
@@ -16,12 +16,12 @@ function App() {
     {
       path: '/', element: <RootLayout />, children: [
         { index: true, element: <HomePage /> },
-        { path: 'store', element: <StorePage /> },
-        { path: 'coral', element: <StorePage /> },
+        { path: 'store', element: <StorePage />, loader: storeLoader },
+        { path: 'coral', element: <StorePage />, loader: () => { return storeByTypeLoader('coral') } },
         { path: 'decoration', element: < DecorationPage /> },
-        { path: 'fish', element: <StorePage /> },
-        { path: 'invertebrate', element: <StorePage /> },
-        { path: ':storeName/:itemId', element: <DetailPage /> },
+        { path: 'fish', element: <StorePage />, loader: () => { return storeByTypeLoader('fish') } },
+        { path: 'invertebrate', element: <StorePage />, loader: () => { return storeByTypeLoader('invertebrate') } },
+        { path: ':storeName/:itemId', element: <DetailPage />, loader: detailLoader },
         { path: 'cart', element: <ShoppingCartPage /> }
       ]
     }

@@ -42,12 +42,12 @@ function Modal({ imageUrl, species, display, setDisplay, images }) {
 
     const onArrowsDown = (ev) => {
         const key = ev.key;
-        console.log(key);
-        if (ev.key === "ArrowLeft") {
+
+        if (key === "ArrowLeft") {
             onLeftClick();
-        } else if (ev.key === "ArrowRight") {
+        } else if (key === "ArrowRight") {
             onRightClick()
-        } else if (ev.key === "Escape") {
+        } else if (key === "Escape") {
             setDisplay('none');
         }
     }
