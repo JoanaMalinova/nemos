@@ -1,24 +1,35 @@
 import styles from "./Discount.module.css";
+import { useRef, useState, useEffect } from "react";
 
 function Discount() {
 
-    const elem = document.getElementsByClassName('carousel')[0];
-    console.log(elem);
-    const Flickity = require("flickity")
+    const carousel = useRef();
+    const [element, setElement] = useState("");
 
-    const flkty = new Flickity(elem, {
-        "autoPlay": true,
-        "draggable": false,
-        "freeScroll": true,
-        "wrapAround": true
-    });
+    useEffect(() => {
+        setElement(carousel.current);
+
+    }, [])
+
+    const Flickity = require("flickity");
+
+    if (element) {
+        const flkty = new Flickity(element, {
+            "autoPlay": true,
+            "draggable": false,
+            "freeScroll": true,
+            "wrapAround": true
+        });
+    }
+
+
 
     return (
         <section id="dicount" className={styles["discounts"]}>
             <div className={styles["discount-wrapper"]}>
                 <h2 className={styles["discount-header"]}>Weekly offers</h2>
                 <hr />
-                <ul className="carousel" >
+                <ul className="carousel" ref={carousel} >
                     <li className="carousel-cell">
                         <article className={styles.card}>
                             <section className={styles["discount-image"]}>

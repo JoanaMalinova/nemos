@@ -20,14 +20,14 @@ export const getAllItems = async () => {
 
 export const getAllFromType = async (type) => {
 
-    let query = query(collection(db, "store"), where("type", "==", type), orderBy("createdOn"), limit(3));
+    let q = query(collection(db, "store"), where("type", "==", type), orderBy("createdOn"), limit(3));
 
     if (lastVisible) {
 
-        query = query(collection(db, "store"), where("type", "==", type), orderBy("createdOn"), startAfter(lastVisible), limit(3));
+        q = query(collection(db, "store"), where("type", "==", type), orderBy("createdOn"), startAfter(lastVisible), limit(3));
     }
 
-    const querySnapshot = await getDocs(query);
+    const querySnapshot = await getDocs(q);
 
     lastVisible = querySnapshot.docs[querySnapshot.docs.length - 1];
 
