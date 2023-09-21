@@ -1,15 +1,14 @@
 import { firebaseApp } from "../firebase_setup/firebase";
-import { getFirestore, startAfter } from "firebase/firestore";
-import { collection, getDocs, query, where, orderBy, limit } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
+import { collection, getDocs, query, where, orderBy } from "firebase/firestore";
 
 const db = getFirestore(firebaseApp);
 
-let lastVisible;
 let result = []
 
 export const getAllItems = async () => {
 
-    const allItemsSnapshot = await getDocs(collection(db, "store"), orderBy("createdOn"), limit(3));
+    const allItemsSnapshot = await getDocs(collection(db, "store"), orderBy("createdOn", "desc"));
 
     allItemsSnapshot.forEach((doc) => {
         result.push(doc.data());
@@ -20,23 +19,13 @@ export const getAllItems = async () => {
 
 export const getAllFromType = async (type) => {
 
-    let q = query(collection(db, "store"), where("type", "==", type), orderBy("createdOn"), limit(3));
+    const itemsSnapshot = await getDocs(query(collection(db, "store"), where("type", "==", type), orderBy("createdOn", "desc")));
 
-    if (lastVisible) {
-
-        q = query(collection(db, "store"), where("type", "==", type), orderBy("createdOn"), startAfter(lastVisible), limit(3));
-    }
-
-    const querySnapshot = await getDocs(q);
-
-    lastVisible = querySnapshot.docs[querySnapshot.docs.length - 1];
-
-    querySnapshot.forEach((doc) => {
+    itemsSnapshot.forEach((doc) => {
         result.push(doc.data());
     });
 
     return result;
-
 }
 
 
