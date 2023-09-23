@@ -1,0 +1,38 @@
+.card .img-wrapper {
+    width: 100%;
+    height: 80%;
+}
+
+.card {
+    transition: all 0.5s ease;
+}
+
+.card:hover {
+    cursor: pointer;
+    scale: 1.01;
+    transform: translatey(-5px);
+    opacity: 0.9;
+}
+
+.card .img-wrapper img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.card .card-info-wrapper {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .card-info-wrapper button {
+    font-size: 1.2rem;
+    text-transform: none;
+    padding: 4px 0;
+    border: 1px solid blueviolet;
+}
+
+.card-info-wrapper p:nth-of-type(2) {
+    font-size: 1.1rem;
+}

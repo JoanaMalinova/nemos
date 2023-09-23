@@ -21,7 +21,7 @@ function Card({ item }) {
                     </div>
                 </section>
                 <section className={classes["info-wrapper"]}>
-                    <p>{item.species}</p>
+                    <p>{item.species || item.name}</p>
                     <p className={classes["info-price"]}> ${item.price}</p>
                     <button className="purple-btn">Add to Cart</button>
                 </section>

@@ -1,0 +1,77 @@
+.additional-info {
+    padding: 5vh 5vw;
+}
+
+.additional-info ul {
+    display: flex;
+    gap: 5px;
+    font-size: 1.1rem;
+}
+
+.additional-info li span {
+    display: block;
+    border: 1px solid white;
+    border-top: 3px solid white;
+    padding: 10px 28px;
+    margin-bottom: -1px;
+    color: blueviolet;
+    text-transform: uppercase;
+    background-color: #90cde3;
+    transition: all 0.3s ease-in;
+}
+
+.additional-info li span:hover {
+    cursor: pointer;
+    color: rgba(137, 43, 226, 0.777);
+}
+
+.additional-info .description,
+.additional-info .add-info {
+    border: 1px solid white;
+    color: white;
+    padding: 20px 40px;
+    font-size: 1.2rem;
+}
+
+.additional-info .active {
+    border-bottom: 1px solid #90cde3;
+    border-top-color: blueviolet;
+}
+
+.additional-info .inactive {
+    border-bottom: 1px solid white;
+    background-color: #9cc9d8;
+}
+
+.additional-info .description ul {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 20px 40px;
+    font-size: 1.2rem;
+    width: 40%;
+}
+
+.additional-info .description ul li {
+    border-bottom: 1px solid white;
+
+}
+
+.additional-info .description ul i {
+    color: blueviolet;
+}
+
+.additional-info .add-info,
+.additional-info .add-info table,
+.additional-info .add-info table tr {
+    width: 100%;
+}
+
+.related-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 5vw;
+    gap: 2vh;
+    color: white;
+}

@@ -21,7 +21,7 @@
     width: 80vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50vh 50vh;
+    grid-template-rows: 50vh 50vh 50vh;
     column-gap: 1vw;
     row-gap: 4vh;
 }

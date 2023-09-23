@@ -1,0 +1,27 @@
+.related-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 5vw;
+    gap: 2vh;
+    color: white;
+}
+
+.related-items h2 {
+    color: blueviolet;
+    text-transform: uppercase;
+}
+
+.related-items .inner-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 8vh;
+}
+
+.related-items .inner-wrapper>* {
+    flex-basis: 24%;
+    height: 25vw;
+    display: flex;
+    flex-direction: column;
+}
