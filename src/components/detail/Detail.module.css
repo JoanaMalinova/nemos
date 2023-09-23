@@ -1,6 +1,8 @@
 .detail-wrapper {
     background-color: #90cde3;
+    position: relative;
 }
+
 
 .detail-wrapper button {
     transition: all 0.7s ease;
@@ -18,43 +20,11 @@
     position: relative;
 }
 
-
-.info-wrapper {
-    flex-basis: 40%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 4vh;
-}
-
-.info-wrapper h1 {
-    font-size: 1.9rem;
-}
-
-.info-wrapper h2 {
-    font-size: 1.8rem;
-}
-
-.info-wrapper h3 {
-    font-size: 1.6rem;
-}
-
-.info-wrapper p {
-
-    line-height: 1.6;
-}
-
-.info-wrapper h1,
-.info-wrapper h3 {
-    color: rgba(118, 69, 216, 1);
-    margin-bottom: 10px;
-}
-
-.upper-detail button {
+/* .upper-detail button {
     text-transform: none;
     font-size: 1.5rem;
     border: 2px solid rgba(118, 69, 216, 1);
-}
+} */
 
 hr {
     border: white;

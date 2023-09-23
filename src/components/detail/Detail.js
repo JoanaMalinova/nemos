@@ -3,6 +3,8 @@ import classes from "./Detail.module.css";
 import Modal from "./modal/Modal";
 import { useLoaderData } from "react-router-dom";
 import Gallery from "./gallery/Gallery";
+import InnerNav from "../navigation/inner nav/InnerNav";
+import DetailInfo from "./main detail info/DetailInfo";
 
 
 function Detail() {
@@ -15,6 +17,7 @@ function Detail() {
         sec: 'inactive'
     });
     const [addInfoDisplay, setAddInfoDisplay] = useState(0);
+
 
 
     const onAddInfoClick = (ev) => {
@@ -31,29 +34,11 @@ function Detail() {
     }
 
     return (
-
         <section className={classes["detail-wrapper"]}>
+            {/* <InnerNav currLink={currLink} /> */}
             <section className={classes["upper-detail"]}>
                 <Gallery activeImage={activeImage} setActiveImage={setActiveImage} setModalDisplay={setModalDisplay} item={item} />
-                <div className={classes["info-wrapper"]}>
-                    <div>
-                        <h1>{item.species}</h1>
-                        <hr />
-                    </div>
-                    <h2>${item.price}</h2>
-                    <button className="purple-btn">Add to cart <i className="fa-solid fa-cart-plus fa-sm"></i></button>
-                    <div>
-                        <h3>How to care for Tridacna squamosa </h3>
-                        <hr />
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, voluptate. Natus tenetur excepturi suscipit aliquam debitis hic corrupti necessitatibus blanditiis cupiditate totam nihil nisi quod vitae ullam praesentium, voluptate neque?</p>
-                    <p><span className="bold blueviolet">Placement: </span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iure ab voluptatum rerum tenetur laboriosam dolor quibusdam nam mollitia libero ipsum magni eligendi porro nulla, ea iusto dolorum laudantium ad?</p>
-                    <p><span className="bold blueviolet">Feeding: </span> A, consectetur molestias officia et expedita reprehenderit officiis eum dolore aliquam voluptatem, maiores ea. Asperiores adipisci beatae minima blanditiis quos obcaecati, architecto vel nam minus iure ipsam quas tempore illo!</p>
-                    <p ><span className="bold blueviolet">Lighting & Flow Requirements: </span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur tenetur pariatur quae at aut et veritatis, modi nihil incidunt blanditiis optio nostrum dolor quas quos unde fuga voluptatem obcaecati quasi!
-                        Eos dolor sed voluptatem ullam tempore nisi facere deserunt eveniet maxime architecto incidunt iure perspiciatis fugit repudiandae, in sunt temporibus. Modi natus ab molestiae aspernatur dicta ipsam, architecto eveniet libero.
-                        Ad, delectus sed tenetur asperiores reprehenderit vel numquam optio odio sapiente voluptates iure vero, hic quod ratione culpa veritatis modi. Excepturi ullam sequi voluptatibus mollitia delectus, rerum aspernatur praesentium voluptate!
-                        Minus sit mollitia error culpa odit labore nam sed vitae totam consequuntur rem quos voluptate itaque, quasi nemo repudiandae corrupti natus iure est, ut laudantium. A autem voluptatem earum numquam! </p>
-                </div>
+                < DetailInfo item={item} />
                 <Modal
                     display={modalDisplay}
                     species="Tridacna squamosa"
@@ -79,33 +64,33 @@ function Detail() {
                     </p>
                     <ul>
                         <li>
-                            <p><i className="fa-solid fa-fish-fins"></i> Species - Labidochromis Caeruleus</p>
+                            <p><i className="fa-solid fa-fish-fins"></i> {item.species ? `Species -${item.species}` : `Color : some color`}</p>
                         </li>
                         <li>
-                            <p><i className="fa-solid fa-fish-fins"></i>   Common Name - Electric Yellow</p>
+                            <p><i className="fa-solid fa-fish-fins"></i> {item.species ? `Common Name - Electric Yellow` : `Brand : some brand`}</p>
                         </li>
                         <li>
-                            <p><i className="fa-solid fa-fish-fins"></i>  Origin - Lake Malawi</p>
+                            <p><i className="fa-solid fa-fish-fins"></i> {item.species ? `Origin - Lake Malawi` : `Theme: Fairy`} </p>
                         </li>
                         <li>
-                            <p><i className="fa-solid fa-fish-fins"></i>  Diet - Omnivore</p>
+                            <p><i className="fa-solid fa-fish-fins"></i> {item.species ? `Diet - Omnivore` : `Material: Resin`} </p>
                         </li>
                         <li>
-                            <p><i className="fa-solid fa-fish-fins"></i> PH Range - Alkaline</p>
+                            <p><i className="fa-solid fa-fish-fins"></i> {item.species ? 'PH Range - Alkaline' : 'Style: Hobbit-Small'} </p>
                         </li>
-                        <li>
+                        <li style={{ "display": item.species ? "block" : "none" }}>
                             <p><i className="fa-solid fa-fish-fins"></i>  Water Type - Hard</p>
                         </li>
-                        <li>
+                        <li style={{ "display": item.species ? "block" : "none" }}>
                             <p><i className="fa-solid fa-fish-fins"></i> Temperature - Tropical 24°c - 26°c</p>
                         </li>
-                        <li>
+                        <li style={{ "display": item.species ? "block" : "none" }}>
                             <p><i className="fa-solid fa-fish-fins"></i> Breed Type- Mouth brooder</p>
                         </li>
-                        <li>
+                        <li style={{ "display": item.species ? "block" : "none" }}>
                             <p><i className="fa-solid fa-fish-fins"></i> Current Size - approximately 5cm (Grows to approximately 10cm)</p>
                         </li>
-                        <li>
+                        <li style={{ "display": item.species ? "block" : "none" }}>
                             <p><i className="fa-solid fa-fish-fins"></i>  Sex - Un-sexed</p>
                         </li>
                     </ul>
@@ -121,7 +106,7 @@ function Detail() {
                                 <td className="blueviolet bold">DIMENSIONS</td>
                                 <td>5 x 5 x 5 cm</td>
                             </tr>
-                            <tr>
+                            <tr style={{ "display": item.species ? "table-row" : "none" }}>
                                 <td className="blueviolet bold">CARE LEVEl</td>
                                 <td>Easy</td>
                             </tr>

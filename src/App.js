@@ -1,9 +1,8 @@
-import HomePage from './pages/Home';
+import HomePage, { bestSellerLoader } from './pages/Home';
 import ShoppingCartPage from './pages/ShoppingCart';
 import StorePage, { storeByTypeLoader, storeLoader } from './pages/Store';
 import DetailPage, { detailLoader } from './pages/Detail';
 import RootLayout from './pages/Root';
-import DecorationPage from './pages/Decoration'
 
 import './App.css';
 
@@ -15,10 +14,10 @@ function App() {
   const routes = createBrowserRouter([
     {
       path: '/', element: <RootLayout />, children: [
-        { index: true, element: <HomePage /> },
+        { index: true, element: <HomePage />, loader: bestSellerLoader },
         { path: 'store', element: <StorePage />, loader: storeLoader },
         { path: 'coral', element: <StorePage />, loader: () => { return storeByTypeLoader('coral') } },
-        { path: 'decoration', element: < DecorationPage /> },
+        { path: 'decoration', element: < StorePage />, loader: () => { return storeByTypeLoader('decoration') } },
         { path: 'fish', element: <StorePage />, loader: () => { return storeByTypeLoader('fish') } },
         { path: 'invertebrate', element: <StorePage />, loader: () => { return storeByTypeLoader('invertebrate') } },
         { path: ':storeName/:itemId', element: <DetailPage />, loader: detailLoader },

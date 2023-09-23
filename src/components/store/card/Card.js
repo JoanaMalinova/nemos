@@ -6,7 +6,7 @@ function Card({ item }) {
     const navigate = useNavigate();
 
     const onCardClick = () => {
-        navigate(`/fish/${item.id}`);
+        navigate(`/${item.type}/${item.id}`);
     }
 
     return (
