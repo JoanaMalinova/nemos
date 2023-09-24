@@ -8,7 +8,7 @@ function Catalog() {
 
     return (
         <section className={classes["store-main"]}>
-            <p>Showing 1 - 48 of 74 products</p>
+            <p>Showing 1 - 12 of {items.length} products</p>
             <ul className={classes["inner-store"]}>
                 {items ? items.map(item => <Card item={item} key={item.id} />) : <></>}
             </ul>

@@ -1,75 +1,3 @@
-.card {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    transition: all 0.4s ease-out;
-}
-
-.card:hover {
-    cursor: pointer;
-}
-
-.card .discount-image {
-    flex: 1 1 65%;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    border-right: 3px solid white;
-}
-
-.card .discount-image img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.card .discount-image .discount-percent {
-    top: 2vh;
-    left: 2vh;
-    position: absolute;
-    height: 14vh;
-    width: 14h;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 600;
-    font-size: 2rem;
-    background-color: #7645d8;
-    color: white;
-    z-index: 2;
-    padding: 3vh;
-}
-
-.card .discount-image .discount-percent span {
-    display: inline-block;
-    height: 8vh;
-    width: 8vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.card .discount-info {
-    flex: 1 1 35%;
-    color: white;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 2rem;
-    text-align: center;
-}
-
-.card .discount-info button {
-    word-spacing: -5px;
-    font-size: 1rem;
-}
-
 .newest-arrivals {
     width: 100%;
     display: flex;
@@ -91,9 +19,9 @@
     width: 80vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 2vw;
-    row-gap: 3vw;
+    grid-template-rows: 50vh 50vh;
+    column-gap: 1vw;
+    row-gap: 4vh;
 }
 
 .newest-arrivals .card {
