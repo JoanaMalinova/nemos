@@ -10,7 +10,7 @@ function Arrivals() {
         <section id="arrivals" className={styles["newest-arrivals"]}>
             <h2>New Arrivals</h2>
             <ul className={styles["inner-arrivals"]}>
-                {arrivals.map(newItem => <Card item={newItem} />)}
+                {arrivals.map(newItem => <Card item={newItem} key={newItem.id} />)}
             </ul>
         </section>
     )

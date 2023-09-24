@@ -9,7 +9,7 @@ export const getAllItems = async () => {
 
     let result = [];
 
-    const allItemsSnapshot = await getDocs(collection(db, "store"), orderBy("createdOn", "desc"));
+    const allItemsSnapshot = await getDocs(query(collection(db, "store"), orderBy("createdOn", "desc")));
 
     allItemsSnapshot.forEach((doc) => {
         result.push(doc.data());

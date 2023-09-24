@@ -15,9 +15,8 @@ function Gallery({ setModalDisplay, setActiveImage, activeImage, item }) {
     return (
         <div className={classes["gallery-wrapper"]}>
             <ul className={classes["aside-gallery"]} onClick={onImageClick}>
-                {item.images.map(image => <li>
+                {item.images.map(image => <li key={image}>
                     <img
-                        key={image}
                         src={image}
                         alt={item.species}
                         style={activeImage === image ? { "opacity": "0.7", "scale": "1.2" } : {}}
