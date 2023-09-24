@@ -45,6 +45,18 @@ export const getOne = async (itemId) => {
 
 }
 
+export const getDiscountItems = async () => {
+    let result = [];
+
+    const itemsSnapshot = await getDocs(query(collection(db, "store"), orderBy("discount")));
+
+    itemsSnapshot.forEach((doc) => {
+        result.push(doc.data());
+    });
+
+    return result;
+}
+
 
 
 

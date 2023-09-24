@@ -1,4 +1,4 @@
-import HomePage, { bestSellerLoader } from './pages/Home';
+import HomePage, { homeLoader } from './pages/Home';
 import ShoppingCartPage from './pages/ShoppingCart';
 import StorePage, { storeByTypeLoader, storeLoader } from './pages/Store';
 import DetailPage, { detailLoader } from './pages/Detail';
@@ -14,7 +14,7 @@ function App() {
   const routes = createBrowserRouter([
     {
       path: '/', element: <RootLayout />, children: [
-        { index: true, element: <HomePage />, loader: bestSellerLoader },
+        { index: true, element: <HomePage />, loader: homeLoader },
         { path: 'store', element: <StorePage />, loader: storeLoader },
         { path: 'coral', element: <StorePage />, loader: () => { return storeByTypeLoader('coral') } },
         { path: 'decoration', element: < StorePage />, loader: () => { return storeByTypeLoader('decoration') } },

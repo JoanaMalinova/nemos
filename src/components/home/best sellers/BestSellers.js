@@ -4,7 +4,7 @@ import BestSellerCard from "./best seller card/BestSellerCard";
 
 function BestSellers() {
 
-    const items = useLoaderData();
+    const { items } = useLoaderData();
     const navigate = useNavigate();
 
     const onBttnClick = () => {

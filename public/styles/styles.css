@@ -122,3 +122,7 @@ main {
 .bold {
     font-weight: 600;
 }
+
+.line-through {
+    text-decoration: line-through;
+}

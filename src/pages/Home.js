@@ -6,6 +6,8 @@ import Discount from "../components/home/discount section/Discount";
 import Consider from "../components/home/consider section/Consider";
 import Arrivals from "../components/home/arrivals section/Arrivals";
 import { getBestSellers } from "../services/homeService";
+import { getDiscountItems } from "../services/stroreService";
+import { json } from "react-router-dom";
 
 
 function HomePage() {
@@ -25,8 +27,7 @@ function HomePage() {
 
 export default HomePage;
 
-export const bestSellerLoader = async () => {
-
-    return await getBestSellers();
-
+export const homeLoader = async () => {
+    const [items, discountItems] = await Promise.all([getBestSellers(), getDiscountItems()]);
+    return json({ items, discountItems });
 }

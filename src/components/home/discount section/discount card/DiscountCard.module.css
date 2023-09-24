@@ -1,0 +1,83 @@
+.card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s ease-out;
+}
+
+.card:hover {
+    cursor: pointer;
+
+}
+
+.card:hover img {
+    opacity: 0.8;
+}
+
+.card .discount-image {
+    flex: 1 1 60%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-right: 3px solid white;
+}
+
+.card .discount-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.card .discount-image .discount-percent {
+    top: 2vh;
+    left: 2vh;
+    position: absolute;
+    height: 14vh;
+    width: 14h;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 2rem;
+    background-color: #7645d8;
+    color: white;
+    z-index: 2;
+    padding: 3vh;
+}
+
+.card .discount-image .discount-percent span {
+    display: inline-block;
+    height: 8vh;
+    width: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .discount-info {
+    flex: 1 1 40%;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 2rem;
+    padding: 2vh;
+    text-align: center;
+}
+
+.card .discount-info button {
+    word-spacing: -5px;
+}
+
+.discount-price {
+    color: #7645d8;
+    font-size: 2.1rem;
+    font-weight: 600;
+}

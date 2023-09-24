@@ -8,7 +8,7 @@ function DetailInfo({ item }) {
                 <h1>{item.species || item.name}</h1>
                 <hr />
             </div>
-            <h2>${item.price}</h2>
+            {item.discount ? <h2><span className="line-through"> ${item.price}</span> ${item.price - item.price * item.discount / 100}</h2> : <h2>${item.price}</h2>}
             <button className="purple-btn">Add to cart <i className="fa-solid fa-cart-plus fa-sm"></i></button>
             <div>
                 {item.species ? <h3>How to care for {item.species}</h3> : <h3>About {item.name}</h3>}

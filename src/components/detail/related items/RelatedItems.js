@@ -14,7 +14,7 @@ function RelatedItems() {
 
         setMyItem(item);
         const currItems = [];
-        const workItems = items.filter(el => el !== myItem);
+        const workItems = items.filter(el => el.id !== myItem.id);
         for (let i = 1; i <= 4; i++) {
             const workIndex = getRandomIndex(workItems.length);
             if (currItems.includes(workItems[workIndex])) {
