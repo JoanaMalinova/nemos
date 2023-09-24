@@ -35,29 +35,12 @@
     object-fit: cover;
 }
 
-/**** for discount ***/
-
-.card .discount-percent {
-    top: 2vh;
-    left: 2vh;
+.card .info-bubble {
     position: absolute;
-    height: 14vh;
-    width: 14h;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 600;
-    font-size: 2rem;
     background-color: #7645d8;
+    border-radius: 50%;
     color: white;
     z-index: 2;
-    padding: 3vh;
-}
-
-/*************** for new ************/
-
-.card .discount-percent {
     top: 10px;
     left: 10px;
     font-size: 1.2rem;
@@ -65,7 +48,7 @@
     height: unset;
 }
 
-.card .discount-percent span {
+.card .info-bubble span {
     display: inline-block;
     height: 8vh;
     width: 8vh;

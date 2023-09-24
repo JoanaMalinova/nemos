@@ -16,9 +16,11 @@ function Card({ item }) {
                 <section className={classes["image-wrapper"]}>
                     <img src={item.images[0]}
                         alt={item.species} />
-                    {item.discount ? <div className={classes["discount-percent"]}>
-                        <span>-{item.discount}%</span>
-                    </div> : <></>}
+                    {item.discount || item.new ?
+                        <div className={classes["info-bubble"]}>
+                            <span>{item.discount ? `-${item.discount}%` : "NEW"}</span>
+                        </div> : <></>
+                    }
                 </section>
                 <section className={classes["info-wrapper"]}>
                     <p>{item.species || item.name}</p>

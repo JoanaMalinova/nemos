@@ -10,8 +10,8 @@ aside {
 aside li a {
     display: block;
     margin-bottom: 20px;
-    height: 11px;
-    width: 11px;
+    height: 12px;
+    width: 12px;
     border-radius: 50%;
     border: 2px solid white
 }
