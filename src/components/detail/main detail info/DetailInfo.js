@@ -1,4 +1,5 @@
 import classes from "./DetailInfo.module.css";
+import MediaShare from "./media share/MediaShare";
 
 function DetailInfo({ item }) {
 
@@ -22,21 +23,7 @@ function DetailInfo({ item }) {
                 Ad, delectus sed tenetur asperiores reprehenderit vel numquam optio odio sapiente voluptates iure vero, hic quod ratione culpa veritatis modi. Excepturi ullam sequi voluptatibus mollitia delectus, rerum aspernatur praesentium voluptate!
                 Minus sit mollitia error culpa odit labore nam sed vitae totam consequuntur rem quos voluptate itaque, quasi nemo repudiandae corrupti natus iure est, ut laudantium. A autem voluptatem earum numquam! </p>
             <hr />
-            <ul className={classes.media}>
-                <p>Share:</p>
-                <li>
-                    <i className="fa-brands fa-twitter fa-lg"></i>
-                </li>
-                <li>
-                    <i className="fa-brands fa-facebook fa-lg"></i>
-                </li>
-                <li>
-                    <i className="fa-brands fa-pinterest fa-lg"></i>
-                </li>
-                <li>
-                    <i className="fa-solid fa-envelope fa-lg"></i>
-                </li>
-            </ul>
+            <MediaShare />
         </div>
     )
 
