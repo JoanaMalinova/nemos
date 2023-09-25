@@ -1,9 +1,18 @@
 .inner-nav {
-    margin-bottom: 10px;
-    margin-left: 10vw;
     font-size: 1.2rem;
+    font-family: "Ubuntu Mono", monospace !important;
+    padding: 2vh 0;
 }
 
 .inner-nav span {
+    color: white;
+}
+
+.inner-nav a {
+    color: blueviolet;
+    transition: all 0.3s ease-out;
+}
+
+.inner-nav a:hover {
     color: white;
 }

@@ -14,7 +14,7 @@
 .upper-detail {
     width: 100%;
     display: flex;
-    padding: 5vw;
+    padding: 1vw 5vw 5vw;
     gap: 5vw;
     position: relative;
 }
