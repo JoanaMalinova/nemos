@@ -74,7 +74,6 @@
 .card .info-wrapper button {
     word-spacing: -5px;
     font-size: 1rem;
-    transition: all 0.3s ease-in-out;
 }
 
 .card .info-wrapper p {
@@ -82,11 +81,11 @@
     font-size: 1.2rem;
 }
 
-.card .info-wrapper button:hover {
-    border: #7645d8;
-}
-
 .card .info-wrapper .info-price {
     font-weight: bold;
     font-size: 1.4rem;
+}
+
+.card button {
+    border-width: 2px;
 }

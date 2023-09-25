@@ -1,7 +1,7 @@
 import Store from "../components/store/Store";
 import storeInfo from "../utils/storeInfo";
 import { getAllFromType, getAllItems } from "../services/stroreService";
-import { useLocation } from "react-router-dom";
+import { useLocation, json } from "react-router-dom";
 
 function StorePage() {
 
@@ -16,9 +16,26 @@ function StorePage() {
 export default StorePage;
 
 export const storeLoader = async () => {
-    return await getAllItems();
+
+    try {
+        const result = await getAllItems();
+        return result;
+
+    } catch (err) {
+
+        throw json({ message: "Could not load store Items!" }, { status: 500 });
+    }
+
 }
 
 export const storeByTypeLoader = async (type) => {
-    return await getAllFromType(type);
+    try {
+        const result = await getAllFromType(type);
+        return result;
+
+    } catch (err) {
+
+        throw json({ message: `Could not load ${type} Items!` }, { status: 500 });
+    }
+
 };

@@ -7,13 +7,17 @@ import RootLayout from './pages/Root';
 import './App.css';
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import ErrorPage from './pages/Error';
 
 function App() {
 
 
   const routes = createBrowserRouter([
     {
-      path: '/', element: <RootLayout />, children: [
+      path: '/',
+      element: <RootLayout />,
+      errorElement: <ErrorPage />,
+      children: [
         { index: true, element: <HomePage />, loader: homeLoader },
         { path: 'store', element: <StorePage />, loader: storeLoader },
         { path: 'coral', element: <StorePage />, loader: () => { return storeByTypeLoader('coral') } },

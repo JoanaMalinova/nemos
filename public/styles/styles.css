@@ -17,17 +17,17 @@ main {
     background-color: white;
     padding: 6px 18px;
     border-radius: 4px;
-    border: 3px groove #7645d8;
-    font-size: 1.6rem;
+    border: 3px solid #7645d8;
+    font-size: 1.4rem;
     text-transform: uppercase;
-    transition: all 0.7s ease;
+    transition: all 0.3s ease-out;
 }
 
 .purple-btn:hover {
     cursor: pointer;
     color: white;
     background-color: #7645d8;
-    border: 3px groove white;
+    /* border: 3px groove white; */
 }
 
 .logo {
@@ -125,4 +125,55 @@ main {
 
 .line-through {
     text-decoration: line-through;
+}
+
+.error-wrapper {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #73afc4;
+    position: relative;
+}
+
+.error-wrapper img {
+    position: absolute;
+    left: 36%;
+    top: 26%;
+    height: 20vh;
+    z-index: 0
+}
+
+.error-wrapper p {
+    font-size: 8rem;
+}
+
+.inner-error {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+}
+
+.inner-error p {
+    position: relative;
+    z-index: 2;
+}
+
+.inner-error hr {
+    background-color: blueviolet;
+    height: 1px;
+    border: none;
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+.inner-error h2 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    color: white;
 }

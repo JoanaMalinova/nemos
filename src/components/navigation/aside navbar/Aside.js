@@ -1,8 +1,7 @@
-import { useEffect } from "react"
 import styles from "./Aside.module.css"
 import { useLocation } from "react-router-dom"
 
-function Aside({ scrollPosition }) {
+function Aside() {
 
     const location = useLocation();
 
@@ -12,15 +11,6 @@ function Aside({ scrollPosition }) {
         dicount: " none",
         arrivals: "none"
     }
-
-    // useEffect(() => {
-    //     if (scrollPosition > 700 && scrollPosition < 1750) {
-    //         backgroundStyles.shop = "#7645d8"
-    //     } else {
-    //         backgroundStyles.shop = "none"
-    //     }
-
-    // }, [scrollPosition])
 
 
     return (

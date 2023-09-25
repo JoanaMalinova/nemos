@@ -34,3 +34,17 @@
     font-size: 1.5rem;
     border: 2px solid rgba(118, 69, 216, 1);
 }
+
+.media {
+    display: flex;
+    gap: 20px;
+}
+
+.media i {
+    transition: all 0.3s ease-out;
+}
+
+.media i:hover {
+    color: blueviolet;
+    cursor: pointer;
+}

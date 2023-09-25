@@ -5,7 +5,7 @@ import { useLoaderData } from "react-router-dom";
 function Catalog() {
 
     const items = useLoaderData();
-    console.log(items);
+
     return (
         <section className={classes["store-main"]}>
             <p>Showing 1 - 12 of {items.length} products</p>
