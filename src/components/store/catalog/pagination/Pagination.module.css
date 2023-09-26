@@ -1,0 +1,38 @@
+.pagination-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.pagination {
+    color: #7645d8;
+    background-color: transparent;
+    display: block;
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 1.2rem;
+    border: 3px solid #7645d8;
+    border-radius: 50%;
+    padding: 3px 13px;
+    transition: all 0.3s ease-out;
+
+    &.active {
+        color: white;
+        background-color: #7645d8;
+        cursor: pointer;
+    }
+}
+
+.pagination:hover {
+    color: white;
+    background-color: #7645d8;
+    cursor: pointer;
+}
+
+.pagination-wrapper i {
+    color: blueviolet;
+}
+
+.pagination-wrapper i:hover {
+    color: white;
+    cursor: pointer;
+}

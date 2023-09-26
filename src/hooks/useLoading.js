@@ -12,7 +12,5 @@ export const useLoading = () => {
 
     }, [navigation.state]);
 
-    console.log(isLoading);
-
     return isLoading;
 }

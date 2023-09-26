@@ -25,19 +25,3 @@
     column-gap: 1vw;
     row-gap: 4vh;
 }
-
-.pagination {
-    color: #7645d8;
-    display: block;
-    font-family: "Ubuntu Mono", monospace;
-    font-size: 1.2rem;
-    border: 3px solid #7645d8;
-    border-radius: 99px;
-    padding: 5px 15px;
-}
-
-.pagination:hover {
-    color: white;
-    background-color: #7645d8;
-    cursor: pointer;
-}

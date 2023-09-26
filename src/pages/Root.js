@@ -11,7 +11,6 @@ import Loader from '../components/special/Loader';
 function RootLayout() {
 
     const isLoading = useLoading();
-    console.log(isLoading);
 
     return (
         <>
