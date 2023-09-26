@@ -5,7 +5,7 @@ import Aside from '../components/navigation/aside navbar/Aside';
 import LowerNav from '../components/navigation/lower navbar/LowerNav';
 import { Outlet } from 'react-router-dom';
 import { useLoading } from '../hooks/useLoading';
-import Loader from '../components/special/Loader';
+import Loader from '../components/special/loader/Loader';
 
 
 function RootLayout() {

@@ -1,0 +1,50 @@
+.error-wrapper {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #73afc4;
+    position: relative;
+}
+
+.error-wrapper img {
+    position: absolute;
+    left: 36%;
+    top: 26%;
+    height: 20vh;
+    z-index: 0
+}
+
+.error-wrapper p {
+    font-size: 8rem;
+}
+
+.inner-error {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+}
+
+.inner-error p {
+    position: relative;
+    z-index: 2;
+}
+
+.inner-error hr {
+    background-color: blueviolet;
+    height: 1px;
+    border: none;
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+.inner-error h2 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    color: white;
+}
