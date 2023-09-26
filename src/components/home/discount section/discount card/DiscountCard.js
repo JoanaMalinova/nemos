@@ -21,7 +21,7 @@ function DiscountCard({ item }) {
                 </section>
                 <section className={classes["discount-info"]}>
                     <p>{item.species || item.name}</p>
-                    <p className={classes["discount-price"]}><span className="line-through">${item.price}</span> ${item.price - item.price * item.discount / 100}</p>
+                    <p className={classes["discount-price"]}><span className="line-through lighter-violet smaller">${item.price}</span> <span className="dark-salmon">${item.price - item.price * item.discount / 100}</span></p>
                     <button className="purple-btn">Add to Cart</button>
                 </section>
             </article>

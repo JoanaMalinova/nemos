@@ -115,18 +115,6 @@ main {
     background: white;
 }
 
-.blueviolet {
-    color: #7645d8;
-}
-
-.bold {
-    font-weight: 600;
-}
-
-.line-through {
-    text-decoration: line-through;
-}
-
 .error-wrapper {
     height: 50vh;
     width: 100%;
@@ -176,4 +164,33 @@ main {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
     color: white;
+}
+
+.blueviolet {
+    color: #7645d8;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.salmon {
+    color: salmon;
+}
+
+.dark-salmon {
+    color: rgb(217, 96, 83)
+}
+
+.lighter-violet {
+    color: #7645d88e;
+}
+
+.smaller {
+    font-weight: 400;
+    font-size: smaller;
 }

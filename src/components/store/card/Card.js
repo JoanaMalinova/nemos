@@ -24,7 +24,7 @@ function Card({ item }) {
                 </section>
                 <section className={classes["info-wrapper"]}>
                     <p>{item.species || item.name}</p>
-                    {item.discount ? <p className={classes["info-price"]}> <span className="line-through">${item.price}</span> ${item.price - item.price * item.discount / 100}</p> :
+                    {item.discount ? <p className={classes["info-price"]}> <span className="line-through lighter-violet smaller">${item.price}</span> <span className="salmon">${item.price - item.price * item.discount / 100}</span></p> :
                         <p className={classes["info-price"]}> ${item.price}</p>}
                     <button className="purple-btn">Add to Cart</button>
                 </section>
