@@ -18,6 +18,7 @@ function Detail() {
 
     useEffect(() => {
         setActiveImage(item.images[0]);
+
     }, [item]);
 
 
@@ -25,7 +26,12 @@ function Detail() {
         <section className={classes["detail-wrapper"]}>
             <InnerNav currLink={storeInfo[item.type].name} itemName={item.species || item.name} />
             <section className={classes["upper-detail"]}>
-                <Gallery activeImage={activeImage} setActiveImage={setActiveImage} setModalDisplay={setModalDisplay} item={item} />
+                <Gallery
+                    activeImage={activeImage}
+                    setActiveImage={setActiveImage}
+                    setModalDisplay={setModalDisplay}
+                    item={item}
+                />
                 < DetailInfo item={item} />
                 <Modal
                     display={modalDisplay}

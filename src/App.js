@@ -9,8 +9,8 @@ import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import ErrorPage from './pages/Error';
 
-function App() {
 
+function App() {
 
   const routes = createBrowserRouter([
     {

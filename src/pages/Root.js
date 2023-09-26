@@ -4,16 +4,22 @@ import Footer from '../components/footer/Footer';
 import Aside from '../components/navigation/aside navbar/Aside';
 import LowerNav from '../components/navigation/lower navbar/LowerNav';
 import { Outlet } from 'react-router-dom';
+import { useLoading } from '../hooks/useLoading';
+import Loader from '../components/special/Loader';
+
 
 function RootLayout() {
+
+    const isLoading = useLoading();
+    console.log(isLoading);
 
     return (
         <>
             <HeaderKeeper />
             <Header />
-            <main>
-                <LowerNav />
-                <Outlet />
+            <LowerNav />
+            <main style={isLoading ? { height: "30vh", background: "#90cde3" } : { height: "unset", background: "unset" }}>
+                {isLoading ? <Loader /> : <Outlet />}
             </main>
             <Aside />
             <Footer />
