@@ -3,6 +3,7 @@ import ShoppingCartPage from './pages/ShoppingCart';
 import StorePage, { storeByTypeLoader, storeLoader } from './pages/Store';
 import DetailPage, { detailLoader } from './pages/Detail';
 import RootLayout from './pages/Root';
+import SearchPage, { searchLoader } from './pages/Search';
 
 import './App.css';
 
@@ -25,7 +26,8 @@ function App() {
         { path: 'fish', element: <StorePage />, loader: () => { return storeByTypeLoader('fish') } },
         { path: 'invertebrate', element: <StorePage />, loader: () => { return storeByTypeLoader('invertebrate') } },
         { path: ':storeName/:itemId', element: <DetailPage />, loader: detailLoader },
-        { path: 'cart', element: <ShoppingCartPage /> }
+        { path: 'cart', element: <ShoppingCartPage /> },
+        { path: 'search/:searchQuery', element: <SearchPage />, loader: searchLoader }
       ]
     }
   ]);

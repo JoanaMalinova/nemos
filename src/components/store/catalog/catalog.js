@@ -3,6 +3,7 @@ import Card from "../card/Card";
 import { useLoaderData } from "react-router-dom";
 import Pagination from "./pagination/Pagination";
 import { useEffect, useMemo, useState } from "react";
+import NoMatchesFound from "./no matches found/NoMatchesFound";
 
 
 function Catalog() {
@@ -24,18 +25,23 @@ function Catalog() {
         return items.slice(firstPageIndex, lastPageIndex);
     }, [currPage]);
 
+    const catalog = <section className={classes["store-main"]}>
+        <p>Showing {`${firstItemIndex} - ${lastItemIndex}`} of {items.length} products</p>
+        <ul className={classes["inner-store"]}>
+            {currentItems.map(item => <Card item={item} key={item.id} />)}
+        </ul>
+        <Pagination
+            currPage={currPage}
+            totalCount={items.length}
+            setcurrPage={setcurrPage}
+        />
+    </section>;
+
+    const noMatches = <NoMatchesFound />;
+
     return (
-        <section className={classes["store-main"]}>
-            <p>Showing {`${firstItemIndex} - ${lastItemIndex}`} of {items.length} products</p>
-            <ul className={classes["inner-store"]}>
-                {currentItems.map(item => <Card item={item} key={item.id} />)}
-            </ul>
-            <Pagination
-                currPage={currPage}
-                totalCount={items.length}
-                setcurrPage={setcurrPage}
-            />
-        </section>)
+        items.length ? catalog : noMatches
+    )
 }
 
 export default Catalog;
