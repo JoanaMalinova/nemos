@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "firebase": "^10.4.0",
     "flickity": "^2.3.0",
+    "fuse.js": "^6.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-flickity-component": "^4.0.6",

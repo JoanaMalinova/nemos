@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./UpperNav.module.css";
+import Search from "./search/Search";
 
 
 function UpperNav({ scrollPosition }) {
@@ -16,10 +17,7 @@ function UpperNav({ scrollPosition }) {
             <div className="logo" onClick={onLogoClick}>
                 <p style={{ "fontSize": scrolledDown ? "3rem" : "8rem" }}>NEMO's</p>
             </div>
-            <form method="POST">
-                <label htmlFor="search"><i className="fa-solid fa-magnifying-glass fa-xl"></i></label>
-                <input type="text" name="search" id="search" />
-            </form>
+            <Search />
             <div>
                 <ul className={styles["user-div"]}>
                     <li>
