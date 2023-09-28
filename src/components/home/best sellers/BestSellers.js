@@ -11,10 +11,6 @@ function BestSellers() {
         navigate("/store");
     }
 
-    // const scrollToTop = () => {
-    //     window.scrollTo(0, 0)
-    // }
-
     return (
         <section id="best-sellers" className={styles["best-sellers"]}>
             <div className={styles["best-sellers-heading-wrapper"]}>

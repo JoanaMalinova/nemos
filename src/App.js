@@ -4,11 +4,12 @@ import StorePage, { storeByTypeLoader, storeLoader } from './pages/Store';
 import DetailPage, { detailLoader } from './pages/Detail';
 import RootLayout from './pages/Root';
 import SearchPage, { searchLoader } from './pages/Search';
+import ErrorPage from './pages/Error';
+import NoMatchesFound, { noMatchesLoader } from './pages/NoMatchesFound';
 
 import './App.css';
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import ErrorPage from './pages/Error';
 
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
         { path: 'invertebrate', element: <StorePage />, loader: () => { return storeByTypeLoader('invertebrate') } },
         { path: ':storeName/:itemId', element: <DetailPage />, loader: detailLoader },
         { path: 'cart', element: <ShoppingCartPage /> },
-        { path: 'search/:searchQuery', element: <SearchPage />, loader: searchLoader }
+        { path: 'search/:searchQuery', element: <SearchPage />, loader: searchLoader },
+        { path: 'search/:searchQuery/no-matches', element: <NoMatchesFound />, loader: noMatchesLoader }
       ]
     }
   ]);

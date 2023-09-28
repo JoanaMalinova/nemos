@@ -6,9 +6,8 @@ function BestSellerCard({ item }) {
     const navigate = useNavigate()
 
     const onCardClick = () => {
-        navigate(`/${item.type}/${item.id}`)
+        navigate(`/${item.type}/${item.id}`);
     }
-
 
     return (
         <div

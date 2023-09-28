@@ -1,17 +1,27 @@
 import Catalog from "../components/store/catalog/Catalog";
 import Fuse from "fuse.js";
 import { getAllItems } from "../services/stroreService";
+import { Navigate, useLoaderData, useParams } from "react-router-dom";
 
 function SearchPage() {
 
+    const items = useLoaderData();
+    const { searchQuery } = useParams()
+
     return (
-        <Catalog />
+        <>
+            {items === "No matches found!" ?
+                <Navigate to={`/search/${searchQuery}/no-matches`} replace="true" /> :
+                <Catalog />
+            }
+        </>
     )
 }
 
 export default SearchPage;
 
 export const searchLoader = async ({ params }) => {
+
     const searchQuery = params.searchQuery;
 
     const allItems = await getAllItems();
@@ -23,6 +33,12 @@ export const searchLoader = async ({ params }) => {
     };
 
     const fuse = new Fuse(allItems, fuseOptions);
-    const result = fuse.search(params.searchQuery).map(curr => curr.item);
+
+    let result = fuse.search(params.searchQuery).map(curr => curr.item);
+
+    if (!result.length) {
+        result = "No matches found!";
+    }
+
     return result;
 }

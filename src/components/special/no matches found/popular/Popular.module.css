@@ -1,0 +1,17 @@
+.popular-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 400px 400px;
+    width: 100%;
+    min-height: 100vh;
+    padding: 5vh 10vw 15vh;
+    gap: 50px;
+    background-color: #90cde3;
+    color: white;
+    font-size: 1.3rem;
+
+}
+
+.popular-wrapper p:nth-child(2) {
+    font-size: 1.5rem;
+}

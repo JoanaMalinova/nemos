@@ -1,0 +1,24 @@
+.heading-wrapper {
+    background-color: #90cde3;
+    padding: 7vh;
+    color: blueviolet;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.heading-wrapper h1 {
+    font-weight: 400;
+}
+
+.heading-wrapper hr {
+    border: none;
+    color: white;
+    height: 2px;
+    margin: 7vh auto 0;
+    width: 70%;
+}
+
+.heading-wrapper span {
+    font-style: italic;
+}
