@@ -27,7 +27,7 @@ function Catalog() {
 
     return (
         <section className={classes["store-main"]}>
-            <p>Showing {`${firstItemIndex} - ${lastItemIndex}`} of {items.length} products</p>
+            <p>Showing {`${firstItemIndex} - ${currentItems.length < lastItemIndex ? currentItems.length : lastItemIndex}`} of {items.length} products</p>
             <ul className={classes["inner-store"]}>
                 {currentItems.map(item => <Card item={item} key={item.id} />)}
             </ul>
