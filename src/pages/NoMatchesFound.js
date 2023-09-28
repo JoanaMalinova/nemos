@@ -1,12 +1,12 @@
 import { getBestSellers } from "../services/homeService";
 import Popular from "../components/special/no matches found/popular/Popular";
-import NoMatchesHeading from "../components/special/no matches found/no matches heading/NoMatchesHeading";
+import SearchHeading from "../components/search/SearchHeading";
 
 function NoMatchesFound() {
 
     return (
         <>
-            <NoMatchesHeading />
+            <SearchHeading />
             <Popular />
         </>
     )

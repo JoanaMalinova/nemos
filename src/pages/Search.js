@@ -2,6 +2,7 @@ import Catalog from "../components/store/catalog/Catalog";
 import Fuse from "fuse.js";
 import { getAllItems } from "../services/stroreService";
 import { Navigate, useLoaderData, useParams } from "react-router-dom";
+import SearchHeading from "../components/search/SearchHeading";
 
 function SearchPage() {
 
@@ -12,7 +13,10 @@ function SearchPage() {
         <>
             {items === "No matches found!" ?
                 <Navigate to={`/search/${searchQuery}/no-matches`} replace="true" /> :
-                <Catalog />
+                <>
+                    <SearchHeading length={items.length} />
+                    <Catalog />
+                </>
             }
         </>
     )
