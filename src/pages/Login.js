@@ -12,3 +12,13 @@ function LoginPage() {
 }
 
 export default LoginPage;
+
+export const loginAction = async ({ request }) => {
+
+    const data = await request.formData();
+
+    const loginData = {
+        email: data.get("email"),
+        password: data.get("password")
+    }
+}

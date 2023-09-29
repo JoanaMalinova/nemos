@@ -8,8 +8,8 @@ import RootLayout from './pages/Root';
 import SearchPage, { searchLoader } from './pages/Search';
 import ErrorPage from './pages/Error';
 import NoMatchesFound, { noMatchesLoader } from './pages/NoMatchesFound';
-import LoginPage from './pages/Login';
-import RegisterPage from './pages/Register';
+import LoginPage, { loginAction } from './pages/Login';
+import RegisterPage, { registerAction } from './pages/Register';
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import EmailResetPage from './pages/EmailReset';
@@ -67,8 +67,8 @@ function App() {
         { path: 'cart', element: <ShoppingCartPage /> },
         { path: 'search/:searchQuery', element: <SearchPage />, loader: searchLoader },
         { path: 'search/:searchQuery/no-matches', element: <NoMatchesFound />, loader: noMatchesLoader },
-        { path: 'login', element: <LoginPage /> },
-        { path: '/register', element: <RegisterPage /> },
+        { path: 'login', element: <LoginPage />, action: loginAction },
+        { path: '/register', element: <RegisterPage />, action: registerAction },
         { path: '/reset-email', element: <EmailResetPage /> }
       ]
     }

@@ -1,5 +1,6 @@
 import classes from "../login form/LoginForm.module.css";
-import { Link } from "react-router-dom";
+import { Link, Form } from "react-router-dom";
+
 
 function RegisterForm() {
 
@@ -7,7 +8,7 @@ function RegisterForm() {
         <div className={classes["form-wrapper"]} >
             <h1>Create my account</h1>
             <h4>Please fill in the information below:</h4>
-            <form>
+            <Form method="POST">
                 <div className={classes["input-wrapper"]}>
                     <label htmlFor="first-name">First name</label>
                     <input type="text" id="first-name" name="first-name" />
@@ -30,7 +31,7 @@ function RegisterForm() {
                 </div>
                 <button type="submit">Sign up</button>
                 <p>Returning Customer? <Link to="/login">Sign in</Link></p>
-            </form>
+            </Form>
         </div >
     )
 }
