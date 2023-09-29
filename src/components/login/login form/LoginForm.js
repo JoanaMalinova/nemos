@@ -10,7 +10,7 @@ function LoginForm() {
             <form>
                 <div className={classes["input-wrapper"]}>
                     <label htmlFor="email">Email</label>
-                    <input type="text" id="email" name="id" />
+                    <input type="text" id="email" name="email" />
                 </div>
                 <div className={classes["input-wrapper"]}>
                     <label htmlFor="password">Password</label>

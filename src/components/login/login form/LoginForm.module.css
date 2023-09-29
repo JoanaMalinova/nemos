@@ -16,8 +16,8 @@
 .form-wrapper form {
     display: flex;
     flex-direction: column;
-    margin: 4vh auto 10vh;
-    gap: 20px;
+    margin: 2vh auto 10vh;
+    gap: 15px;
     width: 30vw;
 }
 
@@ -29,6 +29,14 @@
 
 .form-wrapper label {
     font-size: 1.2rem;
+}
+
+.form-wrapper div:nth-of-type(5) label {
+    margin-left: 10px;
+}
+
+.form-wrapper div:nth-of-type(5) label:hover {
+    cursor: pointer;
 }
 
 .form-wrapper input {
@@ -58,6 +66,7 @@
 }
 
 .form-wrapper button {
+    margin: 15px;
     align-self: center;
     color: white;
     background-color: blueviolet;
