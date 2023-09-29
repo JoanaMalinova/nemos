@@ -2,7 +2,7 @@ import classes from "./Pagination.module.css";
 
 function Pagination({ currPage, setcurrPage, totalCount }) {
 
-    const pageRange = totalCount / 12;
+    const pageRange = Math.ceil(totalCount / 12);
 
     const pageArr = [];
 
