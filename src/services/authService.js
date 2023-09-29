@@ -9,9 +9,9 @@ import {
 } from "firebase/auth";
 
 const db = getFirestore(firebaseApp);
-const auth = getAuth(app);
+const auth = getAuth(firebaseApp);
 
-export const SignUp = async () => {
+export const signUp = async (email, password, username) => {
 
     try {
         const userCredential = await createUserWithEmailAndPassword(
@@ -37,7 +37,7 @@ export const SignUp = async () => {
     }
 }
 
-export const SignIn = async () => {
+export const signIn = async (email, password) => {
     try {
         const userCredential = await signInWithEmailAndPassword(
             auth,
@@ -47,6 +47,7 @@ export const SignIn = async () => {
         const user = userCredential.user;
 
         return user;
+
     } catch (error) {
 
         return { error: error.message }
