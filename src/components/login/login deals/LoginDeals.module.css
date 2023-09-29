@@ -1,0 +1,30 @@
+.login-deals-wrapper {
+    background-color: #90cde3;
+    display: flex;
+    color: blueviolet;
+    width: 100%;
+    padding-bottom: 10vh;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Motserrat, sans-serif;
+}
+
+.login-deals-wrapper>* {
+    width: 25%;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+    min-height: 18vh;
+
+    >i {
+        font-size: 4rem;
+        color: #90cde3;
+    }
+}
+
+.login-deals-wrapper .text-wrapper {
+    text-align: center
+}

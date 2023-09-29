@@ -1,0 +1,75 @@
+.form-wrapper {
+    background-color: #90cde3;
+    color: white;
+    min-height: 30vh;
+    padding: 5vh 0 3vh;
+    font-family: "Montserrat", sans-serif;
+}
+
+.form-wrapper h1,
+.form-wrapper h4 {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.form-wrapper form {
+    display: flex;
+    flex-direction: column;
+    margin: 4vh auto 10vh;
+    gap: 20px;
+    width: 30vw;
+}
+
+.form-wrapper .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-wrapper label {
+    font-size: 1.2rem;
+}
+
+.form-wrapper input {
+    border-radius: 6px;
+    padding: 11px 10px;
+    font-size: 16px;
+    border: 1px solid rgba(137, 43, 226, 0.619);
+    transition: all 0.2s ease-out;
+}
+
+.form-wrapper p {
+    text-align: center;
+}
+
+.form-wrapper p a {
+    color: blueviolet;
+    text-decoration: underline;
+    transition: all 0.4s ease-out;
+}
+
+.form-wrapper p a:hover {
+    color: white;
+}
+
+.form-wrapper input:focus {
+    outline: 1px solid blueviolet;
+}
+
+.form-wrapper button {
+    align-self: center;
+    color: white;
+    background-color: blueviolet;
+    border-radius: 6px;
+    border: 1px solid blueviolet;
+    padding: 10px 80px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-out;
+}
+
+.form-wrapper button:hover {
+    cursor: pointer;
+    color: blueviolet;
+    background-color: white;
+}
