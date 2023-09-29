@@ -16,11 +16,12 @@ function LoginForm() {
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" name="password" />
                 </div>
-                <p><a href="#">Forgot your password?</a></p>
+                <p><a href="/reset-email">Forgot your password?</a></p>
                 <button type="submit">Login</button>
                 <p>New customer? <Link to="/register">Create an account</Link></p>
             </form>
         </div>
+
     )
 }
 

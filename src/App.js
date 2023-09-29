@@ -12,6 +12,7 @@ import LoginPage from './pages/Login';
 import RegisterPage from './pages/Register';
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import EmailResetPage from './pages/EmailReset';
 
 function App() {
 
@@ -67,7 +68,8 @@ function App() {
         { path: 'search/:searchQuery', element: <SearchPage />, loader: searchLoader },
         { path: 'search/:searchQuery/no-matches', element: <NoMatchesFound />, loader: noMatchesLoader },
         { path: 'login', element: <LoginPage /> },
-        { path: '/register', element: <RegisterPage /> }
+        { path: '/register', element: <RegisterPage /> },
+        { path: '/reset-email', element: <EmailResetPage /> }
       ]
     }
   ]);
