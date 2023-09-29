@@ -6,7 +6,7 @@ import { useLocation, json } from "react-router-dom";
 function StorePage() {
 
     const { pathname } = useLocation();
-    const type = pathname.substring(1);
+    let type = pathname.split("/")[1];
 
     return (
         < Store currLink={storeInfo[type].name} imageUrl={storeInfo[type].imageUrl} />

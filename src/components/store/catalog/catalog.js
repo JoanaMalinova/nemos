@@ -1,40 +1,41 @@
 import classes from "./Catalog.module.css";
 import Card from "../card/Card";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import Pagination from "./pagination/Pagination";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 function Catalog() {
 
+    const { pageNumber } = useParams();
     const items = useLoaderData();
-    const [currPage, setcurrPage] = useState(1);
+    const [currPage, setCurrPage] = useState(1);
     const [firstItemIndex, setFirstItemIndex] = useState("");
     const [lastItemIndex, setLastItemIndex] = useState("");
-
+    const [currentItems, setCurrentItems] = useState([]);
 
     useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [currPage])
+        if (pageNumber) {
+            setCurrPage(Number(pageNumber));
 
-    const currentItems = useMemo(() => {
+        }
         const firstPageIndex = (currPage - 1) * 12;
         setFirstItemIndex(firstPageIndex + 1);
         const lastPageIndex = firstPageIndex + 12;
         setLastItemIndex(lastPageIndex);
-        return items.slice(firstPageIndex, lastPageIndex);
+        setCurrentItems(items.slice(firstPageIndex, lastPageIndex));
     }, [currPage]);
 
 
     return (
         <section className={classes["store-main"]}>
-            <p>Showing {`${firstItemIndex} - ${currentItems.length < lastItemIndex ? currentItems.length : lastItemIndex}`} of {items.length} products</p>
+            <p>Showing {`${firstItemIndex} - ${currentItems.length < 12 ? currentItems.length : lastItemIndex}`} of {items.length} products</p>
             <ul className={classes["inner-store"]}>
                 {currentItems.map(item => <Card item={item} key={item.id} />)}
             </ul>
             <Pagination
                 currPage={currPage}
                 totalCount={items.length}
-                setcurrPage={setcurrPage}
+                setCurrPage={setCurrPage}
             />
         </section>
     )

@@ -21,11 +21,46 @@ function App() {
       errorElement: <ErrorPage />,
       children: [
         { index: true, element: <HomePage />, loader: homeLoader },
-        { path: 'store', element: <StorePage />, loader: storeLoader },
-        { path: 'coral', element: <StorePage />, loader: () => { return storeByTypeLoader('coral') } },
-        { path: 'decoration', element: < StorePage />, loader: () => { return storeByTypeLoader('decoration') } },
-        { path: 'fish', element: <StorePage />, loader: () => { return storeByTypeLoader('fish') } },
-        { path: 'invertebrate', element: <StorePage />, loader: () => { return storeByTypeLoader('invertebrate') } },
+        {
+          path: 'store',
+          element: <StorePage />,
+          loader: storeLoader,
+          children: [
+            { path: 'page/:pageNumber', element: <StorePage /> }
+          ]
+        },
+        {
+          path: 'coral',
+          element: <StorePage />,
+          loader: () => { return storeByTypeLoader('coral') },
+          children: [
+            { path: 'page/:pageNumber', element: <StorePage /> }
+          ]
+        },
+        {
+          path: 'decoration',
+          element: < StorePage />,
+          loader: () => { return storeByTypeLoader('decoration') },
+          children: [
+            { path: 'page/:pageNumber', element: <StorePage /> }
+          ]
+        },
+        {
+          path: 'fish',
+          element: <StorePage />,
+          loader: () => { return storeByTypeLoader('fish') },
+          children: [
+            { path: 'page/:pageNumber', element: <StorePage /> }
+          ]
+        },
+        {
+          path: 'invertebrate',
+          element: <StorePage />,
+          loader: () => { return storeByTypeLoader('invertebrate') },
+          children: [
+            { path: 'page/:pageNumber', element: <StorePage /> }
+          ]
+        },
         { path: ':storeName/:itemId', element: <DetailPage />, loader: detailLoader },
         { path: 'cart', element: <ShoppingCartPage /> },
         { path: 'search/:searchQuery', element: <SearchPage />, loader: searchLoader },

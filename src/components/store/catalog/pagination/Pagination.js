@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import classes from "./Pagination.module.css";
 
-function Pagination({ currPage, setcurrPage, totalCount }) {
+function Pagination({ currPage, totalCount, setCurrPage }) {
+
+    const navigate = useNavigate();
 
     const pageRange = Math.ceil(totalCount / 12);
 
@@ -11,11 +14,14 @@ function Pagination({ currPage, setcurrPage, totalCount }) {
     }
 
     const onNext = () => {
-        setcurrPage(currPage + 1);
+        setCurrPage(currPage + 1);
+        navigate(`page/${currPage + 1}`);
+
     };
 
     const onPrevious = () => {
-        setcurrPage(currPage - 1);
+        setCurrPage(currPage - 1);
+        navigate(`page/${currPage - 1}`);
     };
 
     let lastPage = pageArr[pageArr.length - 1];
@@ -29,7 +35,7 @@ function Pagination({ currPage, setcurrPage, totalCount }) {
                 <li key={pageNumber} >
                     <button
                         className={`${classes.pagination} ${currPage === pageNumber ? classes.active : ""}`}
-                        onClick={() => setcurrPage(pageNumber)}
+                        onClick={() => { setCurrPage(`page/${pageNumber}`); navigate(`page/${pageNumber}`) }}
                         disabled={pageNumber === currPage}
                     >
                         {pageNumber}
