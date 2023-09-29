@@ -1,3 +1,5 @@
+import './App.css';
+
 import HomePage, { homeLoader } from './pages/Home';
 import ShoppingCartPage from './pages/ShoppingCart';
 import StorePage, { storeByTypeLoader, storeLoader } from './pages/Store';
@@ -6,11 +8,10 @@ import RootLayout from './pages/Root';
 import SearchPage, { searchLoader } from './pages/Search';
 import ErrorPage from './pages/Error';
 import NoMatchesFound, { noMatchesLoader } from './pages/NoMatchesFound';
-
-import './App.css';
+import LoginPage from './pages/Login';
+import RegisterPage from './pages/Register';
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-
 
 function App() {
 
@@ -64,7 +65,9 @@ function App() {
         { path: ':storeName/:itemId', element: <DetailPage />, loader: detailLoader },
         { path: 'cart', element: <ShoppingCartPage /> },
         { path: 'search/:searchQuery', element: <SearchPage />, loader: searchLoader },
-        { path: 'search/:searchQuery/no-matches', element: <NoMatchesFound />, loader: noMatchesLoader }
+        { path: 'search/:searchQuery/no-matches', element: <NoMatchesFound />, loader: noMatchesLoader },
+        { path: 'login', element: <LoginPage /> },
+        { path: '/register', element: <RegisterPage /> }
       ]
     }
   ]);

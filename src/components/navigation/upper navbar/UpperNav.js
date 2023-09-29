@@ -21,12 +21,12 @@ function UpperNav({ scrollPosition }) {
             <div>
                 <ul className={styles["user-div"]}>
                     <li>
-                        {scrolledDown ? <Link to="/login" style={{ height: "unset" }}><i className="fa-solid fa-user fa-xl"></i></Link> :
-                            <Link to="/login" style={{ height: "10vw" }} ><i className="fa-solid fa-user fa-2xl"></i></Link>}
+                        {scrolledDown ? <Link to="/login" style={{ height: "unset" }}><i className="fa-solid fa-user fa-lg"></i></Link> :
+                            <Link to="/login" style={{ height: "10vw" }} ><i className="fa-solid fa-user fa-xl"></i></Link>}
                     </li>
                     <li>
-                        {scrolledDown ? <Link to="/cart" style={{ height: "unset" }} ><i className="fa-solid fa-cart-shopping fa-xl"></i></Link> :
-                            <Link to="/cart" style={{ height: "10vw" }} ><i className="fa-solid fa-cart-shopping fa-2xl"></i></Link>}
+                        {scrolledDown ? <Link to="/cart" style={{ height: "unset" }} ><i className="fa-solid fa-cart-shopping fa-lg"></i></Link> :
+                            <Link to="/cart" style={{ height: "10vw" }} ><i className="fa-solid fa-cart-shopping fa-xl"></i></Link>}
                     </li>
                 </ul>
             </div>
