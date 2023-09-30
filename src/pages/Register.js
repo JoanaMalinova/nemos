@@ -1,4 +1,4 @@
-import { json } from "react-router-dom";
+import { json, redirect } from "react-router-dom";
 import LoginDeals from "../components/login/login deals/LoginDeals";
 import RegisterForm from "../components/login/register form/RegisterForm";
 import { signUp } from "../services/authService";
@@ -28,5 +28,5 @@ export const registerAction = async ({ request }) => {
 
         throw json({ message: user.error }, { status: 401 });
     }
-
+    return redirect('/store');
 }

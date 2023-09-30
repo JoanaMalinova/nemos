@@ -9,14 +9,15 @@
     background-color: #272034;
     border: 1px solid rgba(118, 69, 216, 1);
     border-radius: 4px;
-    font-size: 20px;
+    font-family: Montserrat, sans-serif;
+    text-indent: 10px;
+    transition: all 0.3s ease-in;
 }
 
 .search-form input:focus {
-    outline: none;
-    -webkit-box-shadow: inset 2px -1px 14px -4px rgba(118, 69, 216, 1);
-    -moz-box-shadow: inset 2px -1px 14px -4px rgba(118, 69, 216, 1);
-    box-shadow: inset 2px -1px 14px -4px rgba(118, 69, 216, 1);
+    outline: 1px solid blueviolet;
+    background-color: white;
+    color: #7645d8;
 }
 
 .search-form .search-btn {

@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import styles from "./UpperNav.module.css";
 import Search from "./search/Search";
 
@@ -21,12 +21,12 @@ function UpperNav({ scrollPosition }) {
             <div>
                 <ul className={styles["user-div"]}>
                     <li>
-                        {scrolledDown ? <Link to="/login" style={{ height: "unset" }}><i className="fa-solid fa-user fa-lg"></i></Link> :
-                            <Link to="/login" style={{ height: "10vw" }} ><i className="fa-solid fa-user fa-xl"></i></Link>}
+                        {scrolledDown ? <NavLink to="/login" className={({ isActive }) => isActive ? `${styles.active} ${styles.smaller}` : styles.smaller}><i className="fa-solid fa-user fa-lg"></i></NavLink> :
+                            <NavLink to="/login" className={({ isActive }) => isActive ? styles.active : undefined} ><i className="fa-solid fa-user fa-xl"></i> <p>SignIn</p></NavLink>}
                     </li>
                     <li>
-                        {scrolledDown ? <Link to="/cart" style={{ height: "unset" }} ><i className="fa-solid fa-cart-shopping fa-lg"></i></Link> :
-                            <Link to="/cart" style={{ height: "10vw" }} ><i className="fa-solid fa-cart-shopping fa-xl"></i></Link>}
+                        {scrolledDown ? <NavLink to="/cart" className={({ isActive }) => isActive ? `${styles.active} ${styles.smaller}` : styles.smaller}><i className="fa-solid fa-cart-shopping fa-lg"></i></NavLink> :
+                            <NavLink to="/cart" className={({ isActive }) => isActive ? styles.active : undefined}><i className="fa-solid fa-cart-shopping fa-xl"></i> <p>Cart</p></NavLink>}
                     </li>
                 </ul>
             </div>
