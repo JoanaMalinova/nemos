@@ -12,6 +12,7 @@
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .lower-nav ul a {
@@ -41,9 +42,29 @@
 }
 
 .lower-nav img {
-    height: 80px;
+    height: 70px;
     width: auto;
 }
+
+.lower-nav ul li{
+    &:nth-of-type(3){
+        &>a{
+            &>img{
+                height: 85px;
+            }
+        }
+    }
+
+    &:nth-of-type(5){
+        &>a{
+            &>img{
+                height: 65px;
+            }
+        }
+    }
+    
+}
+
 
 .lower-nav span {
     position: absolute;

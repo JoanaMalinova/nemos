@@ -1,30 +1,17 @@
-.dropdown {
-    position: absolute;
-    top: 1vh;
-    left: 72vw;
+.dropdown {     
     transition: display 0.8s ease-in;
+    position: relative;
 }
 
-.dropdown-btn {
-    all: unset;
-    display: inline-block;
-    height: 80px;
-    width: 50px;
-    font-size: 1.6rem;
-    color: white;
-    transition: all 0.3s ease;
-}
-
-.dropdown-btn i {
-    transition: all 0.3s ease;
-
+.dropdown>a{
+    border-right: 1px solid white;
 }
 
 .dropdown-content {
     position: absolute;
     display: none;
-    left: -6vw;
-    top: 10vh;
+    left: -2vw;
+    top: 7vh;
     width: 15vw;
     padding: 16px 30px;
     gap: 5px;
@@ -37,14 +24,12 @@
     box-shadow: 1px 1px 15px rgba(0, 0, 0, .15);
 }
 
-.dropdown:hover {
-    .dropdown-btn {
-        cursor: pointer;
-        color: #7645d8;
+.dropdown:hover {   
 
-        >i {
-            text-shadow: -1px 1px 13px white;
-        }
+    >a{
+        color: #7645d8;
+        background-color: #272034;
+        border-radius: 3px;
     }
 
     .dropdown-content {
@@ -52,16 +37,21 @@
     }
 }
 
-.dropdown-content a {
+.dropdown .dropdown-content .dropdown-link {
     color: white;
     display: block;
     width: 100%;
     transition: color 0.2s ease-in;
     line-height: 1.8;
+    font-size: 1.1rem;
+    padding: unset;
+    height: unset;
+    text-align: left;   
 }
 
-.dropdown-content a:hover {
+.dropdown .dropdown-content .dropdown-link:hover {
     color: #7645d8;
+    background-color: unset;
 }
 
 .dropdown-content hr {
@@ -70,4 +60,10 @@
 
     height: 1.1px;
     background-color: white;
+}
+
+.dropdown .store-link.active{
+    color: #7645d8;
+    background-color: white;
+    border-radius: 3px;
 }

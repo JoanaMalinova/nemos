@@ -1,5 +1,4 @@
 import UpperNav from "../navigation/upper navbar/UpperNav";
-import DropdownNav from "../navigation/dropdown navbar/DropdownNav";
 import styles from "./Header.module.css";
 import { useEffect, useState } from 'react';
 import { useLocation } from "react-router-dom";
@@ -26,8 +25,7 @@ function Header() {
 
     return (
         <header>
-            <UpperNav scrollPosition={scrollPosition} />
-            <DropdownNav scrollPosition={scrollPosition} />
+            <UpperNav scrollPosition={scrollPosition} />          
         </header>
     )
 }

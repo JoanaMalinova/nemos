@@ -9,7 +9,7 @@
 }
 
 .content {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #fff;
     display: flex;
     align-items: center;
@@ -28,7 +28,7 @@
 }
 
 .card:hover {
-    flex: 1 1 400px;
+    flex: 1 1 380px;
     box-shadow: 1px 3px 15px #7645d8;
     transform: translatey(-50px);
 }

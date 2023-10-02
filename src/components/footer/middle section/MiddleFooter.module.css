@@ -1,7 +1,6 @@
 footer .middle-footer {
     display: flex;
     gap: 5vw;
-    /* font-size: 1.1rem; */
     align-items: flex-start;
 }
 

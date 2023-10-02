@@ -3,6 +3,7 @@ import Card from "../card/Card";
 import { useLoaderData, useParams } from "react-router-dom";
 import Pagination from "./pagination/Pagination";
 import { useEffect, useState } from "react";
+import { useFirstRender } from "../../../hooks/useFirstRender";
 
 function Catalog() {
 
@@ -12,17 +13,24 @@ function Catalog() {
     const [firstItemIndex, setFirstItemIndex] = useState("");
     const [lastItemIndex, setLastItemIndex] = useState("");
     const [currentItems, setCurrentItems] = useState([]);
+    const isFirstRender = useFirstRender()
 
-    useEffect(() => {
+    useEffect(() => {       
+
+        if (!isFirstRender) {
+            window.scroll(0, 600);
+        }
+
         if (pageNumber) {
             setCurrPage(Number(pageNumber));
-
         }
+
         const firstPageIndex = (currPage - 1) * 12;
         setFirstItemIndex(firstPageIndex + 1);
         const lastPageIndex = firstPageIndex + 12;
         setLastItemIndex(lastPageIndex);
         setCurrentItems(items.slice(firstPageIndex, lastPageIndex));
+
     }, [currPage]);
 
 

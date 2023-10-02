@@ -14,14 +14,13 @@ function Pagination({ currPage, totalCount, setCurrPage }) {
     }
 
     const onNext = () => {
-        setCurrPage(currPage + 1);
-        navigate(`page/${currPage + 1}`);
-
+        setCurrPage(currPage + 1);     
+        navigate(`page/${currPage + 1}`);      
     };
 
     const onPrevious = () => {
-        setCurrPage(currPage - 1);
-        navigate(`page/${currPage - 1}`);
+        setCurrPage(currPage - 1);       
+        navigate(`page/${currPage - 1}`);       
     };
 
     let lastPage = pageArr[pageArr.length - 1];

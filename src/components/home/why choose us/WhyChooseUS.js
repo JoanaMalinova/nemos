@@ -1,6 +1,6 @@
 import styles from "./WhyChooseUs.module.css";
 
-function WhyChooseUS() {
+function  WhyChooseUs(){
 
     return (
         <section className={styles["why-choose-us"]}>
@@ -25,4 +25,4 @@ function WhyChooseUS() {
     )
 }
 
-export default WhyChooseUS;
+export default WhyChooseUs;
