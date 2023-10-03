@@ -35,3 +35,59 @@
     font-size: 1.5rem;
     border: 2px solid rgba(118, 69, 216, 1);
 }
+
+@keyframes shake {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(30deg);
+    }
+
+    20% {
+        transform: rotate(0deg) ;
+    }
+
+    30% {
+        transform: rotate(-30deg) scale(1.2);
+    }
+
+    40% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(30deg);
+    }
+
+    60% {
+        transform: rotate(0deg) scale(1.4);
+    }
+
+    70% {
+        transform: rotate(-30deg);
+    }
+
+    80% {
+        transform: rotate(0deg);
+    }
+
+    90% {
+        transform: rotate(30deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+
+}
+
+.info-wrapper button:hover {
+    >i {
+        animation-name: shake;
+        animation-duration: 0.5s;
+    }
+
+}
