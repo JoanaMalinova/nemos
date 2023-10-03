@@ -1,0 +1,54 @@
+.header-wrapper {
+    background-color: #90cde3;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    padding:5vw;
+    color: white;
+    font-family: Montserrat, sans-serif;
+}
+
+.header-wrapper h1 {
+    text-align: center;
+
+    >a {
+        margin-right: 20px;
+        color: #7645d88e;
+
+        >span {
+            margin-left: 20px;
+            color: white;
+        }
+    }
+}
+
+.stage {
+    display: inline-flex;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    background-color: #7645d88e;
+}
+
+
+.header-wrapper .active {
+    color: #551a8b;
+
+    >span {
+        background-color: blueviolet;
+    }
+}
+
+.free-shipping{
+    border-radius: 4px;
+    background-color: blueviolet;
+    font-weight: 600;
+    font-size:1.2rem;
+    padding: 4px;
+    text-align: center;
+    width:80vw;
+    margin: 0 auto;
+}

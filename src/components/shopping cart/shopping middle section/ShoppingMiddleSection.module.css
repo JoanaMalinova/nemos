@@ -1,0 +1,34 @@
+.middle-section{
+    display: flex;
+    background-color: #90cde3;
+    color: white;
+    font-family: Montserrat, sans-serif;  
+    /* gap: 50px;   */
+    padding: 20px 50px 30px;
+}
+
+.middle-section table{
+    border-collapse: collapse;   
+}
+
+.middle-section thead{
+    border-bottom: 2px solid white;
+}
+
+.middle-section table{
+    width: 100%;
+}
+
+.middle-section th{
+    text-align: left; 
+    text-transform: uppercase;   
+}
+
+.middle-section  td{
+    text-align: left;
+    padding: 16px 0    
+}
+
+.middle-section tr{
+    border-bottom: 1px solid white;
+}
