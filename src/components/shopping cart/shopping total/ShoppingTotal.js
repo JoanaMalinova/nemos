@@ -22,7 +22,6 @@ function ShoppingTotal() {
                             <button></button>
                        </form>
                     </tr>
-                    
                 </tbody>
             </table>
         </div >

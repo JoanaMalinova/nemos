@@ -5,7 +5,7 @@
 .additional-info ul {
     display: flex;
     gap: 5px;
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
 }
 
 .additional-info li span {
@@ -30,7 +30,7 @@
     border: 1px solid white;
     color: white;
     padding: 20px 40px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .additional-info .active {
@@ -48,7 +48,7 @@
     gap: 10px;
     flex-direction: column;
     padding: 20px 40px;
-    font-size: 1.2rem;
+    /* font-size: 1.1rem; */
     width: 40%;
 }
 

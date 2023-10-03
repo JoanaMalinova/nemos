@@ -55,9 +55,8 @@
 
 .lower-nav ul a:hover {
     >img {
-        transform: scale(1.2);
         animation-name: shake;
-       animation-duration: 0.4s
+        animation-duration: 0.4s
     }
 
     >span {
@@ -106,4 +105,9 @@
         font-size: larger;
         color: #90cde3;
     }
+}
+
+.lower-nav .active:hover img {
+    animation: none;
+
 }
