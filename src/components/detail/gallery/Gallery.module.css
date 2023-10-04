@@ -5,8 +5,6 @@
     max-height: 80vh;
     position: sticky;
     top: 100px;
-    bottom: 0;
-
 }
 
 .gallery-wrapper img:hover {

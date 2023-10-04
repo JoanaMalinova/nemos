@@ -1,0 +1,97 @@
+.first-column {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.first-column p{
+    transition: all 0.3s ease-out;
+}
+
+.first-column p:hover{
+    cursor: pointer;
+    color: blueviolet;
+}
+
+.img-wrapper {
+    width: 150px;
+    height: 150px;
+}
+
+.img-wrapper img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-wrapper img:hover{
+    cursor: pointer;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.table-row .btn-wrapper button, 
+.table-row .trash-btn{
+    all:unset;  
+}
+
+.table-row .trash-btn{
+    margin-left: 30px;
+    transition: all 0.3s ease-out;
+}
+
+.table-row .trash-btn:hover{
+    background: none;
+}
+
+.btn-wrapper {
+    border: 2px solid blueviolet;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 120px;
+    height: 40px;
+}
+
+.table-row .btn-wrapper button {
+    border: none;
+    height: 100%;
+    width: 40px;
+    background-color: blueviolet;
+    color: white;
+    transition: all 0.3s ease-out;
+    text-align: center;
+
+    &:nth-of-type(1) {
+        border-right: 2px solid blueviolet;
+    }
+
+    &:nth-of-type(2) {
+        border-left: 2px solid blueviolet;
+    }
+}
+
+.btn-wrapper button:hover {
+    background-color: white;
+    color: blueviolet;
+    cursor: pointer;
+}
+
+
+.btn-wrapper span {
+    display: inline-block;
+    width: 3vw;
+    text-align: center;
+}
+
+.subtotal-td{
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5px;
+}

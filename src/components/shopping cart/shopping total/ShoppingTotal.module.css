@@ -1,5 +1,45 @@
-.total-wrapper{
+.total-wrapper {
     width: 30vw;
     border-left: 1px solid white;
     padding: 0 30px;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.coupon-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  
+}
+
+.coupon-wrapper input {
+    border-radius: 6px;
+    padding: 11px 10px;
+    font-size: 16px;
+    border: 1px solid rgba(137, 43, 226, 0.619);
+    transition: all 0.2s ease-out;    
+    width: 100%;   
+}
+
+.coupon-wrapper input:focus {
+    outline: 1px solid blueviolet;
+}
+
+
+.total-wrapper button{
+    display: inline-block;
+    width: 100%;
+}
+
+.payment-methods{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    font-size: 2rem;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
 }

@@ -3,32 +3,8 @@
     padding-right: 30px;
 }
 
-.first-column {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.img-wrapper {
-    width: 150px;
-    height: 150px;
-}
-
-.img-wrapper img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.price {
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
 .table-wrapper button {
     display: block;
     margin: 50px auto;
-    border: none;
-    font-size: 1.1rem;
-    font-family: Montserrrat, sans-serif;
 }
+

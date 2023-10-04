@@ -5,6 +5,7 @@
     font-family: Montserrat, sans-serif;  
     /* gap: 50px;   */
     padding: 20px 50px 30px;
+    position: relative;
 }
 
 .middle-section table{
@@ -32,3 +33,21 @@
 .middle-section tr{
     border-bottom: 1px solid white;
 }
+
+.middle-section button{      
+    color: white;
+    background-color: blueviolet;
+    text-transform: none;
+    border-radius: 6px;
+    border: 1px solid blueviolet;
+    padding: 10px 80px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-out;
+}
+
+.middle-section button:hover {
+    cursor: pointer;
+    color: blueviolet;
+    background-color: white;
+}
+

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import classes from "./Detail.module.css";
 import Modal from "./modal/Modal";
-import { useLoaderData, useLocation } from "react-router-dom";
+import { useLoaderData} from "react-router-dom";
 import Gallery from "./gallery/Gallery";
 import InnerNav from "../navigation/inner nav/InnerNav";
 import DetailInfo from "./main detail info/DetailInfo";

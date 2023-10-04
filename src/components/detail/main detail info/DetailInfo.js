@@ -1,8 +1,16 @@
 import classes from "./DetailInfo.module.css";
 import MediaShare from "./media share/MediaShare";
 import Price from "./price section/Price";
+import { useState } from "react";
+
 
 function DetailInfo({ item }) {
+
+    const [quantity, setQuantity] = useState(1);
+
+    const onAddbtnClick = () => {
+
+    }
 
     return (
         <div className={classes["info-wrapper"]}>
@@ -10,8 +18,8 @@ function DetailInfo({ item }) {
                 <h1>{item.species || item.name}</h1>
                 <hr />
             </div>
-            <Price item={item} />
-            <button className="purple-btn">Add to cart <i className="fa-solid fa-cart-plus fa-sm"></i></button>
+            <Price item={item} setQuantity={setQuantity} quantity={quantity} />
+            <button className="purple-btn" onClick={onAddbtnClick}>Add to cart <i className="fa-solid fa-cart-plus fa-sm"></i></button>
             <div>
                 {item.species ? <h3>How to care for {item.species}</h3> : <h3>About {item.name}</h3>}
                 <hr />

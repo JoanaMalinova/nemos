@@ -26,7 +26,8 @@ export const signUp = async (email, password, username) => {
         await setDoc(doc(db, "users", user.uid), {
             userId: user.uid,
             email,
-            username
+            username,
+            cart:[]
         });
 
         return user;
