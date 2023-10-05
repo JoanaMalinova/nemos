@@ -10,6 +10,7 @@ export const addItemToCart = async (itemId, userId) => {
     const itemRef = doc(db, "store", itemId);
 
     if (userId) {
+        userId = 
         await updateDoc(itemRef, {
             inCarts: arrayUnion(userId)
         });

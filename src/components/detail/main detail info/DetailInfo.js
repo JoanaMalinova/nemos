@@ -1,15 +1,35 @@
 import classes from "./DetailInfo.module.css";
 import MediaShare from "./media share/MediaShare";
 import Price from "./price section/Price";
-import { useState } from "react";
+import {  useEffect, useState } from "react";
+import { useCookies } from "react-cookie";
 
 
 function DetailInfo({ item }) {
 
+    const [cookies, setCookie] = useCookies(['cart']);
     const [quantity, setQuantity] = useState(1);
+    const [isAlreadyAdded, setAlreadyAdded] = useState(false);  
+    const cart = cookies.cart
 
-    const onAddbtnClick = () => {
+    useEffect(()=>{
 
+        if (cart.find(curr => curr.id === item.id)) {
+            setAlreadyAdded(true);           
+        }
+    },[isAlreadyAdded]);
+
+    const onAddbtnClick = () => {    
+           
+        setCookie('cart', [...cart, {
+            id: item.id,
+            name: item.name || item.species,
+            image: item.images[0],
+            price: item.price,
+            quantity,
+            type: item.type
+        }]);
+        setAlreadyAdded(true);
     }
 
     return (
@@ -19,7 +39,10 @@ function DetailInfo({ item }) {
                 <hr />
             </div>
             <Price item={item} setQuantity={setQuantity} quantity={quantity} />
-            <button className="purple-btn" onClick={onAddbtnClick}>Add to cart <i className="fa-solid fa-cart-plus fa-sm"></i></button>
+            {isAlreadyAdded ?
+                <button className="purple-btn" onClick={onAddbtnClick} disabled={true}>Added to cart <i className="fa-solid fa-cart-plus fa-sm"></i></button> :
+                <button className="purple-btn" onClick={onAddbtnClick}>Add to cart <i className="fa-solid fa-cart-plus fa-sm"></i></button>
+            }
             <div>
                 {item.species ? <h3>How to care for {item.species}</h3> : <h3>About {item.name}</h3>}
                 <hr />

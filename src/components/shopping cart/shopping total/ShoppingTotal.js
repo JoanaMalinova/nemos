@@ -1,6 +1,14 @@
+import { useEffect, useState } from "react";
 import classes from "./ShoppingTotal.module.css";
 
-function ShoppingTotal() {
+function ShoppingTotal({ cartItems }) {
+
+    const [total, setTotal] = useState(0);
+
+    useEffect(() => {
+        const currTotal = cartItems.reduce((acc, currValue) => acc + currValue.price * currValue.quantity, 0);
+        setTotal(currTotal);
+    }, [cartItems])
 
     return (
         <div className={classes["total-wrapper"]}>
@@ -13,7 +21,7 @@ function ShoppingTotal() {
                 <tbody>
                     <tr>
                         <td>Subtotal</td>
-                        <td>$240</td>
+                        <td>${total}</td>
                     </tr>
                     <tr>
                         <td>
@@ -26,7 +34,7 @@ function ShoppingTotal() {
                     </tr>
                     <tr>
                         <td>Total</td>
-                        <td>$240</td>
+                        <td>${total}</td>
                     </tr>
                     <tr>
                         <td>

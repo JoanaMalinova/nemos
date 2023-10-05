@@ -21,7 +21,7 @@ function Price({ item , quantity, setQuantity}) {
             {item.discount ? <h2><span className="line-through smaller"> ${item.price}</span> <span className="salmon">${item.price - item.price * item.discount / 100}</span></h2> : <h2>${item.price}</h2>}
             <div className={classes["btn-wrapper"]}>
                 <button onClick={onMinusClick}>-</button>
-                <span>1</span>
+                <span>{quantity}</span>
                 <button onClick={onPlusClick}>+</button>
             </div>
         </div>

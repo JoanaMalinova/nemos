@@ -14,7 +14,25 @@ import RegisterPage, { registerAction } from './pages/Register';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import EmailResetPage from './pages/EmailReset';
 
+import { useFirstRender } from './hooks/useFirstRender';
+import { useEffect } from 'react';
+import { useCookies } from 'react-cookie';
+
 function App() {
+
+  const isFirstRender = useFirstRender();
+  const [cookies, setCookie] = useCookies(["cart"]);
+
+  useEffect(()=>{
+
+    if(isFirstRender){
+      
+      if(!cookies.cart){
+        setCookie("cart",[])
+      }    
+    }
+
+  })
 
   const routes = createBrowserRouter([
     {
