@@ -21,7 +21,7 @@ function ShoppingTotal({ cartItems }) {
                 <tbody>
                     <tr>
                         <td>Subtotal</td>
-                        <td>${total}</td>
+                        <td className="bold bigger">${total}</td>
                     </tr>
                     <tr>
                         <td>
@@ -34,7 +34,7 @@ function ShoppingTotal({ cartItems }) {
                     </tr>
                     <tr>
                         <td>Total</td>
-                        <td>${total}</td>
+                        <td className="bold bigger">${total}</td>
                     </tr>
                     <tr>
                         <td>

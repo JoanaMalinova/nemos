@@ -1,7 +1,7 @@
 
 import classes from "./Price.module.css";
 
-function Price({ item , quantity, setQuantity}) {    
+function Price({ item , quantity, setQuantity, isAlreadyAdded}) {    
 
     const onMinusClick = () => {
 
@@ -19,11 +19,12 @@ function Price({ item , quantity, setQuantity}) {
     return (
         <div className={classes["price-wrapper"]} >
             {item.discount ? <h2><span className="line-through smaller"> ${item.price}</span> <span className="salmon">${item.price - item.price * item.discount / 100}</span></h2> : <h2>${item.price}</h2>}
-            <div className={classes["btn-wrapper"]}>
+            {!isAlreadyAdded? <div className={classes["btn-wrapper"]}>
                 <button onClick={onMinusClick}>-</button>
                 <span>{quantity}</span>
                 <button onClick={onPlusClick}>+</button>
-            </div>
+            </div> : <></>}
+            
         </div>
     )
 }

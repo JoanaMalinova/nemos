@@ -4,6 +4,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Pagination from "./pagination/Pagination";
 import { useEffect, useState } from "react";
 import { useFirstRender } from "../../../hooks/useFirstRender";
+import { useCookies } from "react-cookie";
 
 function Catalog() {
 
@@ -13,7 +14,8 @@ function Catalog() {
     const [firstItemIndex, setFirstItemIndex] = useState("");
     const [lastItemIndex, setLastItemIndex] = useState("");
     const [currentItems, setCurrentItems] = useState([]);
-    const isFirstRender = useFirstRender()
+    const isFirstRender = useFirstRender();
+    const [cookies, setCookie] = useCookies(['cart']);    
 
     useEffect(() => {       
 
@@ -38,7 +40,7 @@ function Catalog() {
         <section className={classes["store-main"]}>
             <p>Showing {`${firstItemIndex} - ${currentItems.length < 12 ? currentItems.length : lastItemIndex}`} of {items.length} products</p>
             <ul className={classes["inner-store"]}>
-                {currentItems.map(item => <Card item={item} key={item.id} />)}
+                {currentItems.map(item => <Card item={item} key={item.id} setCookie={setCookie} cart={cookies.cart} />)}
             </ul>
             <Pagination
                 currPage={currPage}
