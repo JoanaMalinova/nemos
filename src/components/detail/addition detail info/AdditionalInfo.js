@@ -31,7 +31,7 @@ function AdditionalInfo({ item }) {
                     <span className={classes[infoClass.main]}>Description</span>
                 </li>
                 <li>
-                    <span className={classes[infoClass.sec]}>Addition Information</span>
+                    <span className={classes[infoClass.sec]}>Additional Information</span>
                 </li>
             </ul>
             <Description species={item.species} addInfoDisplay={addInfoDisplay} />

@@ -20,7 +20,7 @@ function DiscountCard({ item, setCookie, cart }) {
             navigate(`/${item.type}/${item.id}`);
         }
     }
-    
+
     const onAddbtnClick = () => {
 
         setCookie('cart', [...cart, {
@@ -29,7 +29,8 @@ function DiscountCard({ item, setCookie, cart }) {
             image: item.images[0],
             price: item.price,
             quantity: 1,
-            type: item.type
+            type: item.type,
+            discount: item.discount
         }]);
 
         setAlreadyAdded(true);

@@ -1,31 +1,32 @@
 import classes from "./DetailInfo.module.css";
 import MediaShare from "./media share/MediaShare";
 import Price from "./price section/Price";
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-function DetailInfo({ item,cookies,setCookie }) {
-   
+function DetailInfo({ item, cookies, setCookie }) {
+
     const [quantity, setQuantity] = useState(1);
-    const [isAlreadyAdded, setAlreadyAdded] = useState(false);  
+    const [isAlreadyAdded, setAlreadyAdded] = useState(false);
     const cart = cookies.cart
 
-    useEffect(()=>{
+    useEffect(() => {
 
         if (cart.find(curr => curr.id === item.id)) {
-            setAlreadyAdded(true);           
+            setAlreadyAdded(true);
         }
 
-    },[isAlreadyAdded]);
+    }, [isAlreadyAdded]);
 
-    const onAddbtnClick = () => {    
-           
+    const onAddbtnClick = () => {
+
         setCookie('cart', [...cart, {
             id: item.id,
             name: item.name || item.species,
             image: item.images[0],
             price: item.price,
             quantity,
-            type: item.type
+            type: item.type,
+            discount: item.discount
         }]);
         setAlreadyAdded(true);
     }
@@ -36,10 +37,10 @@ function DetailInfo({ item,cookies,setCookie }) {
                 <h1>{item.species || item.name}</h1>
                 <hr />
             </div>
-            <Price item={item} setQuantity={setQuantity} quantity={quantity} isAlreadyAdded={isAlreadyAdded}/>
+            <Price item={item} setQuantity={setQuantity} quantity={quantity} isAlreadyAdded={isAlreadyAdded} />
             {isAlreadyAdded ?
-                <button className="purple-btn" disabled={true}>Added to cart <i className="fa-solid fa-check"></i></button> :
-                <button className="purple-btn" onClick={onAddbtnClick}>Add to cart <i className="fa-solid fa-cart-plus fa-sm"></i><span class="cart-item"></span></button>
+                <button className={`${classes.sendtocart} purple-btn`} disabled={true}>Added to cart <i className="fa-solid fa-check"></i></button> :
+                <button className="purple-btn" onClick={onAddbtnClick}>Add to cart <i className="fa-solid fa-cart-plus fa-sm"></i></button>
             }
             <div>
                 {item.species ? <h3>How to care for {item.species}</h3> : <h3>About {item.name}</h3>}

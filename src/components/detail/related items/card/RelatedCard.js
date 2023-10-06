@@ -29,7 +29,8 @@ function RelatedCard({ item, setCookie, cart }) {
             image: item.images[0],
             price: item.price,
             quantity: 1,
-            type: item.type
+            type: item.type,
+            discount: item.discount
         }]);
 
         setAlreadyAdded(true);

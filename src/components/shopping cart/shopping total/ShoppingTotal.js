@@ -1,13 +1,18 @@
-import { useContext, useEffect} from "react";
+import { useContext, useEffect } from "react";
 import classes from "./ShoppingTotal.module.css";
 import { CartContext } from "../../../contexts/CartContext";
 
 function ShoppingTotal() {
-   
-    const {setTotal, total, cartItems} = useContext(CartContext);
+
+    const { setTotal, total, cartItems } = useContext(CartContext);
 
     useEffect(() => {
-        const currTotal = cartItems.reduce((acc, currValue) => acc + currValue.price * currValue.quantity, 0);
+        const currTotal = cartItems.reduce((acc, currValue) => {
+            if (currValue.discount) {
+                return acc + (currValue.price - currValue.price * currValue.discount / 100) * currValue.quantity;
+            }
+            return acc + currValue.price * currValue.quantity
+        }, 0);
         setTotal(currTotal);
     }, [cartItems])
 

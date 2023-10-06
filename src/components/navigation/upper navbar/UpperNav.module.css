@@ -14,7 +14,7 @@
     height: 50px;
 }
 
-.user-div li{
+.user-div li {
     &:not(:last-of-type) {
         >a {
             border-right: 1px solid white;
@@ -43,6 +43,7 @@
 
 .user-div li a i {
     transition: all 0.3s ease;
+    position: relative;
 }
 
 
@@ -50,6 +51,8 @@
     color: #7645d8;
     background-color: #272034;
     border-radius: 3px;
+
+
 }
 
 .upper-nav .user-div .active {
@@ -60,4 +63,21 @@
 
 .smaller {
     width: 140px;
+}
+
+.cart-item {
+    position: absolute;
+    display: block;
+    height: 15px;
+    width: 15px;
+    top: -20px;
+    right: -10px;
+    line-height: 1;
+    font-size: 8px;
+    color: white;
+    font-weight: 600;
+    background-color: blueviolet;
+    border-radius: 20px;
+    text-align: center;
+    padding: 2px;
 }

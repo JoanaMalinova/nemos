@@ -16,10 +16,10 @@ function Card({ item, setCookie, cart }) {
 
     const onCardClick = (ev) => {
 
-        if(ev.target.tagName !== "BUTTON"){
+        if (ev.target.tagName !== "BUTTON") {
             navigate(`/${item.type}/${item.id}`);
         }
-       
+
     }
 
     const onAddbtnClick = () => {
@@ -30,7 +30,8 @@ function Card({ item, setCookie, cart }) {
             image: item.images[0],
             price: item.price,
             quantity: 1,
-            type: item.type
+            type: item.type,
+            discount: item.discount
         }]);
 
         setAlreadyAdded(true);

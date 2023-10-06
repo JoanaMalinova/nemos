@@ -34,6 +34,7 @@
     text-transform: none;
     font-size: 1.5rem;
     border: 2px solid rgba(118, 69, 216, 1);
+    position: relative;
 }
 
 @keyframes shake {
@@ -47,7 +48,7 @@
     }
 
     20% {
-        transform: rotate(0deg) ;
+        transform: rotate(0deg);
     }
 
     30% {
@@ -92,14 +93,14 @@
 
 }
 
-.info-wrapper button:disabled{
+.info-wrapper button:disabled {
     background-color: #7645d88e;
     color: white;
     border: 2px solid #7645d88e;
 }
 
-.info-wrapper button:disabled:hover{
-    >i{
+.info-wrapper button:disabled:hover {
+    >i {
         animation: none;
     }
 

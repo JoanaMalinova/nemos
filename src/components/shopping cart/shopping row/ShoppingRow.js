@@ -57,7 +57,7 @@ function ShoppingRow({ item }) {
                     <p>{item.name}</p>
                 </td>
                 <td>
-                    <span className={classes.price}>${item.price}</span>
+                    <span className={classes.price}>${item.discount ? item.price - item.price * item.discount / 100 : item.price}</span>
                 </td>
                 <td>
                     <div className={classes["btn-wrapper"]}>
@@ -68,7 +68,7 @@ function ShoppingRow({ item }) {
                 </td>
                 <td>
                     <div className={classes["subtotal-td"]}>
-                        <span className={classes.price}>${item.quantity * item.price}</span>
+                        <span className={classes.price}>${item.discount ? item.quantity * (item.price - item.price * item.discount / 100) : item.quantity * item.price}</span>
                         <button className={classes["trash-btn"]} onClick={onTrashClick}><i className="fa-solid fa-trash-can"></i></button>
                     </div>
                 </td>
