@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect} from "react";
 import classes from "./ShoppingTotal.module.css";
+import { CartContext } from "../../../contexts/CartContext";
 
-function ShoppingTotal({ cartItems }) {
-
-    const [total, setTotal] = useState(0);
+function ShoppingTotal() {
+   
+    const {setTotal, total, cartItems} = useContext(CartContext);
 
     useEffect(() => {
         const currTotal = cartItems.reduce((acc, currValue) => acc + currValue.price * currValue.quantity, 0);

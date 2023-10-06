@@ -7,7 +7,7 @@ function LoginDeals() {
                 <i className="fa-solid fa-truck-fast"></i>
                 <div className={classes["text-wrapper"]}>
                     <h3>Free shipping</h3>
-                    <p>Shipping is free for orders over $130</p>
+                    <p>Shipping is free for orders over $300</p>
                 </div>
             </div>
             <div>

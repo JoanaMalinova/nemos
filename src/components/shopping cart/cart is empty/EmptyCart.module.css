@@ -1,0 +1,27 @@
+.empty-wrapper {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+    font-family: Montserrat, sans-serif;
+    color: white;
+    background-color: #90cde3;
+
+    >h3{
+        color: blueviolet;
+    }
+
+    >i{
+        font-size: 4rem;
+        opacity: 0.5;
+    }
+}
+
+.empty-wrapper a{
+    color: blueviolet;
+    font-style: italic;
+    text-decoration: underline;
+}

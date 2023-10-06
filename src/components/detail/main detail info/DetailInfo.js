@@ -39,7 +39,7 @@ function DetailInfo({ item,cookies,setCookie }) {
             <Price item={item} setQuantity={setQuantity} quantity={quantity} isAlreadyAdded={isAlreadyAdded}/>
             {isAlreadyAdded ?
                 <button className="purple-btn" disabled={true}>Added to cart <i className="fa-solid fa-check"></i></button> :
-                <button className="purple-btn" onClick={onAddbtnClick}>Add to cart <i className="fa-solid fa-cart-plus fa-sm"></i></button>
+                <button className="purple-btn" onClick={onAddbtnClick}>Add to cart <i className="fa-solid fa-cart-plus fa-sm"></i><span class="cart-item"></span></button>
             }
             <div>
                 {item.species ? <h3>How to care for {item.species}</h3> : <h3>About {item.name}</h3>}

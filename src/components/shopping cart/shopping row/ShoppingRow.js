@@ -1,7 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import classes from './ShoppingRow.module.css';
+import { useContext } from 'react';
+import { CartContext } from '../../../contexts/CartContext';
 
-function ShoppingRow({ item, setCartItems, setCookie, cartItems }) {
+function ShoppingRow({ item }) {
+
+    const { setCartItems, setCookie, cartItems } = useContext(CartContext);
 
     const navigate = useNavigate();
 
@@ -25,7 +29,7 @@ function ShoppingRow({ item, setCartItems, setCookie, cartItems }) {
             }
             return curr;
         });
-       
+
         setCookie('cart', altered);
         setCartItems(altered);
     }
@@ -38,7 +42,7 @@ function ShoppingRow({ item, setCartItems, setCookie, cartItems }) {
             }
             return curr;
         });
-       
+
         setCookie("cart", altered);
         setCartItems(altered);
     }
@@ -69,7 +73,6 @@ function ShoppingRow({ item, setCartItems, setCookie, cartItems }) {
                     </div>
                 </td>
             </tr>
-
         </>
 
     )

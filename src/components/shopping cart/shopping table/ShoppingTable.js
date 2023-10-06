@@ -1,12 +1,16 @@
+import { useContext } from "react";
 import ShoppingRow from "../shopping row/ShoppingRow";
 import classes from "./ShoppingTable.module.css";
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../../contexts/CartContext";
 
-function ShoppingTable({ cartItems, setCartItems, setCookie }) {
+function ShoppingTable() {
+
+    const { cartItems } = useContext(CartContext);
 
     const navigate = useNavigate();
 
-    const onContinueClick = ()=>{
+    const onContinueClick = () => {
         navigate('/store');
     }
 
@@ -22,12 +26,7 @@ function ShoppingTable({ cartItems, setCartItems, setCookie }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {cartItems.map(currItem => <ShoppingRow
-                        key={currItem.id}
-                        item={currItem}
-                        setCartItems={setCartItems}
-                        setCookie={setCookie}
-                        cartItems = {cartItems} />)}
+                    {cartItems.map(currItem => <ShoppingRow key={currItem.id} item={currItem}/>)}
                 </tbody>
             </table>
             <button onClick={onContinueClick}>Continue Shopping</button>

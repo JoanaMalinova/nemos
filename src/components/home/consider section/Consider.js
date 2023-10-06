@@ -16,7 +16,7 @@ function Consider() {
                     <div>
                         <i className="fa-solid fa-truck fa-2xl"></i>
                         <span className={styles.free}>FREE</span>
-                        <p>Free Shipping over $130</p>
+                        <p>Free Shipping over $300</p>
                     </div>
                 </li>
                 <li>

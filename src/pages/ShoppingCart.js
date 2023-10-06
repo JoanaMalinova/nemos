@@ -1,13 +1,20 @@
+import { useCookies } from "react-cookie";
 import LoginDeals from "../components/login/login deals/LoginDeals";
-import ShoppingHeader from "../components/shopping cart/shopping header/ShoppingHeader";
-import ShoppingMiddleSection from "../components/shopping cart/shopping middle section/ShoppingMiddleSection";
+import ShoppingMain from "../components/shopping cart/shopping main/ShpoppingMain";
+import EmptyCart from "../components/shopping cart/cart is empty/EmptyCart";
 
 function ShoppingCartPage() {
 
+    const [cookies, setCookie] = useCookies();
+    const cart = cookies.cart;
+
     return (
         <>
-            <ShoppingHeader />
-            <ShoppingMiddleSection />
+            {!cart.length ?
+                <EmptyCart /> :
+                <ShoppingMain />
+            }
+
             <LoginDeals />
         </>
     )
