@@ -14,15 +14,13 @@ function Consider() {
                 </li>
                 <li>
                     <div>
-                        <i className="fa-solid fa-truck fa-2xl"></i>
-                        <span className={styles.free}>FREE</span>
+                        <i className="fa-solid fa-truck fa-2xl"><span className={styles.free}>FREE</span></i>
                         <p>Free Shipping over $300</p>
                     </div>
                 </li>
                 <li>
                     <div className={styles["secure-checkout"]}>
-                        <i className="fa-solid fa-shield fa-2xl"></i>
-                        <i className="fa-solid fa-cart-shopping"></i>
+                        <i className="fa-solid fa-shield fa-2xl"><i className="fa-solid fa-cart-shopping"></i></i>
                         <p>Secure Checkout</p>
                     </div>
                 </li>

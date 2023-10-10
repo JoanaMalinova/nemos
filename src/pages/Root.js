@@ -7,7 +7,6 @@ import { Outlet } from 'react-router-dom';
 import { useLoading } from '../hooks/useLoading';
 import Loader from '../components/special/loader/Loader';
 
-
 function RootLayout() {
 
     const isLoading = useLoading();

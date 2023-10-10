@@ -2,6 +2,7 @@ import UpperNav from "../navigation/upper navbar/UpperNav";
 import styles from "./Header.module.css";
 import { useEffect, useState } from 'react';
 import { useLocation } from "react-router-dom";
+import TextUs from "../special/text us/TextUs";
 
 function Header() {
 
@@ -25,7 +26,8 @@ function Header() {
 
     return (
         <header>
-            <UpperNav scrollPosition={scrollPosition} />          
+            <UpperNav scrollPosition={scrollPosition} />
+            <TextUs />
         </header>
     )
 }

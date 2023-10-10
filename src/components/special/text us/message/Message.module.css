@@ -1,0 +1,30 @@
+.message-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 8px;
+    padding-left: 30%;
+}
+
+.message p {
+    font-size: 0.9rem;
+}
+
+.message div {
+    padding: 12px;
+    border-radius: 16px;
+    border-bottom-right-radius: 0;
+    background-color: #b2d9e7c6;
+    -webkit-box-shadow: 10px 10px 44px -22px rgba(0, 0, 0, 0.36);
+    -moz-box-shadow: 10px 10px 44px -22px rgba(0, 0, 0, 0.36);
+    box-shadow: 10px 10px 44px -22px rgba(0, 0, 0, 0.36);
+}
+
+.message>p {
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.message-wrapper .logo {
+    color: blueviolet;
+}

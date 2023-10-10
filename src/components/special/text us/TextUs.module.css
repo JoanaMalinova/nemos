@@ -1,0 +1,184 @@
+.text-us-wrapper {
+    padding: 10px;
+    border-radius: 60px;
+    color: white;
+    background-color: rgba(137, 43, 226, 0.819);
+    font-size: 1.1rem;
+    position: fixed;
+    z-index: 20;
+    right: 65px;
+    top: 89vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 10px 10px 79px 17px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 10px 10px 79px 17px rgba(0, 0, 0, 0.25);
+    box-shadow: 10px 10px 79px 17px rgba(0, 0, 0, 0.25);
+
+}
+
+.text-us-wrapper:hover {
+    background-color: blueviolet;
+    cursor: pointer;
+}
+
+.inner-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-family: Montserrat, sans-serif;
+    padding: 0 5px;
+}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+}
+
+.chat-wrapper {
+    width: 24vw;
+    height: 68vh;
+    background-color: white;
+    position: fixed;
+    z-index: 20;
+    right: 65px;
+    top: 20vh;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: Montserrat, sans-serif;
+    border: 1px solid #7645d88e;
+    -webkit-box-shadow: 10px 10px 79px 17px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 10px 10px 79px 17px rgba(0, 0, 0, 0.15);
+    box-shadow: 10px 10px 79px 17px rgba(0, 0, 0, 0.15);
+}
+
+
+.chat-wrapper:hover {
+    cursor: auto;
+}
+
+.chat-header {
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    height: 25%;
+}
+
+.chat-header h4 {
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
+.chat-header p:nth-of-type(2) {
+    font-size: 0.8rem;
+}
+
+.chat-header i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: all 0.5s ease;
+}
+
+.chat-header i:hover,
+.send-bttn:hover {
+    transform: translateY(-5px);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.chat-header .logo {
+    font-size: 1.7rem;
+}
+
+.logo {
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    color: black;
+}
+
+.text-section .chat {
+    height: 88%;
+    padding: 15px;
+    overflow-y: scroll;
+    padding-right: 20px;
+    margin-right: -20px;
+}
+
+.text-section form {
+    height: 12%;
+    overflow: hidden;
+    -webkit-box-shadow: 10px -15px 37px 11px rgba(118, 69, 216, 0.12);
+    -moz-box-shadow: 10px -15px 37px 11px rgba(118, 69, 216, 0.12);
+    box-shadow: 10px -15px 37px 11px rgba(118, 69, 216, 0.12);
+    position: relative;
+}
+
+.text-section form input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-top: 1px solid #7645d816;
+    font-size: 0.8rem;
+    text-indent: 20px;
+    padding-right: 50px;
+}
+
+.text-section form input:focus {
+    outline: none;
+}
+
+.send-bttn {
+    all: unset;
+    color: #61a6c0;
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+    font-size: 1.4rem;
+    transition: all 0.5s ease;
+}
+
+.message-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.message p {
+    font-size: 0.9rem;
+}
+
+.message div {
+    padding: 12px;
+    border-radius: 16px;
+    border-bottom-left-radius: 0;
+    background-color: #b2d9e7c6;
+    -webkit-box-shadow: 10px 10px 44px -22px rgba(0, 0, 0, 0.36);
+    -moz-box-shadow: 10px 10px 44px -22px rgba(0, 0, 0, 0.36);
+    box-shadow: 10px 10px 44px -22px rgba(0, 0, 0, 0.36);
+}
+
+.message>p {
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.message-wrapper .logo {
+    color: blueviolet;
+}
