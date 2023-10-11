@@ -4,5 +4,5 @@ Firebase Authentication for user login and register.
 Still in production. Authetication, validation and error handling still not optimized.
 Cart , store and seacrch function.
 Home page has multiple sections, which are fully functioning as well.
-All roots are linked with react-roouter-dom.
+All roots are linked with react-router-dom.
 I use react-router-dom for actions and loaders as well as route navigation.
