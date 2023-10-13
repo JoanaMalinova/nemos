@@ -2,7 +2,7 @@
 (Deployed with Firebase -  https://nemos-663db.web.app)
 <h2>Exotic aquarium fish online store </h2>
 <h3>Description</h3>
-<h4>1. Purpose:</h4> I started this project to challenge myself. My goal was to make an online shop page, resembling a real one as a SPA with the knowledge I have. I wanted to practice and showcase my react and css and test some of the latest functionalities of React Router.
+<h4>1. Purpose:</h4> I started this project to challenge myself. My goal was to make an online shop page, resembling a real one as a SPA with the knowledge I have. I wanted to practice and showcase my react and css and test some of the latest functionalities of React Router. I picked the topic of aquarium fish, partly because of my love for animals, partly because I pictured the design for this type of web application will be more colourful and interesting to make and then I found some different pages, which inspired me for the details and bits of the design pattern and functionalities.
 <h4>2. Technologies :</h4>
 I chose <strong>React</strong> as I find it really intuitive to work with, easy to set up and it's easy and fast to build and manage components. <br>
 <strong>React Router</strong> has great functionalities fo workin with routes, navigation, forms, preloading data and custom error handling or routes. <br>
@@ -48,7 +48,7 @@ Back-end provider is firebase - <strong>Cloud Firestore</strong> - which I find 
       <li>Table with added items in it</li>
       <li>Cart total section - calculates the whole sum, dummy coupon section(not working yet)</li>   
     </ul>
-<strong>3.6.Authentication pages</strong> - login, register and forgotten-password pages are interlinked, authentication is note ready yet 
+<strong>3.6. Authentication pages</strong> - login, register and forgotten-password pages are interlinked, authentication is note ready yet 
     <ul>
       <li>Login page</li>
       <li>Register page - accessible via login page, has subscribe to email checkbox</li>
@@ -56,4 +56,15 @@ Back-end provider is firebase - <strong>Cloud Firestore</strong> - which I find 
       <li>Cart total section - calculates the whole sum, dummy coupon section(not working yet)</li>   
     </ul>
 
-Authentication- validation, error handling and dynamic changes to header are the next step of the project. 
+<strong>3.7. Special features</strong>
+    <ul>
+      <li>Search- search bar is located in header ,used fuse, there is a page that leads to a catalog if search is not succsessful</li>
+      <li>Text us- a fixed element in the right down corner, it doesnt send a request to the backend</li>
+      <li>Carousel- made with <a href="https://flickity.metafizzy.co/">flickity</a> in the home page it is set on infinite loop, showcases the discount items</li>       
+    </ul>
+
+<h4>4. In development:</h4>
+Authentication service is already created and working, validation , error handling and dynamic changes to header are still in the works. Header will change on user login to show user email or name and will lead to user account page. Search pagination is not working properly and needs to be revised. Appy coupon and to checkout will be made functional. State management emprovements will be done after I finish up my reasearch. Lazy loading will be applied in the final stages of developement.
+<h4>5. Conslusion:</h4>   
+I have used the background, animation , transition, transform and position property in CSS in different scenarios and now I have much clearer understanding of their proper use. I have used video and picture media in the site in varous positionings. I have used previously unknown to me features of React router like react router form and the action and loader functionalities,NavLinks and way to stye it, I made my router made up in a different way than before(using RouterProvider and createBrowserRouter), using  a Root element and a default Error page. I set up my architecture with pages folder seperate from my component folder and my css modules inside the individual component folder, which is much more convinient in my opinion. I have a deeper understanding of useState, useEffect, useRef hoosks, dynamic styling , of reative and absolute paths.<br/>
+All in all it was great fun to take on a new, more complex project and also learn more features of React and CSS.
