@@ -17,7 +17,6 @@ import EmailResetPage from './pages/EmailReset';
 import { useFirstRender } from './hooks/useFirstRender';
 import { useEffect } from 'react';
 import { useCookies } from 'react-cookie';
-import TextUs from './components/special/text us/TextUs';
 
 function App() {
 

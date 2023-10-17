@@ -1,5 +1,4 @@
 .welcome-wrapper {
-    height: 70vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -7,18 +6,15 @@
     align-items: flex-start;
     color: white;
     font-size: 2rem;
-    text-shadow: #100721;
-    padding-left: 10vw;
-    text-shadow: 0px -1px 7px rgba(122, 104, 104, 0.6);
     line-height: 1;
     position: relative;
     z-index: 3;
 }
 
-.welcome-wrapper h3,
-h1 {
+.welcome-wrapper .heading-wrapper {
     z-index: 4;
-    position: relative;
+    position: absolute;
+    left: 10vw;
 }
 
 .nemo {
@@ -28,14 +24,48 @@ h1 {
 .video-div {
     width: 100%;
     height: 70vh;
-    position: absolute;
-    top: 0;
-    left: 0;
     overflow: hidden;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    background-color: #90cde3;
 }
 
 .video-div video {
-    min-width: 100%;
-    min-height: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 950px) {
+
+    .video-div {
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .welcome-wrapper .heading-wrapper {
+        z-index: 4;
+        position: absolute;
+        left: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 470px) {
+
+    .welcome-wrapper .heading-wrapper {
+        z-index: 4;
+        position: absolute;
+        left: 10px;
+        font-size: 1.4rem;
+    }
+
+    .nemo {
+        font-size: 4rem;
+    }
+
 }
