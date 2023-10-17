@@ -40,7 +40,7 @@ Back-end provider is firebase - <strong>Cloud Firestore</strong> - which I find 
       <li>Additional info section - changes on click from additional info to description</li>
       <li>You-may-also-like section with dynamic content from same type items</li>      
     </ul>
-<h4>3.5. Cart</h4> - all added items are shown, can be deleted from cart or their quanity adjusted
+<h4>3.5. Cart</h4> - all added items are shown, can be deleted from cart or their quantity adjusted
     <ul>
       <li>Navigation to checkout and complete order(not working yet)</li>
       <li>Banner-changes to the sum needed fro free shipping </li>
@@ -52,9 +52,7 @@ Back-end provider is firebase - <strong>Cloud Firestore</strong> - which I find 
       <li>Login page</li>
       <li>Register page - accessible via login page, has subscribe to email checkbox</li>
       <li>Forgottern password page- accessible via login page</li>
-      <li>Cart total section - calculates the whole sum, dummy coupon section(not working yet)</li>   
     </ul>
-
 <h4>3.7. Special features</h4>
     <ul>
       <li>Search- search bar is located in header ,used fuse, there is a page that leads to a catalog if search is not succsessful</li>
