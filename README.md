@@ -1,4 +1,4 @@
-<h1>Nemos </h1>
+<h1>NEMO's </h1>
 (Deployed with Firebase -  https://nemos-663db.web.app)
 <h2>Exotic aquarium fish online store </h2>
 <h3>1. Purpose:</h3> I started this project to challenge myself. My goal was to make an online shop page, resembling a real one as a SPA with the knowledge I have. I wanted to practice and showcase my react and css and test some of the latest functionalities of React Router. I picked the topic of aquarium fish, partly because of my love for animals, partly because I pictured the design for this type of web application will be more colourful and interesting to make and then I found some different pages, which inspired me for the details and bits of the design pattern and functionalities.
