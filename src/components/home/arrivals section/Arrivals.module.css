@@ -23,3 +23,41 @@
     column-gap: 1vw;
     row-gap: 4vh;
 }
+
+@media screen and (max-width: 1000px) {
+
+    .inner-arrivals {
+        width: 80vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 350px 350px 350px 350px;
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .newest-arrivals {
+        gap: 5vh;
+        background-color: #90cde3;
+        padding: 5vh 0 10vh;
+    }
+
+    .inner-arrivals {
+        width: 90vw;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px 300px 300px 300px;
+        gap: 25px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .newest-arrivals {
+        gap: 3vh;
+        background-color: #90cde3;
+        padding: 5vh 0 10vh;
+    }
+
+}

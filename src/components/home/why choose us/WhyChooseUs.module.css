@@ -99,7 +99,33 @@
 @media screen and (max-width: 520px) {
 
     .why-choose-us {
+        height: unset;
         background: url("../../../../public/images/Sunday-Reading-Under-the-Sea.webp") top left / cover no-repeat;
+
     }
 
+    .inner-wrapper {
+        padding: 5vh 0 10vh;
+        height: unset;
+        gap: 10vh;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .icon-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 10vh;
+    }
+
+
+    .inner-wrapper h2 {
+        font-size: 4rem;
+    }
+
+    .icon-holder {
+        font-size: 1.8rem;
+    }
 }
