@@ -6,7 +6,6 @@
     background: #100721;
     color: white;
     padding: 15vh 0;
-
 }
 
 .best-sellers-heading-wrapper {
@@ -25,4 +24,24 @@
     justify-content: center;
     height: 380px;
     gap: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .best-sellers {
+        padding: 7vh 0;
+        gap: 7vh;
+    }
+
+    .container {
+        height: 45vh;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .container {
+        height: 30vh;
+
+    }
 }
