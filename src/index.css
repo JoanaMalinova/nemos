@@ -237,7 +237,14 @@ button:disabled:hover {
 
     html {
         font-size: 0.8rem;
+
     }
+
+    .carousel {
+        height: 60vh;
+        width: 80%;
+    }
+
 
 }
 
@@ -246,5 +253,11 @@ button:disabled:hover {
     html {
         font-size: 0.7rem;
     }
+
+    .carousel {
+        height: 30vh;
+        width: 90%;
+    }
+
 
 }

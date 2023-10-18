@@ -81,3 +81,37 @@
     font-size: 2.1rem;
     font-weight: 600;
 }
+
+
+@media screen and (max-width: 1000px) {
+    .discounts {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        background-color: #100721;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .discount-wrapper {
+        height: 50vh;
+        width: 90%;
+    }
+
+
+    .card .discount-image .discount-percent {
+        font-size: 1.3rem;
+    }
+
+    .card .discount-info {
+        font-size: 1.5rem;
+    }
+
+    .discount-price {
+        font-size: 1.3rem;
+    }
+
+    .card .discount-info button {
+        font-size: 1rem;
+    }
+}
