@@ -2,13 +2,12 @@
     background-color: #100721;
     width: 100%;
     border-top: 3px groove #7645d8;
-    padding: 20vh 8vw 5vh 8vw;
+    padding: 20vh 6% 5vh 4%;
     text-shadow: 8px 1px 32px rgba(0, 0, 0, 0.58);
 }
 
 .shop-for {
-    width: 80vw;
-    height: 100vh;
+    width: 90vw;
     display: grid;
     grid-template-areas: "shopping-hours shopping-hours shop-for-fish"
         "shop-for-ivertabrate shop-for-coral shop-for-decoration";
@@ -74,7 +73,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 2
+    z-index: 2;
 }
 
 .inner-shop-for>* {
@@ -98,4 +97,44 @@
 
 .shop-for button {
     word-spacing: -5px;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .shop-for {
+        width: 90vw;
+        grid-template-rows: 250px 250px;
+    }
+
+    .shopping-hours {
+
+        font-size: 1.25rem;
+        padding: 0;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .shopping-hours {
+        font-size: 1.4rem;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+
+    .shop-for {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shop-for>* {
+        height: 300px;
+        width: 85vw;
+    }
+
+
 }
