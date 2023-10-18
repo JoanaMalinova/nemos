@@ -1,69 +1,77 @@
 .consider {
-    height: 60vh;
-    color: white;
-    font-size: 1.8rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    font-weight: 800;
-    gap: 10vh;
+    align-items: center;
+    color: white;
+    height: 60vh;
+    width: 100%;
     position: relative;
     background: url("../../../../public/images/Sunday-Reading-Under-the-Sea.webp")bottom/ cover no-repeat;
 }
 
 .consider>* {
-    position: relative;
+    z-index: 2;
 }
 
 .consider::before {
-    content: '';
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.3;
+    opacity: 0.4;
     width: 100%;
     height: 100%;
+    content: "";
     background: rgb(2, 23, 30);
     background: radial-gradient(circle, rgba(2, 23, 30, 1) 31%, rgba(4, 79, 110, 1) 72%, rgba(5, 108, 151, 1) 86%, rgba(1, 162, 222, 1) 97%);
 }
 
-.consider ul {
-    width: 100%;
+.inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+}
+
+.icon-wrapper {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    width: 100vw;
+    font-weight: 600;
+    word-spacing: -5px;
 }
 
-.consider ul li {
-    width: 20%;
-    height: 20vh;
+.inner-wrapper h2 {
+    font-size: 3.4rem;
+    word-spacing: -10px;
+    text-shadow: -1px 1px 13px rgba(0, 0, 0, 0.6);
 }
 
-.consider ul li div {
-    height: 100%;
+.icon-holder {
     display: flex;
     flex-direction: column;
+    gap: 5vh;
     align-items: center;
-    gap: 6vh;
+    height: 18vh;
+    font-size: 1.8rem;
 }
 
-.consider ul li div p {
-    text-align: center;
-}
-
-.consider ul li div>* {
+.icon-holder>* {
     text-shadow: -1px 1px 13px rgba(0, 0, 0, 0.6);
+}
+
+.icon-holder>i {
     position: relative;
 }
 
-.consider h2 {
-    font-size: 3.3rem;
-    text-shadow: -1px 1px 13px rgba(0, 0, 0, 0.6);
+.consider p {
+    width: 20vw;
+    text-align: center;
 }
 
 .consider .free,
-.consider .secure-checkout>i>i {
+.consider .icon-holder>i>i {
     color: #100721;
     position: absolute;
     font-weight: 800;
@@ -78,4 +86,57 @@
     font-size: 0.8rem;
     left: 8px;
     top: -8px;
+}
+
+
+@media screen and (max-width: 850px) {
+
+    .consider {
+        height: 40vh;
+    }
+
+    .inner-wrapper h2 {
+        font-size: 2.4rem;
+    }
+
+    .inner-wrapper {
+        gap: 5vh;
+        justify-content: center;
+    }
+
+    .icon-holder {
+        font-size: 1.2rem;
+    }
+
+    .consider .free {
+        font-size: 0.6rem;
+        left: 2px;
+    }
+
+    .consider .icon-holder>i>i {
+        font-size: 1rem;
+        left: 10px;
+    }
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .consider,
+    .inner-wrapper {
+        height: 30vh;
+    }
+
+    .icon-holder {
+        height: 10vh;
+        gap: 3vh;
+    }
+
+    .consider .icon-holder>i>i {
+        font-size: 1rem;
+        left: 7px;
+        top: -7px;
+    }
+
 }

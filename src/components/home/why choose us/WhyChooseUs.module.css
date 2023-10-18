@@ -60,3 +60,46 @@
 .icon-holder>* {
     text-shadow: -1px 1px 13px rgba(0, 0, 0, 0.6);
 }
+
+
+@media screen and (max-width: 850px) {
+
+    .why-choose-us {
+        height: 40vh;
+    }
+
+    .inner-wrapper h2 {
+        font-size: 2.4rem;
+    }
+
+    .inner-wrapper {
+        gap: 5vh;
+        justify-content: center;
+    }
+
+    .icon-holder {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .why-choose-us,
+    .inner-wrapper {
+        height: 30vh;
+    }
+
+    .icon-holder {
+        height: 7vh;
+    }
+}
+
+
+@media screen and (max-width: 520px) {
+
+    .why-choose-us {
+        background: url("../../../../public/images/Sunday-Reading-Under-the-Sea.webp") top left / cover no-repeat;
+    }
+
+}
