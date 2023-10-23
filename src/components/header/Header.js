@@ -3,11 +3,13 @@ import styles from "./Header.module.css";
 import { useEffect, useState } from 'react';
 import { useLocation } from "react-router-dom";
 import TextUs from "../special/text us/TextUs";
+import { useMediaQuery } from "@mui/material";
 
 function Header() {
 
     const [scrollPosition, setScrollPosition] = useState(0);
     const { pathname } = useLocation();
+    const matches = useMediaQuery("max-width:700px");
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });

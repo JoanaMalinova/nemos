@@ -51,8 +51,6 @@
     color: #7645d8;
     background-color: #272034;
     border-radius: 3px;
-
-
 }
 
 .upper-nav .user-div .active {
@@ -88,6 +86,56 @@
     .upper-nav {
         padding: 1vh 5vh;
 
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .upper-nav {
+        padding: 1vh 0;
+        flex-direction: column;
+
+        >div:nth-of-type(2) {
+            width: 100%;
+        }
+    }
+
+    .user-div {
+        justify-content: space-around;
+        height: 35px;
+    }
+
+    .user-div li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .user-div li a {
+        padding: 0;
+        height: unset;
+        width: unset;
+    }
+
+    .search-bttn {
+        color: white;
+        background-color: transparent;
+        border: none;
+        font-size: 1.4rem;
+        transition: color 0.3s ease, transform 0.5s ease-out;
+    }
+
+    .search-bttn:hover {
+        color: #90cde3;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    .user-div li a:hover {
+        color: #90cde3;
+        background-color: transparent;
+        transform: scale(1.1);
     }
 
 }

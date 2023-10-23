@@ -254,6 +254,10 @@ button:disabled:hover {
         font-size: 0.7rem;
     }
 
+    .logo {
+        height: 50%;
+    }
+
     .carousel {
         height: 30vh;
         width: 90%;
