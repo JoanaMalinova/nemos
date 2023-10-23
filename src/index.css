@@ -256,6 +256,7 @@ button:disabled:hover {
 
     .logo {
         height: 50%;
+        overflow: hidden;
     }
 
     .carousel {
