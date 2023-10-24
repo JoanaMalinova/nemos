@@ -10,6 +10,11 @@ function LoginForm() {
         console.log(values)
     }
 
+    const errorStyle = {
+        border: "1px solid salmon",
+        outline: "1px solid salmon"
+    }
+
     return (
         <div className={classes["form-wrapper"]}>
             <h1>Customer Login</h1>
@@ -28,6 +33,7 @@ function LoginForm() {
                                 id="email"
                                 name="email"
                                 placeholder="didi@abv.bg"
+                                style={errors.email && touched.email ? errorStyle : null}
                             />
                             {errors.email && touched.email ?
                                 <div className={classes["error-div"]}>{errors.email}</div> : null}
@@ -39,6 +45,7 @@ function LoginForm() {
                                 id="password"
                                 name="password"
                                 placeholder="********"
+                                style={errors.password && touched.password ? errorStyle : null}
                             />
                             {errors.password && touched.password ?
                                 <div className={classes["error-div"]}>{errors.password}</div> : null}

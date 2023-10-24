@@ -18,6 +18,12 @@ function RegisterForm() {
         console.log(values);
     }
 
+    const errorStyle = {
+        border: "1px solid salmon",
+        outline: "1px solid salmon"
+    }
+
+
     return (
         <div className={classes["form-wrapper"]} >
             <h1>Create my account</h1>
@@ -43,13 +49,23 @@ function RegisterForm() {
                         </div>
                         <div className={classes["input-wrapper"]}>
                             <label htmlFor="email">Email</label>
-                            <Field type="text" id="email" name="email" />
+                            <Field
+                                type="text"
+                                id="email"
+                                name="email"
+                                style={errors.email && touched.email ? errorStyle : null}
+                            />
                             {errors.email && touched.email ?
                                 <div className={classes["error-div"]}>{errors.email}</div> : null}
                         </div>
                         <div className={classes["input-wrapper"]}>
                             <label htmlFor="password">Password</label>
-                            <Field type="password" id="password" name="password" />
+                            <Field
+                                type="password"
+                                id="password"
+                                name="password"
+                                style={errors.password && touched.password ? errorStyle : null}
+                            />
                             {errors.password && touched.password ?
                                 <div className={classes["error-div"]}>{errors.password}</div> : null}
                         </div>
