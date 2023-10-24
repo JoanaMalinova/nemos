@@ -1,4 +1,3 @@
-import Box from '@mui/material/Box';
 import Drawer from '@mui/joy/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -44,38 +43,33 @@ function LeftDrawer({ toggleDrawer, state }) {
                     }}>
                     STORE
                 </Typography>
-                <Box
-                    sx={{ width: "70vw" }}
-                    role="presentation"
-                    onClick={toggleDrawer("left", false)}
-                    onKeyDown={toggleDrawer("left", false)}
-                >
-                    <List>
-                        {['All', 'Fish', 'Invertebrate', 'Coral', 'Decoration'].map((text, index) => (
-                            <ListItem key={text} disablePadding>
-                                <ListItemButton
+                <List>
+                    {['All', 'Fish', 'Invertebrate', 'Coral', 'Decoration'].map((text, index) => (
+                        <ListItem key={text} disablePadding>
+                            <ListItemButton
+                                sx={{
+                                    borderBottom: "1px solid blueviolet",
+                                    padding: "0"
+                                }}
+                            >
+                                <Link
+                                    href={text === "All" ? "/store" : `/${text.toLowerCase()}`}
+                                    underline="none"
                                     sx={{
-                                        justifyContent: "flex-start",
+                                        fontSize: "1.4rem",
+                                        fontFamily: "Montserrat",
+                                        color: "white",
+                                        height: "100%",
+                                        width: "100%",
                                         padding: "16px 30px",
-                                        borderBottom: "1px solid blueviolet"
                                     }}
                                 >
-                                    <Link
-                                        href={text === "All" ? "/store" : `/${text.toLowerCase()}`}
-                                        underline="none"
-                                        sx={{
-                                            fontSize: "1.4rem",
-                                            fontFamily: "Montserrat",
-                                            color: "white",
-                                        }}
-                                    >
-                                        {text.toUpperCase()}
-                                    </Link>
-                                </ListItemButton>
-                            </ListItem>
-                        ))}
-                    </List>
-                </Box>
+                                    {text.toUpperCase()}
+                                </Link>
+                            </ListItemButton>
+                        </ListItem>
+                    ))}
+                </List>
             </Drawer>
         </div>
     );

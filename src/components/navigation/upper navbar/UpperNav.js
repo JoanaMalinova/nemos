@@ -11,6 +11,7 @@ function UpperNav({ scrollPosition }) {
 
     const [cookies, setCookies] = useCookies(["cart"]);
     const [state, setState] = useState({ left: false });
+    const [searchDisplay, setSearchDisplay] = useState("none");
     const matches = useMediaQuery("screen and (max-width:500px)");
     const navigate = useNavigate();
 
@@ -30,44 +31,60 @@ function UpperNav({ scrollPosition }) {
         setState({ [anchor]: open });
     };
 
+    const onSearchClick = () => {
+
+        if (searchDisplay === "none") {
+            setSearchDisplay("block");
+        } else {
+            setSearchDisplay("none");
+        }
+    }
+
+
     return (
-        <nav className={classes["upper-nav"]} style={{ "height": scrolledDown ? "unset" : "17vh" }}>
-            <div className="logo" onClick={onLogoClick}>
-                <p style={{ "fontSize": scrolledDown ? "3rem" : "6rem" }}>NEMO's</p>
-            </div>
-            {!matches && <Search />}
-            <div>
-                <ul className={classes["user-div"]}>
-                    {matches &&
-                        <button className={classes["search-bttn"]}>
-                            <i className="fa-solid fa-magnifying-glass fa-xl"></i>
-                        </button>}
-                    <li>
-                        {matches ?
-                            <button className={classes["search-bttn"]}
-                                onClick={toggleDrawer("left", true)}
-                            >
-                                <i className="fa-solid fa-store fa-lg"></i>
-                            </button> :
-                            < DropdownNav scrollPosition={scrollPosition} matches={matches} />
-                        }
+        <>
+            <nav className={classes["upper-nav"]} style={{ "height": scrolledDown ? "unset" : "17vh" }}>
+                <div className="logo" onClick={onLogoClick}>
+                    <p style={{ "fontSize": scrolledDown ? "3rem" : "6rem" }}>NEMO's</p>
+                </div>
+                {!matches && <Search />}
+                <div>
+                    <ul className={classes["user-div"]}>
+                        {matches &&
+                            <button className={classes["search-bttn"]} onClick={onSearchClick}>
+                                <i className="fa-solid fa-magnifying-glass fa-xl"></i>
+                            </button>}
+                        <li>
+                            {matches ?
+                                <button className={classes["search-bttn"]}
+                                    onClick={toggleDrawer("left", true)}
+                                >
+                                    <i className="fa-solid fa-store fa-lg"></i>
+                                </button> :
+                                < DropdownNav scrollPosition={scrollPosition} matches={matches} />
+                            }
 
-                    </li>
-                    <li>
-                        {matches ? <NavLink to="/login" ><i className="fa-solid fa-user fa-lg"></i></NavLink> :
-                            (scrolledDown ? <NavLink to="/login" className={({ isActive }) => isActive ? `${classes.active} ${classes.smaller}` : classes.smaller}><i className="fa-solid fa-user fa-lg"></i></NavLink> :
-                                <NavLink to="/login" className={({ isActive }) => isActive ? classes.active : undefined} ><i className="fa-solid fa-user fa-xl"></i> <p>SignIn</p></NavLink>)}
+                        </li>
+                        <li>
+                            {matches ? <NavLink to="/login" ><i className="fa-solid fa-user fa-lg"></i></NavLink> :
+                                (scrolledDown ? <NavLink to="/login" className={({ isActive }) => isActive ? `${classes.active} ${classes.smaller}` : classes.smaller}><i className="fa-solid fa-user fa-lg"></i></NavLink> :
+                                    <NavLink to="/login" className={({ isActive }) => isActive ? classes.active : undefined} ><i className="fa-solid fa-user fa-xl"></i> <p>SignIn</p></NavLink>)}
 
-                    </li>
-                    <li>
-                        {matches ? <NavLink to="/cart"><i className="fa-solid fa-cart-shopping fa-lg"><span className={classes["cart-item"]}>{itemCount}</span></i></NavLink> :
-                            (scrolledDown ? <NavLink to="/cart" className={({ isActive }) => isActive ? `${classes.active} ${classes.smaller}` : classes.smaller}><i className="fa-solid fa-cart-shopping fa-lg"> <span className={classes["cart-item"]}>{itemCount}</span></i></NavLink> :
-                                <NavLink to="/cart" className={({ isActive }) => isActive ? classes.active : undefined}><i className="fa-solid fa-cart-shopping fa-xl"><span className={classes["cart-item"]}>{itemCount}</span></i><p>Cart</p></NavLink>)}
-                    </li>
-                </ul>
-            </div>
-            <LeftDrawer toggleDrawer={toggleDrawer} state={state} />
-        </nav>
+                        </li>
+                        <li>
+                            {matches ? <NavLink to="/cart"><i className="fa-solid fa-cart-shopping fa-lg"><span className={classes["cart-item"]}>{itemCount}</span></i></NavLink> :
+                                (scrolledDown ? <NavLink to="/cart" className={({ isActive }) => isActive ? `${classes.active} ${classes.smaller}` : classes.smaller}><i className="fa-solid fa-cart-shopping fa-lg"> <span className={classes["cart-item"]}>{itemCount}</span></i></NavLink> :
+                                    <NavLink to="/cart" className={({ isActive }) => isActive ? classes.active : undefined}><i className="fa-solid fa-cart-shopping fa-xl"><span className={classes["cart-item"]}>{itemCount}</span></i><p>Cart</p></NavLink>)}
+                        </li>
+                    </ul>
+                </div>
+                {matches &&
+                    <LeftDrawer toggleDrawer={toggleDrawer} state={state} />}
+            </nav>
+            {matches &&
+                <Search searchDisplay={searchDisplay} />}
+        </>
+
     )
 }
 
