@@ -125,6 +125,14 @@
 
 @media screen and (max-width: 550px) {
 
+    .shopping-hours {
+        font-size: 1.9rem;
+    }
+
+    .shop-for-wrapper {
+        padding: 40px 5%;
+    }
+
     .shop-for {
         display: flex;
         flex-direction: column;
@@ -134,6 +142,10 @@
     .shop-for>* {
         height: 300px;
         width: 85vw;
+    }
+
+    .shop-for button {
+        font-size: 1.7rem;
     }
 
 

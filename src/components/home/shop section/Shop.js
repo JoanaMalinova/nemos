@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import styles from "./Shop.module.css"
+import styles from "./Shop.module.css";
+import { useMediaQuery } from "@mui/material";
 
 function Shop() {
 
     const navigate = useNavigate();
+    const matches = useMediaQuery("screen and (max-width:500px)");
 
     const onInnerShopClick = (ev) => {
 
@@ -21,7 +23,7 @@ function Shop() {
                     <p>Some str.24 Sofia</p>
                     <fieldset>
                         <legend>Opening Hours</legend>
-                        <p>Monday - Friday: 10 am to 5 pm</p>
+                        <p>Monday - Friday: {matches && <br />}10 am to 5 pm</p>
                         <p>Saturday: 9.00am - 4.00pm</p>
                         <p>Sunday: 10.00am - 3.00pm</p>
                     </fieldset>

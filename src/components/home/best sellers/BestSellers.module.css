@@ -44,4 +44,8 @@
         height: 30vh;
 
     }
+
+    .best-sellers button {
+        font-size: 1.8rem;
+    }
 }
