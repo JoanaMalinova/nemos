@@ -42,3 +42,15 @@
     color: white;
     padding: 5vh 0;
 }
+
+@media screen and (max-width:500px) {
+
+    .store-heading h1 {
+        margin-bottom: 0;
+    }
+
+    .store-heading p {
+        padding: 10px 15px;
+        font-size: 1.2rem;
+    }
+}

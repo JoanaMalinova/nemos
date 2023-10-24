@@ -92,3 +92,11 @@
 .card button {
     border-width: 2px;
 }
+
+@media screen and (max-width: 500px) {
+
+    .card .info-wrapper {
+        justify-content: space-between;
+        padding-bottom: 5px;
+    }
+}

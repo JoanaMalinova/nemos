@@ -12,7 +12,8 @@
     font-size: 1.2rem;
     border: 2px solid #7645d8;
     border-radius: 50%;
-    padding: 3px 13px;
+    height: 34px;
+    width: 34px;
     transition: all 0.3s ease-out;
 
     &.active {
@@ -35,4 +36,12 @@
 .pagination-wrapper i:hover {
     color: white;
     cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .pagination {
+
+        height: 30px;
+        width: 30px;
+    }
 }

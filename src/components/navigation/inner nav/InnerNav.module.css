@@ -16,3 +16,9 @@
 .inner-nav a:hover {
     color: white;
 }
+
+@media screen and (max-width: 500px) {
+    .inner-nav {
+        font-size: 1.5rem;
+    }
+}
