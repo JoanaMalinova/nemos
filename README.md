@@ -5,7 +5,7 @@
 <h3>2. Technologies :</h3>
 I chose <strong>React</strong> as I find it really intuitive to work with, easy to set up and it's easy and fast to build and manage components. <br>
 <strong>React Router</strong> has great functionalities fo workin with routes, navigation, forms, preloading data and custom error handling or routes. <br>
-<strong>HTML</strong> is done by me from scratch, styling is done in <strong>CSS</strong> modules and globally by index.css. <br>
+<strong>HTML</strong> is done by me from scratch, styling is done in <strong>CSS</strong> modules and globally by index.css. Update: I added <strong>MUI</strong> to tha project and started my first components and stilizations, using it.<br>
 I used <strong>flickity</strong> for my carousel in the home page, so there is a css file for flickity stilizations as well. <br>
 Back-end provider is firebase - <strong>Cloud Firestore</strong> - which I find very helpful and well structured, thats why i also use <strong>Firebase authentication</strong> with email/password sign in method. <br>
 <strong>Fuse</strong> for the search functionality, since it's lightweight and the app is small-scaled <br>
@@ -61,6 +61,7 @@ Back-end provider is firebase - <strong>Cloud Firestore</strong> - which I find 
     </ul>
 
 <h3>4. In development:</h3>
+<strong>Currently working on the responsive design and planning on redeploying the app after that.</strong>
 Authentication service is already created and working, validation , error handling and dynamic changes to header are still in the works. Header will change on user login to show user email or name and will lead to user account page. Search pagination is not working properly and needs to be revised. Appy coupon and to checkout will be made functional. State management emprovements will be done after I finish up my reasearch. Lazy loading will be applied in the final stages of developement.
 <h3>5. Conclusion:</h3>   
 I have used the background, animation , transition, transform and position property in CSS in different scenarios and now I have much clearer understanding of their proper use. I have used video and picture media in the site in varous positionings. I have used previously unknown to me features of React router like react router form and the action and loader functionalities,NavLinks and way to stye it, I made my router made up in a different way than before(using RouterProvider and createBrowserRouter), using  a Root element and a default Error page. I set up my architecture with pages folder seperate from my component folder and my css modules inside the individual component folder, which is much more convinient in my opinion. I have a deeper understanding of useState, useEffect, useRef hoosks, dynamic styling , of reative and absolute paths.<br/>
