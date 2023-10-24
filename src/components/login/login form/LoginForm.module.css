@@ -82,3 +82,9 @@
     color: blueviolet;
     background-color: white;
 }
+
+.error-div {
+    color: coral;
+    font-style: italic;
+    font-weight: 500;
+}
