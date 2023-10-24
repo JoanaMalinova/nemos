@@ -230,13 +230,6 @@ html>* {
     width: 100%;
 }
 
-@media screen and (max-width: 500px) {
-
-    html {
-        font-size: 14px;
-    }
-
-}
 
 @media screen and (max-width: 700px) {
 
@@ -265,8 +258,12 @@ html>* {
     }
 
     .carousel {
-        height: 30vh;
+        height: 500px;
         width: 90%;
+    }
+
+    .flickity-viewport {
+        height: 400px;
     }
 
 

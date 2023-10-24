@@ -8,7 +8,6 @@
 
 .card:hover {
     cursor: pointer;
-
 }
 
 .card:hover img {
@@ -113,5 +112,37 @@
 
     .card .discount-info button {
         font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .card {
+        flex-direction: column;
+    }
+
+    .card .discount-info {
+        font-size: 2rem;
+        padding: 10px;
+        height: 40%;
+        width: 100%;
+        gap: 0;
+        justify-content: space-around;
+    }
+
+    .discount-price {
+        font-size: 2rem;
+    }
+
+    .card .discount-info button {
+        font-size: 1.5rem;
+    }
+
+    .card .discount-image {
+        height: 60%;
+        width: 100%;
+        border-right: none;
+        border-bottom: 3px solid white;
     }
 }
