@@ -1,13 +1,15 @@
 import LowerFooter from "./lower section/LowerFooter"
 import MiddleFooter from "./middle section/MiddleFooter"
 import UpperFooter from "./upper section/UpperFooter"
-import styles from "./Footer.module.css";
+import classes from "./Footer.module.css";
 
 function Footer() {
     return (
         <footer>
-            < UpperFooter />
-            < MiddleFooter />
+            <div className={classes["footer-wrapper"]}>
+                < UpperFooter />
+                < MiddleFooter />
+            </div>
             < LowerFooter />
         </footer>
     )

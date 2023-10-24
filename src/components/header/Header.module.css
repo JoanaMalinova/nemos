@@ -6,7 +6,6 @@ header {
     border-bottom: 3px groove black;
     background: url("../../../public/images/Sunday-Reading-Under-the-Sea.webp") top / cover no-repeat;
     opacity: 0.9;
-    overflow: hidden;
 }
 
 header>* {

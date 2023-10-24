@@ -5,7 +5,7 @@ footer .middle-footer {
 }
 
 footer .middle-footer .about {
-    flex: 1 1 30%
+    flex: 1 1 50%
 }
 
 footer .middle-footer .faq {
@@ -17,6 +17,13 @@ footer .middle-footer .links li,
 footer .middle-footer .about p {
     font-family: 'Montserrat', sans-serif;
 }
+
+footer .middle-footer .links-wrapper {
+    display: flex;
+    gap: 20px;
+    flex: 1 1 50%
+}
+
 
 footer .middle-footer .links {
     flex: 1 1 12%
@@ -47,4 +54,23 @@ footer .middle-footer ul li a {
 footer .middle-footer ul li a:hover {
     cursor: pointer;
     color: #90cde3;
+}
+
+@media screen and (max-width: 500px) {
+
+    footer .middle-footer {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .links-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer .middle-footer div:nth-of-type(1) p {
+        line-height: 1;
+    }
 }
