@@ -7,6 +7,7 @@ I chose <strong>React</strong> as I find it really intuitive to work with, easy 
 <strong>React Router</strong> has great functionalities fo workin with routes, navigation, forms, preloading data and custom error handling or routes. <br>
 <strong>HTML</strong> is done by me from scratch, styling is done in <strong>CSS</strong> modules and globally by index.css. Update: I added <strong>MUI</strong> to tha project and started my first components and stilizations, using it. Since it's one of the most used component library I plan on using more of it functionalities in my next project.<br>
 I used <strong>flickity</strong> for my carousel in the home page, so there is a css file for flickity stilizations as well. <br>
+<strong>Formik with Yup</strong> for login and register form validation.
 Back-end provider is firebase - <strong>Cloud Firestore</strong> - which I find very helpful and well structured, thats why i also use <strong>Firebase authentication</strong> with email/password sign in method. <br>
 <strong>Fuse</strong> for the search functionality, since it's lightweight and the app is small-scaled <br>
 <strong>React-cookie</strong> for cart item keeping of unregistered users.(This was a challenge for me since I haven't until now developed an app store, which allows unautheticated users to add items to the cart and the logic behind that was trying at first. I am still unsure if it is the right way to do it, but I am glad I found a different approach , than what I am used to).
