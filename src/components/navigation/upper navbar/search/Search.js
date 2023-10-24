@@ -35,7 +35,7 @@ function Search({ searchDisplay }) {
                 id="search"
                 onChange={onSearhInputChange}
                 value={searchQuery}
-                style={searchDisplay && { width: "100%", height: "44px", fontSize: "1.4rem" }}
+                style={searchDisplay && { width: "100%", fontSize: "1.4rem" }}
             />
             <button type="submit" className={classes["search-btn"]}>
                 <i
