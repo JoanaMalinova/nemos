@@ -8,7 +8,12 @@ function EmailResetForm() {
             <form>
                 <div className={classes["input-wrapper"]}>
                     <label htmlFor="email">Email</label>
-                    <input type="text" id="email" name="email" />
+                    <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder="didi@abv.bg"
+                    />
                 </div>
                 <p>We will send you an email to reset your password.</p>
                 <button type="submit">Submit</button>

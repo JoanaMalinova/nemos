@@ -37,13 +37,25 @@ function RegisterForm() {
                     <Form method="POST">
                         <div className={classes["input-wrapper"]}>
                             <label htmlFor="first-name">First name</label>
-                            <Field type="text" id="first-name" name="first-name" />
+                            <Field
+                                type="text"
+                                id="first-name"
+                                name="first-name"
+                                style={errors["first-name"] && touched["first-name"] ? errorStyle : null}
+                                placeholder="Diana"
+                            />
                             {errors["first-name"] && touched["first-name"] ?
                                 <div className={classes["error-div"]}>{errors["first-name"]}</div> : null}
                         </div>
                         <div className={classes["input-wrapper"]}>
                             <label htmlFor="last-name">Last name</label>
-                            <Field type="text" id="last-name" name="last-name" />
+                            <Field
+                                type="text"
+                                id="last-name"
+                                name="last-name"
+                                style={errors["last-name"] && touched["last-name"] ? errorStyle : null}
+                                placeholder="Malinova"
+                            />
                             {errors["last-name"] && touched["last-name"] ?
                                 <div className={classes["error-div"]}>{errors["last-name"]}</div> : null}
                         </div>
@@ -54,6 +66,7 @@ function RegisterForm() {
                                 id="email"
                                 name="email"
                                 style={errors.email && touched.email ? errorStyle : null}
+                                placeholder="didi@abv.bg"
                             />
                             {errors.email && touched.email ?
                                 <div className={classes["error-div"]}>{errors.email}</div> : null}
@@ -65,6 +78,7 @@ function RegisterForm() {
                                 id="password"
                                 name="password"
                                 style={errors.password && touched.password ? errorStyle : null}
+                                placeholder="**********"
                             />
                             {errors.password && touched.password ?
                                 <div className={classes["error-div"]}>{errors.password}</div> : null}
