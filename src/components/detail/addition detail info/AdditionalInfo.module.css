@@ -75,3 +75,27 @@
     gap: 2vh;
     color: white;
 }
+
+@media screen and (max-width: 500px) {
+
+    .additional-info {
+        font-size: 1.3rem;
+    }
+
+    .additional-info .description,
+    .additional-info .add-info {
+        font-size: 1.22rem;
+    }
+
+    .additional-info .add-info {
+        font-size: 1.4rem;
+    }
+
+    .additional-info .description ul {
+        width: 100%;
+        gap: 20px;
+        padding: 15px;
+    }
+
+
+}

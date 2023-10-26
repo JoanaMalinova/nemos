@@ -2,6 +2,7 @@ import classes from "./AdditionalInfo.module.css";
 import { useState } from "react";
 import Description from "./description section/Description";
 import AddInfo from "./additional info/AddInfo";
+import { useMediaQuery } from "@mui/material";
 
 function AdditionalInfo({ item }) {
 
@@ -10,6 +11,7 @@ function AdditionalInfo({ item }) {
         sec: 'inactive'
     });
     const [addInfoDisplay, setAddInfoDisplay] = useState(0);
+    const matches = useMediaQuery("screen and (max-width:500px)");
 
     const onAddInfoClick = (ev) => {
 
@@ -31,7 +33,7 @@ function AdditionalInfo({ item }) {
                     <span className={classes[infoClass.main]}>Description</span>
                 </li>
                 <li>
-                    <span className={classes[infoClass.sec]}>Additional Information</span>
+                    <span className={classes[infoClass.sec]}>{matches ? "Additional" : "Additional Information"}</span>
                 </li>
             </ul>
             <Description species={item.species} addInfoDisplay={addInfoDisplay} />
