@@ -11,3 +11,15 @@
     color: blueviolet;
     cursor: pointer;
 }
+
+@media screen and (max-width: 500px) {
+
+    .media p {
+        font-size: 1.4rem;
+    }
+
+    .media i {
+        font-size: 2rem;
+        line-height: 1;
+    }
+}

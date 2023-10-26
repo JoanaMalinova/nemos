@@ -19,7 +19,6 @@
 }
 
 .info-wrapper p {
-
     line-height: 1.6;
 }
 
@@ -105,4 +104,16 @@
     }
 
     cursor: auto;
+}
+
+@media screen and (max-width:500px) {
+
+    .info-wrapper p {
+        font-size: 1.22rem;
+    }
+
+    .info-wrapper button {
+        font-size: 1.7rem;
+    }
+
 }
