@@ -85,6 +85,7 @@
     .additional-info .description,
     .additional-info .add-info {
         font-size: 1.22rem;
+        padding: 25px;
     }
 
     .additional-info .add-info {
