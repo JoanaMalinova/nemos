@@ -62,3 +62,25 @@
     top: 50%;
     transform: translatey(-50%);
 }
+
+@media screen and (max-width:500px) {
+
+
+    .modal-content {
+        margin: 50% auto;
+        height: 100vw;
+        width: 100vw;
+        padding: 0;
+        position: relative;
+    }
+
+    .modal i {
+        z-index: 3;
+    }
+
+    .close {
+        line-height: 1;
+        font-size: 3.5rem;
+    }
+
+}

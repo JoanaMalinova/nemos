@@ -35,3 +35,9 @@ hr {
     width: 90%;
     margin: 2vh auto;
 }
+
+@media screen and (max-width:500px) {
+    .upper-detail {
+        flex-direction: column;
+    }
+}

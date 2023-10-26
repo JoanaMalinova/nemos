@@ -47,3 +47,27 @@
     height: 100%;
     width: 100%;
 }
+
+
+@media screen and (max-width:500px) {
+
+    .gallery-wrapper .aside-gallery {
+        flex-direction: row;
+    }
+
+    .gallery-wrapper .aside-gallery li {
+        height: unset;
+    }
+
+    .gallery-wrapper {
+        position: static;
+        flex-direction: column-reverse;
+        flex-basis: unset;
+        height: 100vw;
+    }
+
+    .gallery-wrapper .active-image {
+        flex-basis: 80%;
+        height: 100%;
+    }
+}
