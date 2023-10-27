@@ -1,40 +1,40 @@
-.middle-section{
+.middle-section {
     display: flex;
     background-color: #90cde3;
     color: white;
-    font-family: Montserrat, sans-serif;  
+    font-family: Montserrat, sans-serif;
     /* gap: 50px;   */
     padding: 20px 50px 30px;
     position: relative;
 }
 
-.middle-section table{
-    border-collapse: collapse;   
+.middle-section table {
+    border-collapse: collapse;
 }
 
-.middle-section thead{
+.middle-section thead {
     border-bottom: 2px solid white;
 }
 
-.middle-section table{
+.middle-section table {
     width: 100%;
 }
 
-.middle-section th{
-    text-align: left; 
-    text-transform: uppercase;   
-}
-
-.middle-section  td{
+.middle-section th {
     text-align: left;
-    padding: 16px 0    
+    text-transform: uppercase;
 }
 
-.middle-section tr{
+.middle-section td {
+    text-align: left;
+    padding: 16px 0
+}
+
+.middle-section tr {
     border-bottom: 1px solid white;
 }
 
-.middle-section button{      
+.middle-section button {
     color: white;
     background-color: blueviolet;
     text-transform: none;
@@ -51,3 +51,10 @@
     background-color: white;
 }
 
+@media screen and (max-width:500px) {
+
+    .middle-section {
+        flex-direction: column;
+        padding: 0;
+    }
+}

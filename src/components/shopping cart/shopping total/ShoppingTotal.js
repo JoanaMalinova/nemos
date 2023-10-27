@@ -30,7 +30,7 @@ function ShoppingTotal() {
                         <td className="bold bigger">${total}</td>
                     </tr>
                     <tr>
-                        <td>
+                        <td colSpan={2}>
                             <form className={classes["coupon-wrapper"]}>
                                 <label htmlFor="coupon">Coupon</label>
                                 <input id="coupon" name="coupon" placeholder="Coupon Code"></input>
@@ -43,7 +43,7 @@ function ShoppingTotal() {
                         <td className="bold bigger">${total}</td>
                     </tr>
                     <tr>
-                        <td>
+                        <td colSpan={2}>
                             <button >To Checkout</button>
                             <div className={classes["payment-methods"]}>
                                 <i className="fa-brands fa-cc-visa"></i>

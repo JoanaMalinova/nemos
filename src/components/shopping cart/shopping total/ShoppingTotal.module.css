@@ -12,7 +12,7 @@
     flex-direction: column;
     gap: 20px;
     width: 100%;
-  
+
 }
 
 .coupon-wrapper input {
@@ -20,8 +20,8 @@
     padding: 11px 10px;
     font-size: 16px;
     border: 1px solid rgba(137, 43, 226, 0.619);
-    transition: all 0.2s ease-out;    
-    width: 100%;   
+    transition: all 0.2s ease-out;
+    width: 100%;
 }
 
 .coupon-wrapper input:focus {
@@ -29,12 +29,12 @@
 }
 
 
-.total-wrapper button{
+.total-wrapper button {
     display: inline-block;
     width: 100%;
 }
 
-.payment-methods{
+.payment-methods {
     width: 100%;
     display: flex;
     gap: 20px;
@@ -42,4 +42,19 @@
     margin-top: 30px;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width:500px) {
+
+    .total-wrapper {
+        width: 100%;
+        border-left: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        font-size: 1.3rem;
+    }
+
 }
