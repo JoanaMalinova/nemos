@@ -54,6 +54,11 @@
 
 @media screen and (max-width: 500px) {
 
+    .inner-arrivals {
+        column-gap: 15px;
+        row-gap: 25px;
+    }
+
     .newest-arrivals {
         gap: 3vh;
         background-color: #90cde3;
