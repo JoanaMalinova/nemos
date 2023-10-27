@@ -89,7 +89,6 @@
         height: 50vh;
         width: 100%;
         padding: 3vh 0 7vh;
-
     }
 
 
@@ -105,9 +104,9 @@
 @media screen and (max-width: 500px) {
 
     .discounts {
-        height: 700px
+        height: unset;
+        padding: 25vw 0;
     }
-
 
     .discounts h2 {
         font-size: 2.5rem;

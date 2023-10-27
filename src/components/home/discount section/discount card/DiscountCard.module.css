@@ -97,7 +97,6 @@
         width: 90%;
     }
 
-
     .card .discount-image .discount-percent {
         font-size: 1.3rem;
     }
@@ -123,10 +122,8 @@
     }
 
     .card .discount-info {
-        font-size: 2rem;
+        font-size: 1.6rem;
         padding: 10px;
-        height: 40%;
-        width: 100%;
         gap: 0;
         justify-content: space-around;
     }
@@ -136,13 +133,18 @@
     }
 
     .card .discount-info button {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .card .discount-image {
-        height: 60%;
         width: 100%;
         border-right: none;
         border-bottom: 3px solid white;
+    }
+
+    .card .discount-image .discount-percent {
+        height: 16vw;
+        width: 16vw;
+        font-size: 1.5rem;
     }
 }

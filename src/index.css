@@ -235,7 +235,6 @@ html>* {
 
     html {
         font-size: 0.8rem;
-
     }
 
     .carousel {
@@ -258,12 +257,12 @@ html>* {
     }
 
     .carousel {
-        height: 500px;
+        height: 80vw;
         width: 90%;
     }
 
     .flickity-viewport {
-        height: 400px;
+        height: 75vw !important;
     }
 
 
