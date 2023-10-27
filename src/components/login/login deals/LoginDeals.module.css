@@ -28,3 +28,16 @@
 .login-deals-wrapper .text-wrapper {
     text-align: center
 }
+
+@media screen and (max-width:500px) {
+
+    .login-deals-wrapper {
+        flex-direction: column;
+        font-size: 1.3rem;
+        gap: 30px;
+    }
+
+    .login-deals-wrapper>* {
+        width: 75vw;
+    }
+}

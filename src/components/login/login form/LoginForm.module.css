@@ -88,3 +88,31 @@
     font-style: italic;
     font-weight: 500;
 }
+
+@media screen and (max-width:500px) {
+    .form-wrapper form {
+        width: 75vw;
+        margin-bottom: 20px;
+    }
+
+    .form-wrapper label {
+        font-size: 1.4rem;
+    }
+
+    .form-wrapper button {
+        font-size: 1.5rem;
+    }
+
+    .form-wrapper h4 {
+        font-size: 1.3rem;
+    }
+
+    .error-div {
+        font-size: 1.2rem;
+    }
+
+    .form-wrapper p {
+        font-size: 1.2rem;
+    }
+
+}
