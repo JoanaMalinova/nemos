@@ -22,8 +22,7 @@ function Discount() {
         const flkty = new Flickity(element, {
             "autoPlay": true,
             "freeScroll": true,
-            "wrapAround": true,
-            "adaptiveHeight": true
+            "wrapAround": true
         });
     }
 

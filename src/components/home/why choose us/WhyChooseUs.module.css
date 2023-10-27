@@ -40,6 +40,7 @@
     width: 100%;
     font-weight: 600;
     word-spacing: -5px;
+    gap: 10vw;
 }
 
 .inner-wrapper h2 {
