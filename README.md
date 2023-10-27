@@ -4,7 +4,7 @@
 <h3>1. Purpose:</h3> I started this project to challenge myself. My goal was to make an online shop page, resembling a real one as a SPA with the knowledge I have. I wanted to practice and showcase my react and css and test some of the latest functionalities of React Router. I picked the topic of aquarium fish, partly because of my love for animals, partly because I pictured the design for this type of web application will be more colourful and interesting to make and then I found some different pages, which inspired me for the details and bits of the design pattern and functionalities.
 <h3>2. Technologies :</h3>
 I chose <strong>React</strong> as I find it really intuitive to work with, easy to set up and it's easy and fast to build and manage components. <br>
-<strong>React Router</strong> has great functionalities fo workin with routes, navigation, forms, preloading data and custom error handling or routes. <br>
+<strong>React Router</strong> has great functionalities for working with routes, navigation, forms, preloading data and custom error handling or routes. <br>
 <strong>HTML</strong> is done by me from scratch, styling is done in <strong>CSS</strong> modules and globally by index.css. Update: I added <strong>MUI</strong> to tha project and started my first components and stilizations, using it. Since it's one of the most used component library I plan on using more of it functionalities in my next project.<br>
 I used <strong>flickity</strong> for my carousel in the home page, so there is a css file for flickity stilizations as well. <br>
 <strong>Formik with Yup</strong> for login and register form validation.
@@ -37,9 +37,9 @@ Back-end provider is firebase - <strong>Cloud Firestore</strong> - which I find 
  <h4>3.4. Detail</h4> - opens from home page, search page, store page, has breadcrumbs navigation , from here you can adjust quantity and add item to cart
     <ul>
       <li>Gallery - images carousel that changes on click, works with keybord arrows also.</li>
-      <li>Info section - name or species, price, add to cart button,dummy information.</li>
+      <li>Info section - name or species, price, add to cart button, dummy information.</li>
       <li>Additional info section - changes on click from additional info to description</li>
-      <li>You-may-also-like section with dynamic content from same type items</li>      
+      <li>Related section with dynamic content from same type items</li>      
     </ul>
 <h4>3.5. Cart</h4> - all added items are shown, can be deleted from cart or their quantity adjusted
     <ul>
@@ -62,8 +62,8 @@ Back-end provider is firebase - <strong>Cloud Firestore</strong> - which I find 
     </ul>
 
 <h3>4. In development:</h3>
-<strong>Currently working on the responsive design and planning on redeploying the app after that.</strong>
+<strong>Currently working on the responsive design - home, catalog, header and footer and detail page are mostly done.</strong>
 Authentication service is already created and working, validation , error handling and dynamic changes to header are still in the works. Header will change on user login to show user email or name and will lead to user account page. Search pagination is not working properly and needs to be revised. Appy coupon and to checkout will be made functional. State management emprovements will be done after I finish up my reasearch. Lazy loading will be applied in the final stages of developement. I plan on using Formik for login and register validation with yup.
 <h3>5. Conclusion:</h3>   
-I have used the background, animation , transition, transform and position property in CSS in different scenarios and now I have much clearer understanding of their proper use. I have used video and picture media in the site in varous positionings. I have used previously unknown to me features of React router like react router form and the action and loader functionalities,NavLinks and way to stye it, I made my router made up in a different way than before(using RouterProvider and createBrowserRouter), using  a Root element and a default Error page. I set up my architecture with pages folder seperate from my component folder and my css modules inside the individual component folder, which is much more convinient in my opinion. I have a deeper understanding of useState, useEffect, useRef hoosks, dynamic styling , of reative and absolute paths.<br/>
+I have used the background, animation , transition, transform and position property in CSS in different scenarios and now I have much clearer understanding of their proper use. I have used video and picture media in the site in varous positionings. I have used previously unknown to me features of React router like react router form and the action and loader functionalities, I made my router made up in a different way than before(using RouterProvider and createBrowserRouter), using  a Root element and a default Error page. I set up my architecture with pages folder seperate from my component folder and my css modules inside the individual component folder, which is much more convinient in my opinion. I have a deeper understanding of useState, useEffect, useRef hoosks, dynamic styling , of reative and absolute paths.<br/>
 All in all it was great fun to take on a new, more complex project and also learn more features of React and CSS.
