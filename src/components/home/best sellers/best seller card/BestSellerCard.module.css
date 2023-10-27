@@ -46,6 +46,8 @@
     font-size: 1.6rem;
 }
 
+
+
 @media screen and (max-width: 700px) {
 
     .card:hover {
@@ -56,6 +58,42 @@
 @media screen and (max-width: 500px) {
 
     .card:hover {
-        flex: 1 0 50%;
+        flex: 0 1 16%;
+        box-shadow: none;
+        transform: none;
     }
+
+    .card:hover .content {
+        opacity: 1;
+        transform: none;
+        visibility: hidden;
+    }
+
+    .active {
+        flex: 1 0 50%;
+        box-shadow: 1px 3px 15px #7645d8;
+        transform: translatey(-10px) scale(1.2);
+        z-index: 2;
+
+
+        & .content {
+            opacity: 1;
+            transform: translatey(0%);
+            visibility: visible;
+        }
+    }
+
+    .active:hover {
+        flex: 1 0 50%;
+        box-shadow: 1px 3px 15px #7645d8;
+        transform: translatey(-10px) scale(1.2);
+
+        & .content {
+            opacity: 1;
+            transform: translatey(0%);
+            visibility: visible;
+        }
+    }
+
+
 }

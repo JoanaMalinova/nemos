@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom";
 import classes from "./Card.module.css"
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function Card({ item, setCookie, cart }) {
