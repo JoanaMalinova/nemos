@@ -4,11 +4,11 @@
     gap: 40px;
 }
 
-.first-column p{
+.first-column p {
     transition: all 0.3s ease-out;
 }
 
-.first-column p:hover{
+.first-column p:hover {
     cursor: pointer;
     color: blueviolet;
 }
@@ -24,7 +24,7 @@
     object-fit: cover;
 }
 
-.img-wrapper img:hover{
+.img-wrapper img:hover {
     cursor: pointer;
 }
 
@@ -33,17 +33,17 @@
     font-weight: 600;
 }
 
-.table-row .btn-wrapper button, 
-.table-row .trash-btn{
-    all:unset;  
+.table-row .btn-wrapper button,
+.table-row .trash-btn {
+    all: unset;
 }
 
-.table-row .trash-btn{
+.table-row .trash-btn {
     margin-left: 30px;
     transition: all 0.3s ease-out;
 }
 
-.table-row .trash-btn:hover{
+.table-row .trash-btn:hover {
     background: none;
 }
 
@@ -89,9 +89,39 @@
     text-align: center;
 }
 
-.subtotal-td{
-    display: flex;    
+.subtotal-td {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding-right: 5px;
+}
+
+@media screen and (max-width:500px) {
+
+    .first-column {
+        gap: 7vw;
+    }
+
+    .first-column p {
+        font-size: 1.2rem;
+        width: min-content;
+    }
+
+    .img-wrapper {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .btn-wrapper {
+        width: min-content;
+        height: 35px;
+    }
+
+    .table-row .btn-wrapper button {
+        width: 30px;
+    }
+
+    .btn-wrapper span {
+        width: 5vw;
+    }
 }

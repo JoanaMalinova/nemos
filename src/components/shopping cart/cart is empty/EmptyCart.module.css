@@ -10,18 +10,28 @@
     color: white;
     background-color: #90cde3;
 
-    >h3{
+    >h3 {
         color: blueviolet;
     }
 
-    >i{
+    >i {
         font-size: 4rem;
         opacity: 0.5;
     }
 }
 
-.empty-wrapper a{
+.empty-wrapper a {
     color: blueviolet;
     font-style: italic;
     text-decoration: underline;
+}
+
+@media screen and (max-width:500px) {
+    .empty-wrapper {
+        padding: 20px;
+
+        >h2 {
+            text-align: center;
+        }
+    }
 }
