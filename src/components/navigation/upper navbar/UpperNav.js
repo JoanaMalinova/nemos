@@ -82,7 +82,11 @@ function UpperNav({ scrollPosition }) {
                     <LeftDrawer toggleDrawer={toggleDrawer} state={state} />}
             </nav>
             {matches &&
-                <Search searchDisplay={searchDisplay} />}
+                <Search
+                    searchDisplay={searchDisplay}
+                    setSearchDisplay={setSearchDisplay}
+                    matches={matches}
+                />}
         </>
 
     )

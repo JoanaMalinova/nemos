@@ -2,7 +2,7 @@ import { useState } from "react";
 import classes from "./Search.module.css";
 import { useNavigate } from "react-router-dom";
 
-function Search({ searchDisplay }) {
+function Search({ searchDisplay, setSearchDisplay, matches }) {
 
     const [searchQuery, setSearchQuery] = useState('');
     const navigate = useNavigate();
@@ -16,6 +16,10 @@ function Search({ searchDisplay }) {
         ev.preventDefault();
         if (searchQuery === "") {
             return
+        }
+
+        if (matches) {
+            setSearchDisplay("none");
         }
 
         navigate(`/search/${searchQuery}`);
