@@ -73,6 +73,8 @@ function ShoppingRow({ item, matches }) {
                         <span>{item.quantity}</span>
                         <button onClick={onPlusClick}>+</button>
                     </div>
+                    {matches &&
+                        <button className={classes["trash-btn"]} onClick={onTrashClick}>Remove</button>}
                 </td>
                 {!matches &&
                     <td>

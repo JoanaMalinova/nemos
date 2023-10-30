@@ -124,4 +124,10 @@
     .btn-wrapper span {
         width: 5vw;
     }
+
+    .table-row .trash-btn {
+        margin: 5px 12px;
+        font-size: 1.2rem;
+    }
+
 }
