@@ -2,20 +2,24 @@ import classes from "../login form/LoginForm.module.css";
 import { Link } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import { userRegisterSchema } from "../../../utils/validationSchema";
+import { useSubmit } from "react-router-dom";
 
 
 function RegisterForm() {
 
+    const submit = useSubmit();
+
     const initialValues = {
-        "first-name": "",
-        "last-name": "",
+        firstName: "",
+        lastName: "",
         email: "",
         password: "",
         newsletter: ""
     }
 
     const onRegisterSubmit = (values) => {
-        console.log(values);
+        console.log(values)
+        // submit(JSON.stringify(values), {formEncType: "application/json", method: "POST" });
     }
 
     const errorStyle = {
@@ -36,28 +40,28 @@ function RegisterForm() {
                 {({ errors, touched }) => (
                     <Form method="POST">
                         <div className={classes["input-wrapper"]}>
-                            <label htmlFor="first-name">First name</label>
+                            <label htmlFor="firstName">First name</label>
                             <Field
                                 type="text"
-                                id="first-name"
-                                name="first-name"
-                                style={errors["first-name"] && touched["first-name"] ? errorStyle : null}
+                                id="firstName"
+                                name="firstName"
+                                style={errors["firstName"] && touched["firstName"] ? errorStyle : null}
                                 placeholder="Diana"
                             />
-                            {errors["first-name"] && touched["first-name"] ?
-                                <div className={classes["error-div"]}>{errors["first-name"]}</div> : null}
+                            {errors["firstName"] && touched["firstName"] ?
+                                <div className={classes["error-div"]}>{errors["firstName"]}</div> : null}
                         </div>
                         <div className={classes["input-wrapper"]}>
-                            <label htmlFor="last-name">Last name</label>
+                            <label htmlFor="lastName">Last name</label>
                             <Field
                                 type="text"
-                                id="last-name"
-                                name="last-name"
-                                style={errors["last-name"] && touched["last-name"] ? errorStyle : null}
+                                id="lastName"
+                                name="lastName"
+                                style={errors["lastName"] && touched["lastName"] ? errorStyle : null}
                                 placeholder="Malinova"
                             />
-                            {errors["last-name"] && touched["last-name"] ?
-                                <div className={classes["error-div"]}>{errors["last-name"]}</div> : null}
+                            {errors["lastName"] && touched["lastName"] ?
+                                <div className={classes["error-div"]}>{errors["lastName"]}</div> : null}
                         </div>
                         <div className={classes["input-wrapper"]}>
                             <label htmlFor="email">Email</label>
@@ -77,6 +81,7 @@ function RegisterForm() {
                                 type="password"
                                 id="password"
                                 name="password"
+                                autoComplete="on"
                                 style={errors.password && touched.password ? errorStyle : null}
                                 placeholder="**********"
                             />

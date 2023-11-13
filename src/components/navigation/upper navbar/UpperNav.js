@@ -17,7 +17,8 @@ function UpperNav({ scrollPosition }) {
 
     const scrolledDown = scrollPosition >= 265 ? true : false;
     const cart = cookies.cart;
-    const itemCount = cart.reduce((acc, curr) => acc + curr.quantity, 0)
+    const itemCount = cart.reduce((acc, curr) => acc + curr.quantity, 0);
+    const user = { firstName: "Konstantin" };
 
     const onLogoClick = () => {
         navigate("/");
@@ -68,7 +69,7 @@ function UpperNav({ scrollPosition }) {
                         <li>
                             {matches ? <NavLink to="/login" ><i className="fa-solid fa-user fa-lg"></i></NavLink> :
                                 (scrolledDown ? <NavLink to="/login" className={({ isActive }) => isActive ? `${classes.active} ${classes.smaller}` : classes.smaller}><i className="fa-solid fa-user fa-lg"></i></NavLink> :
-                                    <NavLink to="/login" className={({ isActive }) => isActive ? classes.active : undefined} ><i className="fa-solid fa-user fa-xl"></i> <p>SignIn</p></NavLink>)}
+                                    <NavLink to="/login" className={({ isActive }) => isActive ? classes.active : undefined} ><i className="fa-solid fa-user fa-xl"></i> <p className={classes["user-profile"]}>{!user ? "SignIn" : `${user.firstName}'s profile`}</p></NavLink>)}
 
                         </li>
                         <li>

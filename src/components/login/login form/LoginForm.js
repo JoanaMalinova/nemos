@@ -2,12 +2,15 @@ import classes from "./LoginForm.module.css";
 import { Link } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import { userLoginSchema } from "../../../utils/validationSchema";
+import { useSubmit } from "react-router-dom";
 
 function LoginForm() {
 
+    const submit = useSubmit();
     const initialValues = { email: "", password: "" };
-    const onLoginSubmit = (values) => {
-        console.log(values)
+
+    const onLoginSubmit = (values) => {       
+        submit(JSON.stringify(values), {method:"POST",  encType: "application/json"});
     }
 
     const errorStyle = {
@@ -45,6 +48,7 @@ function LoginForm() {
                                 id="password"
                                 name="password"
                                 placeholder="********"
+                                autoComplete ="on"
                                 style={errors.password && touched.password ? errorStyle : null}
                             />
                             {errors.password && touched.password ?

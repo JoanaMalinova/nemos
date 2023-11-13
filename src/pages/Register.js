@@ -17,16 +17,15 @@ export default RegisterPage;
 
 export const registerAction = async ({ request }) => {
 
-    const data = await request.formData();
+    console.log("im in");
 
-    const username = data.get("first-name") + " " + data.get("last-name");
-    const email = data.get("email");
-    const password = data.get("password");
+    const data = await request.json();
+    console.log(data);   
 
-    const user = await signUp(email, password, username);
-    if (user.error) {
+    // const user = await signUp(data.email, data.password, data.username);
+    // if (user.error) {
 
-        throw json({ message: user.error }, { status: 401 });
-    }
-    return redirect('/store');
+    //     throw json({ message: user.error }, { status: 401 });
+    // }
+    // return redirect('/store');
 }

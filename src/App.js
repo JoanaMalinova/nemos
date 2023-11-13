@@ -86,8 +86,8 @@ function App() {
         { path: 'search/:searchQuery', element: <SearchPage />, loader: searchLoader },
         { path: 'search/:searchQuery/no-matches', element: <NoMatchesFound />, loader: noMatchesLoader },
         { path: 'login', element: <LoginPage />, action: loginAction },
-        { path: '/register', element: <RegisterPage />, action: registerAction },
-        { path: '/reset-email', element: <EmailResetPage /> }
+        { path: 'register', element: <RegisterPage />, action: registerAction },
+        { path: 'reset-email', element: <EmailResetPage /> }
       ]
     }
   ]);

@@ -8,6 +8,7 @@ import ErrorContent from "../components/special/error content/ErrorContent";
 function ErrorPage() {
 
     const error = useRouteError();
+    console.log(error);
 
     let status = 404;
     let title = "Oops!Page not found";
