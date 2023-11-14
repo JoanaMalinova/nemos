@@ -37,7 +37,7 @@
 
 
     >p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 }
 
@@ -80,8 +80,7 @@
     padding: 2px;
 }
 
-.upper-nav .user-profile{
-    font-size: 14px;
+.upper-nav .user-profile{   
     line-height: 1;
     text-align: center;
 }
