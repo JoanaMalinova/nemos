@@ -7,11 +7,11 @@ const specialCharsRules = /.*[!@#$&*]{1,}/;
 const numberRules = /.*[0-9]{1,}/;
 
 export const userRegisterSchema = object({
-    "first-name": string()
+    firstName: string()
         .required("First name is required")
         .matches(firstNameRules, "Unallowed character")
         .min(2, "First name should be at least two letters long"),
-    "last-name": string()
+    lastName: string()
         .required("Last name is required")
         .matches(lastNameRules, "Unallowed character")
         .min(2, "Last name should be at least two letters long"),

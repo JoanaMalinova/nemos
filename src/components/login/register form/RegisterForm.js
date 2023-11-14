@@ -17,15 +17,14 @@ function RegisterForm() {
         newsletter: ""
     }
 
-    const onRegisterSubmit = (values) => {       
-        submit(JSON.stringify(values), {formEncType: "application/json", method: "POST" });
+    const onRegisterSubmit = (values) => {     
+        submit(JSON.stringify(values), {method:"POST", encType: "application/json"});
     }
 
     const errorStyle = {
         border: "1px solid salmon",
         outline: "1px solid salmon"
-    }
-
+}
 
     return (
         <div className={classes["form-wrapper"]} >
@@ -37,7 +36,7 @@ function RegisterForm() {
                 onSubmit={onRegisterSubmit}
             >
                 {({ errors, touched }) => (
-                    <Form method="POST">
+                    <Form>
                         <div className={classes["input-wrapper"]}>
                             <label htmlFor="firstName">First name</label>
                             <Field

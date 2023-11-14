@@ -17,12 +17,12 @@ export default RegisterPage;
 
 export const registerAction = async ({ request }) => {
 
-    console.log("im in");
+    const data = await request.json(); 
+    console.log(data);
+    const username = `${data.firstName.trim()} ${data.lastName.trim()}`;
 
-    const data = await request.json();
-    console.log(data);   
+    const user = await signUp(data.email.trim(), data.password.trim(), username);
 
-    const user = await signUp(data.email, data.password, data.username);
     if (user.error) {
 
         throw json({ message: user.error }, { status: 401 });

@@ -20,7 +20,6 @@ function LoginPage() {
 export default LoginPage;
 
 export const loginAction = async ({ request }) => {
-    console.log("im in");
 
     const data = await request.json();   
 

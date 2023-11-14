@@ -56,9 +56,10 @@ export const signIn = async (email, password) => {
 }
 
 export const signOutUser = async () => {
-    
+
     try {
         await signOut(auth);
+        sessionStorage.clear()
 
         return true
 

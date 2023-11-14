@@ -16,6 +16,7 @@ function UpperNav({ scrollPosition }) {
     const matches = useMediaQuery("screen and (max-width:500px)");
     const navigate = useNavigate();
     const user = useAuth();
+    const firstName = user.displayName.split(" ")[0];
 
     const scrolledDown = scrollPosition >= 265 ? true : false;
     const cart = cookies.cart;
@@ -69,7 +70,7 @@ function UpperNav({ scrollPosition }) {
                         <li>
                             {matches ? <NavLink to="/login" ><i className="fa-solid fa-user fa-lg"></i></NavLink> :
                                 (scrolledDown ? <NavLink to="/login" className={({ isActive }) => isActive ? `${classes.active} ${classes.smaller}` : classes.smaller}><i className="fa-solid fa-user fa-lg"></i></NavLink> :
-                                    <NavLink to="/login" className={({ isActive }) => isActive ? classes.active : undefined} ><i className="fa-solid fa-user fa-xl"></i> <p className={classes["user-profile"]}>{!user ? "SignIn" : `${user.displayName}'s profile`}</p></NavLink>)}
+                                    <NavLink to="/login" className={({ isActive }) => isActive ? classes.active : undefined} ><i className="fa-solid fa-user fa-xl"></i> <p className={classes["user-profile"]}>{!user ? "SignIn" : `${firstName}'s profile`}</p></NavLink>)}
 
                         </li>
                         <li>

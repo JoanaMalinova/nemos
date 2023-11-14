@@ -28,11 +28,29 @@
 }
 
 .user-info .inner-info{
-    width: 20%;
+    width: 400px;
     text-align: left;
+}
+
+.user-info .inner-info button{
+    font-size: 16px;
+    text-transform: none;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin-left: 16px;
+    transition: all .6s;
+}
+
+.user-info .inner-info button:hover{
+    color: #90cde3;
+    background-color: white;
 }
 
 .user-info .inner-info p{
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 19px;
 }
