@@ -2,12 +2,16 @@ import { json, redirect } from "react-router-dom";
 import LoginDeals from "../components/login/login deals/LoginDeals";
 import LoginForm from "../components/login/login form/LoginForm";
 import { signIn } from "../services/authService";
+import { useAuth } from "../hooks/useAuth";
+import UserProfile from "../components/login/user profile/UserProfile";
 
 function LoginPage() {
 
+    const user = useAuth();    
+
     return (
         <>
-            <LoginForm />
+            {!user? <LoginForm /> : <UserProfile user = {user}/>}            
             <LoginDeals />
         </>
     )

@@ -22,10 +22,10 @@ export const registerAction = async ({ request }) => {
     const data = await request.json();
     console.log(data);   
 
-    // const user = await signUp(data.email, data.password, data.username);
-    // if (user.error) {
+    const user = await signUp(data.email, data.password, data.username);
+    if (user.error) {
 
-    //     throw json({ message: user.error }, { status: 401 });
-    // }
-    // return redirect('/store');
+        throw json({ message: user.error }, { status: 401 });
+    }
+    return redirect('/store');
 }

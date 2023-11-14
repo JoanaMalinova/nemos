@@ -17,9 +17,8 @@ function RegisterForm() {
         newsletter: ""
     }
 
-    const onRegisterSubmit = (values) => {
-        console.log(values)
-        // submit(JSON.stringify(values), {formEncType: "application/json", method: "POST" });
+    const onRegisterSubmit = (values) => {       
+        submit(JSON.stringify(values), {formEncType: "application/json", method: "POST" });
     }
 
     const errorStyle = {

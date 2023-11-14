@@ -5,7 +5,7 @@ import EmptyCart from "../components/shopping cart/cart is empty/EmptyCart";
 
 function ShoppingCartPage() {
 
-    const [cookies, setCookie] = useCookies();
+    const [cookies] = useCookies();
     const cart = cookies.cart;
 
     return (

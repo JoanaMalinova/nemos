@@ -6,19 +6,20 @@ import { useCookies } from "react-cookie";
 import { useMediaQuery } from "@mui/material";
 import { useState } from "react";
 import LeftDrawer from "../left drawer/LeftDrawer";
+import { useAuth } from "../../../hooks/useAuth";
 
 function UpperNav({ scrollPosition }) {
 
-    const [cookies, setCookies] = useCookies(["cart"]);
+    const [cookies] = useCookies(["cart"]);
     const [state, setState] = useState({ left: false });
     const [searchDisplay, setSearchDisplay] = useState("none");
     const matches = useMediaQuery("screen and (max-width:500px)");
     const navigate = useNavigate();
+    const user = useAuth();
 
     const scrolledDown = scrollPosition >= 265 ? true : false;
     const cart = cookies.cart;
     const itemCount = cart.reduce((acc, curr) => acc + curr.quantity, 0);
-    const user = { firstName: "Konstantin" };
 
     const onLogoClick = () => {
         navigate("/");
@@ -40,7 +41,6 @@ function UpperNav({ scrollPosition }) {
             setSearchDisplay("none");
         }
     }
-
 
     return (
         <>
@@ -69,7 +69,7 @@ function UpperNav({ scrollPosition }) {
                         <li>
                             {matches ? <NavLink to="/login" ><i className="fa-solid fa-user fa-lg"></i></NavLink> :
                                 (scrolledDown ? <NavLink to="/login" className={({ isActive }) => isActive ? `${classes.active} ${classes.smaller}` : classes.smaller}><i className="fa-solid fa-user fa-lg"></i></NavLink> :
-                                    <NavLink to="/login" className={({ isActive }) => isActive ? classes.active : undefined} ><i className="fa-solid fa-user fa-xl"></i> <p className={classes["user-profile"]}>{!user ? "SignIn" : `${user.firstName}'s profile`}</p></NavLink>)}
+                                    <NavLink to="/login" className={({ isActive }) => isActive ? classes.active : undefined} ><i className="fa-solid fa-user fa-xl"></i> <p className={classes["user-profile"]}>{!user ? "SignIn" : `${user.displayName}'s profile`}</p></NavLink>)}
 
                         </li>
                         <li>

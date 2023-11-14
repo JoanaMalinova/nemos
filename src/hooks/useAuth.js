@@ -1,8 +1,10 @@
-import { onAuthStateChanged } from "firebase/auth"
+import { onAuthStateChanged, getAuth } from "firebase/auth"
 
 export const useAuth = () => {
 
-    onAuthStateChanged((user) => {
+    const auth = getAuth();
+
+    onAuthStateChanged(auth, (user) => {
         if (user){
             sessionStorage.setItem("user", JSON.stringify(user));
         }
