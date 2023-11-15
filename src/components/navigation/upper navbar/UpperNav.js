@@ -17,9 +17,9 @@ function UpperNav({ scrollPosition }) {
     const navigate = useNavigate();
     const user = useAuth();
     let firstName;
-    if(user){
-       firstName = user.displayName.split(" ")[0];
-    }  
+    if (user?.displayName) {
+        firstName = user.displayName.split(" ")[0];
+    }
     const scrolledDown = scrollPosition >= 265 ? true : false;
     const cart = cookies.cart;
     const itemCount = cart.reduce((acc, curr) => acc + curr.quantity, 0);

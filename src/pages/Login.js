@@ -22,11 +22,11 @@ export default LoginPage;
 export const loginAction = async ({ request }) => {
 
     const data = await request.json();   
-
+    
     const user = await signIn(data.email, data.password);
     
     if (user.error) {
-        console.log(user.error)
+        console.log(user.error.data.message);
         throw json({ message: user.error }, { status: 401 });
     }
 

@@ -3,11 +3,11 @@ import LoginDeals from "../components/login/login deals/LoginDeals";
 import RegisterForm from "../components/login/register form/RegisterForm";
 import { signUp } from "../services/authService";
 
-function RegisterPage() {
+function RegisterPage({errorMessage}) {
 
     return (
         <>
-            <RegisterForm />
+            <RegisterForm message = {errorMessage} />
             <LoginDeals />
         </>
     )
@@ -18,7 +18,7 @@ export default RegisterPage;
 export const registerAction = async ({ request }) => {
 
     const data = await request.json(); 
-    console.log(data);
+
     const username = `${data.firstName.trim()} ${data.lastName.trim()}`;
 
     const user = await signUp(data.email.trim(), data.password.trim(), username);

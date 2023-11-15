@@ -5,7 +5,7 @@ import { userRegisterSchema } from "../../../utils/validationSchema";
 import { useSubmit } from "react-router-dom";
 
 
-function RegisterForm() {
+function RegisterForm({message}) {
 
     const submit = useSubmit();
 
@@ -91,6 +91,7 @@ function RegisterForm() {
                             <label htmlFor="newsletter">Subscribe to our newsletter?</label>
                         </div>
                         <button type="submit">Sign up</button>
+                        {message && <div className={classes["error-div"]}>{message}</div> }                        
                         <p>Returning Customer? <Link to="/login">Sign in</Link></p>
                     </Form>
                 )}
