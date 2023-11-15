@@ -48,9 +48,9 @@ Back-end provider is firebase - <strong>Cloud Firestore</strong> - which I find 
       <li>Table with added items in it</li>
       <li>Cart total section - calculates the whole sum, dummy coupon section(not working yet)</li>   
     </ul>
-<h4>3.6. Authentication pages</h4> - login, register and forgotten-password pages are interlinked, authentication is note ready yet 
+<h4>3.6. Authentication pages</h4> - login, register and forgotten-password pages are interlinked
     <ul>
-      <li>Login page</li>
+      <li>Login page - profile page when logged in</li>
       <li>Register page - accessible via login page, has subscribe to email checkbox</li>
       <li>Forgottern password page- accessible via login page</li>
     </ul>
@@ -63,7 +63,7 @@ Back-end provider is firebase - <strong>Cloud Firestore</strong> - which I find 
 
 <h3>4. In development:</h3>
 <strong>Currently working on the responsive design - app is responsive on screens below 500px.</strong>
-Authentication , error handling and dynamic changes to header are still in the works. Header will change on user login to show user email or name and will lead to user account page. Search pagination is not working properly and needs to be revised. Appy coupon and to checkout will be made functional. State management emprovements will be done after I finish up my reasearch. Lazy loading will be applied in the final stages of developement.
+Server error handling to header is still in the works. Search pagination is not working properly and needs to be revised. Appy coupon and to checkout will be made functional. State management emprovements will be done after I finish up my reasearch. Lazy loading will be applied in the final stages of developement.
 <h3>5. Conclusion:</h3>   
 I have used the background, animation , transition, transform and position property in CSS in different scenarios and now I have much clearer understanding of their proper use. I have used video and picture media in the site in varous positionings. I have used previously unknown to me features of React router like react router form and the action and loader functionalities, I made my router made up in a different way than before(using RouterProvider and createBrowserRouter), using  a Root element and a default Error page. I set up my architecture with pages folder seperate from my component folder and my css modules inside the individual component folder, which is much more convinient in my opinion. I have a deeper understanding of useState, useEffect, useRef hoosks, dynamic styling , of reative and absolute paths.<br/>
 All in all it was great fun to take on a new, more complex project and also learn more features of React and CSS and other useful libraries.
