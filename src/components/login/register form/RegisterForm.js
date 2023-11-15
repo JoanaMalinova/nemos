@@ -18,7 +18,7 @@ function RegisterForm({message}) {
     }
 
     const onRegisterSubmit = (values) => {     
-        submit(JSON.stringify(values), {method:"POST", encType: "application/json"});
+        submit(JSON.stringify(values), {method:"POST", encType: "application/json", action:"/register"});
     }
 
     const errorStyle = {
@@ -90,8 +90,8 @@ function RegisterForm({message}) {
                             <Field type="checkbox" id="newsletter" name="newsletter" value="subscribed" />
                             <label htmlFor="newsletter">Subscribe to our newsletter?</label>
                         </div>
-                        <button type="submit">Sign up</button>
-                        {message && <div className={classes["error-div"]}>{message}</div> }                        
+                        {message && <div className={`${classes["error-div"]} ${classes.centered}`}>{message}</div> }    
+                        <button type="submit">Sign up</button>                                           
                         <p>Returning Customer? <Link to="/login">Sign in</Link></p>
                     </Form>
                 )}

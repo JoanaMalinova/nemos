@@ -89,6 +89,10 @@
     font-weight: 500;
 }
 
+.error-div.centered{
+    text-align: center;
+}
+
 @media screen and (max-width:500px) {
     .form-wrapper form {
         width: 75vw;
