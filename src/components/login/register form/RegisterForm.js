@@ -5,7 +5,7 @@ import { userRegisterSchema } from "../../../utils/validationSchema";
 import { useSubmit } from "react-router-dom";
 
 
-function RegisterForm({message}) {
+function RegisterForm({ message }) {
 
     const submit = useSubmit();
 
@@ -17,14 +17,14 @@ function RegisterForm({message}) {
         newsletter: ""
     }
 
-    const onRegisterSubmit = (values) => {     
-        submit(JSON.stringify(values), {method:"POST", encType: "application/json", action:"/register"});
+    const onRegisterSubmit = (values) => {
+        submit(JSON.stringify(values), { method: "POST", encType: "application/json", action: "/register" });
     }
 
     const errorStyle = {
         border: "1px solid salmon",
         outline: "1px solid salmon"
-}
+    }
 
     return (
         <div className={classes["form-wrapper"]} >
@@ -90,8 +90,8 @@ function RegisterForm({message}) {
                             <Field type="checkbox" id="newsletter" name="newsletter" value="subscribed" />
                             <label htmlFor="newsletter">Subscribe to our newsletter?</label>
                         </div>
-                        {message && <div className={`${classes["error-div"]} ${classes.centered}`}>{message}</div> }    
-                        <button type="submit">Sign up</button>                                           
+                        {message && <div className={`${classes["error-div"]} ${classes.centered}`}>{message}</div>}
+                        <button type="submit">Sign up</button>
                         <p>Returning Customer? <Link to="/login">Sign in</Link></p>
                     </Form>
                 )}

@@ -5,13 +5,13 @@ import { signIn } from "../services/authService";
 import { useAuth } from "../hooks/useAuth";
 import UserProfile from "../components/login/user profile/UserProfile";
 
-function LoginPage() {
+function LoginPage({errorMessage}) {
 
     const user = useAuth();    
 
     return (
         <>
-            {!user? <LoginForm /> : <UserProfile user = {user}/>}            
+            {!user? <LoginForm message = {errorMessage} /> : <UserProfile user = {user}/>}            
             <LoginDeals />
         </>
     )
@@ -25,8 +25,8 @@ export const loginAction = async ({ request }) => {
     
     const user = await signIn(data.email, data.password);
     
-    if (user.error) {
-        console.log(user.error.data.message);
+    if (user.error) {       
+         
         throw json({ message: user.error }, { status: 401 });
     }
 

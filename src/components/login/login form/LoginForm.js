@@ -4,13 +4,13 @@ import { Formik, Form, Field } from "formik";
 import { userLoginSchema } from "../../../utils/validationSchema";
 import { useSubmit } from "react-router-dom";
 
-function LoginForm() {
+function LoginForm({ message }) {
 
-    const submit = useSubmit();    
+    const submit = useSubmit();
     const initialValues = { email: "", password: "" };
 
-    const onLoginSubmit = (values) => {       
-        submit(JSON.stringify(values), {method:"POST",  encType: "application/json"});
+    const onLoginSubmit = (values) => {
+        submit(JSON.stringify(values), { method: "POST", encType: "application/json", action: "/login" });
     }
 
     const errorStyle = {
@@ -48,13 +48,14 @@ function LoginForm() {
                                 id="password"
                                 name="password"
                                 placeholder="********"
-                                autoComplete ="on"
+                                autoComplete="on"
                                 style={errors.password && touched.password ? errorStyle : null}
                             />
                             {errors.password && touched.password ?
                                 <div className={classes["error-div"]}>{errors.password}</div> : null}
                         </div>
                         <p><a href="/reset-email">Forgot your password?</a></p>
+                        {message && <div className={`${classes["error-div"]} ${classes.centered}`}>{message}</div>}
                         <button type="submit">Login</button>
                         <p>New customer? <Link to="/register">Create an account</Link></p>
                     </Form>

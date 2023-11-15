@@ -5,11 +5,17 @@ import Footer from "../components/footer/Footer";
 import LowerNav from "../components/navigation/lower navbar/LowerNav";
 import ErrorContent from "../components/special/error content/ErrorContent";
 import RegisterPage from "./Register";
+import LoginPage from "./Login";
 
 function ErrorPage() {
 
-    const error = useRouteError();
-    console.log(error);
+    const error = useRouteError();    
+    const errorMessage = error?.data?.message;
+    let component = <></>
+    if(errorMessage){
+        component = errorMessage === "Firebase: Error (auth/email-already-in-use)."? <RegisterPage errorMessage = {"Email is already in use"}/> :
+        <LoginPage errorMessage={"Invalid email or password"} />
+    }
 
     let status = 404;
     let title = "Oops!Page not found";
@@ -35,8 +41,8 @@ function ErrorPage() {
             <Header />
             <LowerNav />
             <>
-                {error?.data.message === "Firebase: Error (auth/email-already-in-use)." ?
-                    <RegisterPage errorMessage = {"Email is already in use"}></RegisterPage> :
+                {errorMessage ?
+                    component :
                     <ErrorContent message={message} title={title} status={status} />}
             </>
             <Footer />
