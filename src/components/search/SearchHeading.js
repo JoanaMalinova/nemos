@@ -9,7 +9,7 @@ function SearchHeading({ length }) {
     return (
         <div
             className={classes["heading-wrapper"]}
-            style={{ "padding-bottom": pathname.includes("no-matches") ? "7vh" : "0" }}
+            style={{ "paddingBottom": pathname.includes("no-matches") ? "7vh" : "0" }}
         >
             {
                 pathname.includes("no-matches") ?

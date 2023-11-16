@@ -9,7 +9,8 @@ import LoginPage from "./Login";
 
 function ErrorPage() {
 
-    const error = useRouteError();    
+    const error = useRouteError(); 
+    console.log(error);  
     const errorMessage = error?.data?.message;
     let component = <></>
     if(errorMessage){
