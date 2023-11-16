@@ -29,6 +29,7 @@ export const storeLoader = async () => {
 }
 
 export const storeByTypeLoader = async (type) => {
+    
     try {
         const result = await getAllFromType(type);
         return result;
