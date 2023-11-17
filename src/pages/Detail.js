@@ -12,6 +12,7 @@ function DetailPage() {
 export default DetailPage;
 
 export const detailLoader = async ({ params }) => {
+    
     const [item, items] = await Promise.all([getOne(params.itemId), getAllFromType(params.storeName)]);
 
     return json({ item, items });

@@ -7,7 +7,6 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { useFirstRender } from './hooks/useFirstRender';
 import { Suspense, lazy, useEffect } from 'react';
 import { useCookies } from 'react-cookie';
-import StorePage, { storeLoader, storeByTypeLoader } from './pages/Store';
 import Loader from './components/special/loader/Loader';
 
 function App() {
@@ -34,6 +33,7 @@ function App() {
   const LoginPage = lazy(() => import("./pages/Login"));
   const RegisterPage = lazy(() => import("./pages/Register"));
   const ErrorPage = lazy(() => import("./pages/Error"));
+  const StorePage = lazy(() => import("./pages/Store"));
 
   const routes = createBrowserRouter([
     {
@@ -47,42 +47,86 @@ function App() {
         { index: true, element: <HomePage />, loader: homeLoader },
         {
           path: 'store',
-          element: <StorePage />,
-          loader: storeLoader,
+          element:
+            <Suspense fallback={<Loader />}>
+              <StorePage />
+            </Suspense>,
+          loader: () => import("./pages/Store").then(module => module.storeLoader()),
           children: [
-            { path: 'page/:pageNumber', element: <StorePage /> }
+            {
+              path: 'page/:pageNumber',
+              element:
+                <Suspense fallback={<Loader />}>
+                  <StorePage />
+                </Suspense>,
+            }
           ]
         },
         {
           path: 'coral',
-          element: <StorePage />,
-          loader: () => { return storeByTypeLoader('coral') },
+          element:
+            <Suspense fallback={<Loader />}>
+              <StorePage />
+            </Suspense>,
+          loader: () => import("./pages/Store").then(module => module.storeByTypeLoader('coral')),
           children: [
-            { path: 'page/:pageNumber', element: <StorePage /> }
+            {
+              path: 'page/:pageNumber',
+              element:
+                <Suspense fallback={<Loader />}>
+                  <StorePage />
+                </Suspense>,
+            }
           ]
         },
         {
           path: 'decoration',
-          element: < StorePage />,
-          loader: () => { return storeByTypeLoader('decoration') },
+          element:
+            <Suspense fallback={<Loader />}>
+              <StorePage />
+            </Suspense>,
+          loader: () => import("./pages/Store").then(module => module.storeByTypeLoader('decoration')),
           children: [
-            { path: 'page/:pageNumber', element: <StorePage /> }
+            {
+              path: 'page/:pageNumber',
+              element:
+                <Suspense fallback={<Loader />}>
+                  <StorePage />
+                </Suspense>,
+            }
           ]
         },
         {
           path: 'fish',
-          element: <StorePage />,
-          loader: () => { return storeByTypeLoader('fish') },
+          element:
+            <Suspense fallback={<Loader />}>
+              <StorePage />
+            </Suspense>,
+          loader: () => import("./pages/Store").then(module => module.storeByTypeLoader('fish')),
           children: [
-            { path: 'page/:pageNumber', element: <StorePage /> }
+            {
+              path: 'page/:pageNumber',
+              element: <Suspense fallback={<Loader />}>
+                <StorePage />
+              </Suspense>,
+            }
           ]
         },
         {
           path: 'invertebrate',
-          element: <StorePage />,
-          loader: () => { return storeByTypeLoader('invertebrate') },
+          element:
+            <Suspense fallback={<Loader />}>
+              <StorePage />
+            </Suspense>,
+          loader: () => import("./pages/Store").then(module => module.storeByTypeLoader('invertebrate')),
           children: [
-            { path: 'page/:pageNumber', element: <StorePage /> }
+            {
+              path: 'page/:pageNumber',
+              element:
+                <Suspense fallback={<Loader />}>
+                  <StorePage />
+                </Suspense>,
+            }
           ]
         },
         {
