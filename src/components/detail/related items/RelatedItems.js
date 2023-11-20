@@ -4,9 +4,9 @@ import RelatedCard from "./card/RelatedCard";
 import { useEffect, useState } from "react";
 import getRandomIndex from "../../../utils/getRandomIndex";
 
-function RelatedItems({ cookies, setCookie }) {
+function RelatedItems({ cookies, setCookie, item, items }) {
 
-    const { item, items } = useLoaderData();
+    // const { item, items } = useLoaderData();
     const [selectedItems, setSelectedItems] = useState([]);
     const [myItem, setMyItem] = useState("");
 

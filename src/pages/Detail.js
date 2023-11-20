@@ -1,4 +1,4 @@
-import { json } from "react-router-dom";
+import { defer } from "react-router-dom";
 import Detail from "../components/detail/Detail";
 import { getAllFromType, getOne } from "../services/stroreService";
 
@@ -11,9 +11,14 @@ function DetailPage() {
 
 export default DetailPage;
 
-export const detailLoader = async ({ params }) => {
-    
-    const [item, items] = await Promise.all([getOne(params.itemId), getAllFromType(params.storeName)]);
 
-    return json({ item, items });
+export const detailLoader = async ({ params }) => {
+
+    const item = await getOne(params.itemId);
+    const items =await getAllFromType(params.storeName);
+
+    return defer({
+        item: await item,
+        items
+    })
 }

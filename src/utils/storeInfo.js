@@ -17,7 +17,7 @@ const storeInfo = {
         name: "Store"
     },
     decoration: {
-        imageUrl: "https://www.reef2reef.com/attachments/2-jpg.1076798/",
+        imageUrl: "https://files.ekmcdn.com/5f96cb/images/eagle-one-piece-30-cm-shipwreck-aquarium-fish-tank-ship-ornament-8787-1-p.jpg",
         name: "Decoration"
     }
 
